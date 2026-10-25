@@ -1,4 +1,4 @@
-# NyAI Research Plan (Draft for MATS Bridge)
+# NyAI research agenda for checkable AI oversight
 
 ## Question
 Can **explicit, claim-specific warrants and defeater checks** help evaluators identify unsupported or policy-violating recommendations made by AI agents, compared with a conventional answer-and-explanation interface?

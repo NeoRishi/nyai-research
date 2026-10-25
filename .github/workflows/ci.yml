@@ -2,6 +2,8 @@ name: nyai-research-validation
 on:
   push:
   pull_request:
+permissions:
+  contents: read
 jobs:
   scaffold-tests:
     runs-on: ubuntu-latest
@@ -18,3 +20,7 @@ jobs:
           python scripts/summarize_pilot.py
           python scripts/verify_agentic.py
           python scripts/verify_artifacts.py
+      - name: Verify the separate sanitized package in isolation
+        run: |
+          python scripts/build_review_bundle.py
+          python scripts/check_review_bundle.py dist/NyAI_Reproducibility_Review_2026-10-25.zip

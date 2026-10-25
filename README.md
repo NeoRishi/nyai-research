@@ -1,10 +1,24 @@
-# NyAI: making AI conclusions checkable
+# NyAI: evidence validation for AI oversight
 
 An AI-generated explanation can sound convincing even when its evidence does not justify the conclusion. A citation may be irrelevant, a source may have been superseded, or an agent may claim it performed a check that never ran. A reviewer needs a way to inspect those grounds before accepting the answer or allowing the next action.
 
-**NyAI investigates whether explicit evidence warrants, defeaters and revision conditions can make that review more reliable.** The goal is to help people see what supports a conclusion, what blocks it, and what new evidence would change the decision.
+**NyAI studies how to keep AI-assisted research and agent decisions checkable when explanations alone are not reliable evidence.** It investigates whether explicit warrants, defeaters and revision conditions help reviewers identify unsupported conclusions and inappropriate actions.
 
 This repository contains a runnable research prototype and reproducible pilot experiments. Improved human oversight has not yet been demonstrated.
+
+## The AI safety problem
+
+An AI research assistant might declare an evaluation successful without running it, cite a result outside its tested scope, or continue using a conclusion after its evidence changes. As work is delegated to increasingly capable agents, fluent summaries can hide those failures from reviewers.
+
+NyAI targets three connected questions:
+
+- **Scalable oversight:** can a reviewer check the grounds of an AI conclusion without repeating the entire task?
+- **Safe delegation:** can missing evidence or authority block a proposed action, even when its explanation sounds convincing?
+- **AI assurance:** can an evaluator inspect which checks actually ran and challenge a particular evidence-to-decision link?
+
+The proposed path to safety impact is to make unsupported conclusions easier to detect before they influence further AI research or consequential actions. That path remains a hypothesis. The current experiments do not measure deception resistance or a reduction in catastrophic risk.
+
+Feature attribution can help explain model behaviour. NyAI examines a complementary question: **does the available evidence justify accepting this conclusion or taking this action?** Its records expose the external decision procedure; they do not reveal neural model internals or solve the black-box problem in general.
 
 ## How it works
 
@@ -62,11 +76,25 @@ python3 scripts/verify_artifacts.py
 
 These commands use stored outputs and need no credentials. Full replay and live-run instructions are in [Running experiments](docs/running-experiments.md).
 
+The demo and recorded action-policy results do not depend on the private knowledge base. A separate, allowlisted reproducibility package is prepared for review; see [Sharing and independent validation](docs/sharing-and-validation.md). It excludes private corpus content, proprietary policy excerpts, credentials and repository history. The full private repository should not be made public as a shortcut.
+
 - [Research work sample](docs/work-sample.md) and [standalone PDF](output/pdf/NyAI_Research_Work_Sample_2026-10-25.pdf)
 - [Research question and proposed study](docs/research-plan.md)
 - [Implementation and trust boundaries](docs/implementation-notes.md)
 - [What has actually been verified](docs/verification-status.md)
 - [Protocol, controls and limitations](docs/methodology.md)
+
+## Transparency, oversight and the EU AI Act
+
+The earlier NyAI position paper discusses **Regulation (EU) 2024/1689, Article 86**. The research also relates to the Act's transparency and oversight objectives:
+
+| Provision | Research connection |
+|---|---|
+| [Article 13](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-13) - transparency for deployers | Make outputs, evidence limits and check results interpretable |
+| [Article 14](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-14) - human oversight | Investigate appropriate reliance, contestability and conditions for withholding an action |
+| [Article 86](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-86) - explanation of certain individual decisions | Study records that expose the role of the system and the main grounds for a decision |
+
+These are research connections, not a compliance determination. Article 86 has a specific scope involving certain Annex III high-risk systems and consequential decisions affecting people; it is not a universal right to every model's internal reasoning. No statutory duty is established as fulfilled by this prototype. See [the regulatory mapping and its limits](docs/eu-ai-act-relevance.md).
 
 ## Foundations and scope
 

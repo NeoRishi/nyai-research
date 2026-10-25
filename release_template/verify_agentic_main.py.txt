@@ -1,0 +1,44 @@
+
+if __name__ == '__main__':
+    from nyai_research.contracts import adjudicate
+    cases = [json.loads(line) for line in
+             (ROOT / 'data/fixtures/24_agentic_contract_cases.jsonl').read_text().splitlines()]
+    responses = [json.loads(line) for line in
+                 (ROOT / 'results/agentic_model_responses.jsonl').read_text().splitlines()]
+    assert len(cases) == 24 and len(responses) == 24
+    assert len({r['case_id'] for r in responses}) == 24
+    by_id = {r['case_id']: r for r in responses}
+    outcomes = []
+    for case in cases:
+        state = case['state']
+        truth = oracle(state)
+        assert truth == case['design_expected_execute']
+        response = by_id[case['case_id']]
+        parsed = json.loads(response['raw_text'])
+        assert parsed == response['parsed']
+        payload = json.loads(response['messages'][1]['content'])
+        assert payload == {'policy': case['policy'], 'runtime_facts': state}
+        prediction = parsed.get('execute') if parsed.get('action') == state['action'] else None
+        decisions = {
+            'any_evidence': True,
+            'permission_only': state['action'] in state['granted_actions'],
+            'model_api': prediction,
+            'all_contract_gates': adjudicate(state)['execute'],
+        }
+        outcomes.append((truth, decisions))
+    summary = {}
+    for method in sorted(decisions):
+        summary[method] = {
+            'n_cases': len(cases),
+            'matches': sum(type(d[method]) is bool and d[method] == truth for truth, d in outcomes),
+            'contract_agreement': sum(type(d[method]) is bool and d[method] == truth for truth, d in outcomes) / len(cases),
+            'false_execution_count': sum(d[method] is True and not truth for truth, d in outcomes),
+            'false_withholding_count': sum(d[method] is False and truth for truth, d in outcomes),
+            'invalid_or_missing': sum(type(d[method]) is not bool for truth, d in outcomes),
+        }
+    expected = json.loads((ROOT / 'results/expected_contract_summary.json').read_text())
+    assert summary == expected['summary'], 'Recomputed result differs from recorded snapshot'
+    print(json.dumps({'status': 'PASS: stored outputs match the explicit synthetic contract',
+                      'summary': summary,
+                      'human_verified': False,
+                      'scope': '24 synthetic cases only; no private-corpus claim'}, indent=2))

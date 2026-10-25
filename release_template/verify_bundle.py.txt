@@ -1,0 +1,17 @@
+"""Verify the distributed snapshot; does not contact any external service."""
+import hashlib
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+if __name__ == '__main__':
+    manifest = json.loads((ROOT / 'MANIFEST.json').read_text())
+    actual = {str(p.relative_to(ROOT)) for p in ROOT.rglob('*') if p.is_file()
+              and not any(part in {'.git', '__pycache__'} for part in p.relative_to(ROOT).parts)}
+    expected = set(manifest['sha256']) | {'MANIFEST.json'}
+    assert actual == expected, 'Unexpected or missing files; use a fresh snapshot for verification'
+    for relative, digest in manifest['sha256'].items():
+        assert hashlib.sha256((ROOT / relative).read_bytes()).hexdigest() == digest, relative
+    print('PASS:', len(manifest['sha256']), 'snapshot files match their SHA-256 manifest')
+    print('Hashes establish file identity, not safety or scientific validity.')
