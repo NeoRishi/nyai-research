@@ -5,11 +5,14 @@
 - [x] Testable Python harness and preliminary VCIM-derived fixtures.
 - [x] Annotation workflow prevents using unreviewed synthetic labels as empirical truth.
 - [x] Initial policy-family split and source-metadata registry.
-- [ ] New repo created in user's GitHub account and archive pushed (requires GitHub create-repo capability or user's Work/browser/CLI).
-- [ ] Real model responses collected with recorded model IDs and prompts.
+- [x] Private research repository created and pushed; original repositories preserved.
+- [x] Real model responses collected with recorded model IDs and prompts; candidates remain distinguished from outputs.
 - [ ] Heldout examples annotated independently (prefer two reviewers; resolve disagreements).
-- [ ] Results and failure cases reproducibly archived.
-- [ ] Strong baseline beyond original v1 NaiveAgent.
+- [x] Results and failure cases reproducibly archived, including settings failures and truncations.
+- [x] Stronger model and generic-checklist comparisons included; no improvement demonstrated.
+- [x] Separate allowlisted 24-case replay package prepared and tested locally and on a hosted runner.
+- [ ] Applicant has approved the work sample's factual content and contribution attribution.
+- [ ] Sanitized package publication/reviewer access and reuse terms decided; current candidate remains unpublished.
 - [ ] 2-page CV, references and complete Bridge application answers.
 
 ## Prohibited shortcuts

@@ -18,8 +18,10 @@ All raw model outputs are recorded. The settings failure and amendment are prese
 
 Obtain independent review of a small diverse set and rewrite the benchmark rubric before running another large batch. The 24-output worksheet has blank labels. Labels from source templates cannot be copied onto model-generated outputs. A second AI pass is not independent human review. Include realistic research claims and permission failures with primary-source excerpts; control evidence availability and reviewer time. The easy action-policy set is already at ceiling for the model.
 
-## Application work deferred by the user
+## Application readiness requested by the user
 
-The user asked to finish NyAI first and handle application details later. Do not block research on referees, office, start date or work authorization. When application work resumes, use the official requirements at https://www.matsprogram.org/residency/apply and review the applicant's existing CV evidence. No application has been submitted and no referee has been contacted.
+The user has now requested the exact remaining steps for application readiness. See `docs/mats-application-checklist.md` for the current applicant actions, assistant preparation tasks and proposed 90-day research milestones. The published requirements place the explicit 90-day plan under Incubation; Bridge asks for a research plan and theory of change. Do not mistake proposed future validation for completed work. No application has been submitted and no referee has been contacted.
+
+The separate sanitized 24-case package remains unpublished for applicant review. The full private repository and older complete research archive should not be made public. The live application's introduction was inspected; later prompts and file/word limits remain to be checked without invented entries or acknowledgments on the applicant's behalf.
 
 The target remains 27 October for readiness, with the official 31 October 2026 AoE deadline. Two referees means people able to speak directly to the quality of the applicant's work. Obtain their actual details and consent through the applicant; do not invent or contact them without authorization.
