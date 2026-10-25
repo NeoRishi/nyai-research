@@ -1,0 +1,219 @@
+{
+  "checked_at": "2026-10-25T14:00:26.348846+00:00",
+  "database_writes": false,
+  "instance_id": "8ed83df4",
+  "label_counts": [
+    {
+      "label": "Chunk",
+      "count": 1976
+    },
+    {
+      "label": "Domain",
+      "count": 3
+    },
+    {
+      "label": "Dosha",
+      "count": 4
+    },
+    {
+      "label": "Index",
+      "count": 1
+    },
+    {
+      "label": "Module",
+      "count": 11
+    },
+    {
+      "label": "Note",
+      "count": 100
+    },
+    {
+      "label": "Pillar",
+      "count": 4
+    },
+    {
+      "label": "Source",
+      "count": 178
+    },
+    {
+      "label": "Stub",
+      "count": 20
+    }
+  ],
+  "relationship_counts": [
+    {
+      "type": "CITES",
+      "count": 334
+    },
+    {
+      "type": "FEEDS_MODULE",
+      "count": 129
+    },
+    {
+      "type": "HAS_CHUNK",
+      "count": 1976
+    },
+    {
+      "type": "IN_DOMAIN",
+      "count": 100
+    },
+    {
+      "type": "LINKS_TO",
+      "count": 2083
+    },
+    {
+      "type": "RELEVANT_TO_DOSHA",
+      "count": 83
+    },
+    {
+      "type": "SERVES_PILLAR",
+      "count": 44
+    }
+  ],
+  "indexes": [
+    {
+      "name": "chunk_embedding",
+      "type": "VECTOR",
+      "state": "ONLINE",
+      "populationPercent": 100.0,
+      "labelsOrTypes": [
+        "Chunk"
+      ],
+      "properties": [
+        "embedding"
+      ]
+    },
+    {
+      "name": "chunk_id",
+      "type": "RANGE",
+      "state": "ONLINE",
+      "populationPercent": 100.0,
+      "labelsOrTypes": [
+        "Chunk"
+      ],
+      "properties": [
+        "id"
+      ]
+    },
+    {
+      "name": "domain_name",
+      "type": "RANGE",
+      "state": "ONLINE",
+      "populationPercent": 100.0,
+      "labelsOrTypes": [
+        "Domain"
+      ],
+      "properties": [
+        "name"
+      ]
+    },
+    {
+      "name": "dosha_name",
+      "type": "RANGE",
+      "state": "ONLINE",
+      "populationPercent": 100.0,
+      "labelsOrTypes": [
+        "Dosha"
+      ],
+      "properties": [
+        "name"
+      ]
+    },
+    {
+      "name": "index_1b9dcc97",
+      "type": "LOOKUP",
+      "state": "ONLINE",
+      "populationPercent": 100.0,
+      "labelsOrTypes": null,
+      "properties": null
+    },
+    {
+      "name": "index_460996c0",
+      "type": "LOOKUP",
+      "state": "ONLINE",
+      "populationPercent": 100.0,
+      "labelsOrTypes": null,
+      "properties": null
+    },
+    {
+      "name": "index_slug",
+      "type": "RANGE",
+      "state": "ONLINE",
+      "populationPercent": 100.0,
+      "labelsOrTypes": [
+        "Index"
+      ],
+      "properties": [
+        "slug"
+      ]
+    },
+    {
+      "name": "module_name",
+      "type": "RANGE",
+      "state": "ONLINE",
+      "populationPercent": 100.0,
+      "labelsOrTypes": [
+        "Module"
+      ],
+      "properties": [
+        "name"
+      ]
+    },
+    {
+      "name": "note_slug",
+      "type": "RANGE",
+      "state": "ONLINE",
+      "populationPercent": 100.0,
+      "labelsOrTypes": [
+        "Note"
+      ],
+      "properties": [
+        "slug"
+      ]
+    },
+    {
+      "name": "pillar_name",
+      "type": "RANGE",
+      "state": "ONLINE",
+      "populationPercent": 100.0,
+      "labelsOrTypes": [
+        "Pillar"
+      ],
+      "properties": [
+        "name"
+      ]
+    },
+    {
+      "name": "source_file",
+      "type": "RANGE",
+      "state": "ONLINE",
+      "populationPercent": 100.0,
+      "labelsOrTypes": [
+        "Source"
+      ],
+      "properties": [
+        "file"
+      ]
+    },
+    {
+      "name": "stub_slug",
+      "type": "RANGE",
+      "state": "ONLINE",
+      "populationPercent": 100.0,
+      "labelsOrTypes": [
+        "Stub"
+      ],
+      "properties": [
+        "slug"
+      ]
+    }
+  ],
+  "local_wiki_parse": {
+    "notes": 100,
+    "index_nodes": 1,
+    "stubs": 20,
+    "unreadable": 0,
+    "links": 1983,
+    "citations": 334
+  }
+}

@@ -1,0 +1,862 @@
+{
+  "checked_at": "2026-10-25T14:07:17.672731+00:00",
+  "review_type": "Automated exact transcription check; not substantive or independent human validation",
+  "source_sha256": "996023a352b8782594aa01473f5708b430c0ae23c4c809789643c25675b58e8c",
+  "registry_rows": [
+    {
+      "id": "POL-01",
+      "sheet": "74_Policy",
+      "cell_row": 5,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "POL-02",
+      "sheet": "74_Policy",
+      "cell_row": 6,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "POL-03",
+      "sheet": "74_Policy",
+      "cell_row": 7,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "POL-04",
+      "sheet": "74_Policy",
+      "cell_row": 8,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "POL-05",
+      "sheet": "74_Policy",
+      "cell_row": 9,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "POL-06",
+      "sheet": "74_Policy",
+      "cell_row": 10,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "POL-07",
+      "sheet": "74_Policy",
+      "cell_row": 11,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "POL-08",
+      "sheet": "74_Policy",
+      "cell_row": 12,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "POL-09",
+      "sheet": "74_Policy",
+      "cell_row": 13,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "POL-10",
+      "sheet": "74_Policy",
+      "cell_row": 14,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "POL-11",
+      "sheet": "74_Policy",
+      "cell_row": 15,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "EP-EMPIRICAL",
+      "sheet": "68_Epistemics",
+      "cell_row": 5,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "EP-METHODS",
+      "sheet": "68_Epistemics",
+      "cell_row": 6,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "EP-TRADITION",
+      "sheet": "68_Epistemics",
+      "cell_row": 7,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "EP-HYPOTHESIS",
+      "sheet": "68_Epistemics",
+      "cell_row": 8,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "EP-PERSONAL",
+      "sheet": "68_Epistemics",
+      "cell_row": 9,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "EP-FRONTIER",
+      "sheet": "68_Epistemics",
+      "cell_row": 10,
+      "matches": true,
+      "mismatched_fields": []
+    },
+    {
+      "id": "EP-QUARANTINE",
+      "sheet": "68_Epistemics",
+      "cell_row": 11,
+      "matches": true,
+      "mismatched_fields": []
+    }
+  ],
+  "fixture_reference_checks": [
+    {
+      "case_id": "POL-01-01",
+      "source_rule": "POL-01",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-01-02",
+      "source_rule": "POL-01",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-01-03",
+      "source_rule": "POL-01",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-01-04",
+      "source_rule": "POL-01",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-01-05",
+      "source_rule": "POL-01",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-01-06",
+      "source_rule": "POL-01",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-01-07",
+      "source_rule": "POL-01",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-01-08",
+      "source_rule": "POL-01",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-01-09",
+      "source_rule": "POL-01",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-01-10",
+      "source_rule": "POL-01",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-02-01",
+      "source_rule": "POL-02",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-02-02",
+      "source_rule": "POL-02",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-02-03",
+      "source_rule": "POL-02",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-02-04",
+      "source_rule": "POL-02",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-02-05",
+      "source_rule": "POL-02",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-02-06",
+      "source_rule": "POL-02",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-02-07",
+      "source_rule": "POL-02",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-02-08",
+      "source_rule": "POL-02",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-02-09",
+      "source_rule": "POL-02",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-02-10",
+      "source_rule": "POL-02",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-03-01",
+      "source_rule": "POL-03",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-03-02",
+      "source_rule": "POL-03",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-03-03",
+      "source_rule": "POL-03",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-03-04",
+      "source_rule": "POL-03",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-03-05",
+      "source_rule": "POL-03",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-03-06",
+      "source_rule": "POL-03",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-03-07",
+      "source_rule": "POL-03",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-03-08",
+      "source_rule": "POL-03",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-03-09",
+      "source_rule": "POL-03",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-03-10",
+      "source_rule": "POL-03",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-04-01",
+      "source_rule": "POL-04",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-04-02",
+      "source_rule": "POL-04",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-04-03",
+      "source_rule": "POL-04",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-04-04",
+      "source_rule": "POL-04",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-04-05",
+      "source_rule": "POL-04",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-04-06",
+      "source_rule": "POL-04",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-04-07",
+      "source_rule": "POL-04",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-04-08",
+      "source_rule": "POL-04",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-04-09",
+      "source_rule": "POL-04",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-04-10",
+      "source_rule": "POL-04",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-05-01",
+      "source_rule": "POL-05",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-05-02",
+      "source_rule": "POL-05",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-05-03",
+      "source_rule": "POL-05",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-05-04",
+      "source_rule": "POL-05",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-05-05",
+      "source_rule": "POL-05",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-05-06",
+      "source_rule": "POL-05",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-05-07",
+      "source_rule": "POL-05",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-05-08",
+      "source_rule": "POL-05",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-05-09",
+      "source_rule": "POL-05",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-05-10",
+      "source_rule": "POL-05",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-06-01",
+      "source_rule": "POL-06",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-06-02",
+      "source_rule": "POL-06",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-06-03",
+      "source_rule": "POL-06",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-06-04",
+      "source_rule": "POL-06",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-06-05",
+      "source_rule": "POL-06",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-06-06",
+      "source_rule": "POL-06",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-06-07",
+      "source_rule": "POL-06",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-06-08",
+      "source_rule": "POL-06",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-06-09",
+      "source_rule": "POL-06",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-06-10",
+      "source_rule": "POL-06",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-07-01",
+      "source_rule": "POL-07",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-07-02",
+      "source_rule": "POL-07",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-07-03",
+      "source_rule": "POL-07",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-07-04",
+      "source_rule": "POL-07",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-07-05",
+      "source_rule": "POL-07",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-07-06",
+      "source_rule": "POL-07",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-07-07",
+      "source_rule": "POL-07",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-07-08",
+      "source_rule": "POL-07",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-07-09",
+      "source_rule": "POL-07",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-07-10",
+      "source_rule": "POL-07",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-08-01",
+      "source_rule": "POL-08",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-08-02",
+      "source_rule": "POL-08",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-08-03",
+      "source_rule": "POL-08",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-08-04",
+      "source_rule": "POL-08",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-08-05",
+      "source_rule": "POL-08",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-08-06",
+      "source_rule": "POL-08",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-08-07",
+      "source_rule": "POL-08",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-08-08",
+      "source_rule": "POL-08",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-08-09",
+      "source_rule": "POL-08",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-08-10",
+      "source_rule": "POL-08",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-09-01",
+      "source_rule": "POL-09",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-09-02",
+      "source_rule": "POL-09",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-09-03",
+      "source_rule": "POL-09",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-09-04",
+      "source_rule": "POL-09",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-09-05",
+      "source_rule": "POL-09",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-09-06",
+      "source_rule": "POL-09",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-09-07",
+      "source_rule": "POL-09",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-09-08",
+      "source_rule": "POL-09",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-09-09",
+      "source_rule": "POL-09",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-09-10",
+      "source_rule": "POL-09",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-10-01",
+      "source_rule": "POL-10",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-10-02",
+      "source_rule": "POL-10",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-10-03",
+      "source_rule": "POL-10",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-10-04",
+      "source_rule": "POL-10",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-10-05",
+      "source_rule": "POL-10",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-10-06",
+      "source_rule": "POL-10",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-10-07",
+      "source_rule": "POL-10",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-10-08",
+      "source_rule": "POL-10",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-10-09",
+      "source_rule": "POL-10",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-10-10",
+      "source_rule": "POL-10",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-11-01",
+      "source_rule": "POL-11",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-11-02",
+      "source_rule": "POL-11",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-11-03",
+      "source_rule": "POL-11",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-11-04",
+      "source_rule": "POL-11",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-11-05",
+      "source_rule": "POL-11",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-11-06",
+      "source_rule": "POL-11",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-11-07",
+      "source_rule": "POL-11",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-11-08",
+      "source_rule": "POL-11",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-11-09",
+      "source_rule": "POL-11",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "POL-11-10",
+      "source_rule": "POL-11",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "EPI-01",
+      "source_rule": "EP-EMPIRICAL",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "EPI-02",
+      "source_rule": "EP-METHODS",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "EPI-03",
+      "source_rule": "EP-TRADITION",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "EPI-04",
+      "source_rule": "EP-HYPOTHESIS",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "EPI-05",
+      "source_rule": "EP-PERSONAL",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "EPI-06",
+      "source_rule": "EP-FRONTIER",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "EPI-07",
+      "source_rule": "EP-QUARANTINE",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "EPI-08",
+      "source_rule": "EP-EMPIRICAL",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "EPI-09",
+      "source_rule": "EP-METHODS",
+      "reference_text_matches": true,
+      "label_verified": false
+    },
+    {
+      "case_id": "EPI-10",
+      "source_rule": "EP-TRADITION",
+      "reference_text_matches": true,
+      "label_verified": false
+    }
+  ],
+  "latest_copy_relevant_sheets_equal": {
+    "68_Epistemics": true,
+    "74_Policy": true,
+    "78_NyAI": true,
+    "61_Explanation_Contract": true
+  },
+  "normalization_note": "Ignore empty cells/rows; latest workbook has formatted trailing rows and omits dimensions."
+}

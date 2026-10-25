@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checks": [
+    "protocol and amended source hashes",
+    "360 unique audit records",
+    "no label fields in model input",
+    "raw response identities",
+    "independent CSV metric tally",
+    "failed requests and truncations retained",
+    "24 generated decisions distinct from templates",
+    "human-reviewed metrics empty",
+    "source transcription only",
+    "read-only database audit"
+  ]
+}

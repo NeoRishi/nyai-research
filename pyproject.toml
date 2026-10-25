@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "nyai-research"
+version = "0.1.0"
+description = "Reproducible, preliminary evaluation of AI evidence and policy reasoning oversight"
+requires-python = ">=3.10"
+dependencies = []
+[project.optional-dependencies]
+llm = ["openai>=1.50,<3"]
+graph = ["neo4j>=5,<7", "python-dotenv>=1"]
+[tool.setuptools.packages.find]
+where = ["src"]

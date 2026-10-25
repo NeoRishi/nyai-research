@@ -1,0 +1,876 @@
+{
+  "status": "UNREVIEWED SYNTHETIC TEMPLATE AGREEMENT; NOT VERIFIED ACCURACY",
+  "human_verified_cases": 0,
+  "scores": {
+    "checklist": {
+      "n_cases": 120,
+      "n_records": 120,
+      "template_matches": 92,
+      "template_agreement": 0.7666666666666667,
+      "violation_recall_vs_template": 1.0,
+      "violation_false_positive_rate_vs_template": 0.18309859154929578,
+      "violation_precision_vs_template": 0.7903225806451613,
+      "error_count": 2,
+      "confusion": [
+        {
+          "template_label": "compliant",
+          "prediction": "ERROR",
+          "n": 2
+        },
+        {
+          "template_label": "compliant",
+          "prediction": "compliant",
+          "n": 32
+        },
+        {
+          "template_label": "compliant",
+          "prediction": "insufficient",
+          "n": 13
+        },
+        {
+          "template_label": "compliant",
+          "prediction": "violation",
+          "n": 2
+        },
+        {
+          "template_label": "insufficient",
+          "prediction": "insufficient",
+          "n": 11
+        },
+        {
+          "template_label": "insufficient",
+          "prediction": "violation",
+          "n": 11
+        },
+        {
+          "template_label": "violation",
+          "prediction": "violation",
+          "n": 49
+        }
+      ],
+      "tokens": {
+        "prompt_tokens": 32968,
+        "completion_tokens": 19871,
+        "total_tokens": 52839
+      },
+      "median_request_seconds": 2.59265
+    },
+    "structured": {
+      "n_cases": 120,
+      "n_records": 120,
+      "template_matches": 84,
+      "template_agreement": 0.7,
+      "violation_recall_vs_template": 1.0,
+      "violation_false_positive_rate_vs_template": 0.2676056338028169,
+      "violation_precision_vs_template": 0.7205882352941176,
+      "error_count": 3,
+      "confusion": [
+        {
+          "template_label": "compliant",
+          "prediction": "ERROR",
+          "n": 3
+        },
+        {
+          "template_label": "compliant",
+          "prediction": "compliant",
+          "n": 24
+        },
+        {
+          "template_label": "compliant",
+          "prediction": "insufficient",
+          "n": 14
+        },
+        {
+          "template_label": "compliant",
+          "prediction": "violation",
+          "n": 8
+        },
+        {
+          "template_label": "insufficient",
+          "prediction": "insufficient",
+          "n": 11
+        },
+        {
+          "template_label": "insufficient",
+          "prediction": "violation",
+          "n": 11
+        },
+        {
+          "template_label": "violation",
+          "prediction": "violation",
+          "n": 49
+        }
+      ],
+      "tokens": {
+        "prompt_tokens": 36208,
+        "completion_tokens": 24689,
+        "total_tokens": 60897
+      },
+      "median_request_seconds": 6.8858
+    },
+    "baseline": {
+      "n_cases": 120,
+      "n_records": 120,
+      "template_matches": 96,
+      "template_agreement": 0.8,
+      "violation_recall_vs_template": 1.0,
+      "violation_false_positive_rate_vs_template": 0.2676056338028169,
+      "violation_precision_vs_template": 0.7205882352941176,
+      "error_count": 1,
+      "confusion": [
+        {
+          "template_label": "compliant",
+          "prediction": "ERROR",
+          "n": 1
+        },
+        {
+          "template_label": "compliant",
+          "prediction": "compliant",
+          "n": 38
+        },
+        {
+          "template_label": "compliant",
+          "prediction": "insufficient",
+          "n": 4
+        },
+        {
+          "template_label": "compliant",
+          "prediction": "violation",
+          "n": 6
+        },
+        {
+          "template_label": "insufficient",
+          "prediction": "insufficient",
+          "n": 9
+        },
+        {
+          "template_label": "insufficient",
+          "prediction": "violation",
+          "n": 13
+        },
+        {
+          "template_label": "violation",
+          "prediction": "violation",
+          "n": 49
+        }
+      ],
+      "tokens": {
+        "prompt_tokens": 27088,
+        "completion_tokens": 15722,
+        "total_tokens": 42810
+      },
+      "median_request_seconds": 2.43735
+    }
+  },
+  "by_original_split": {
+    "development": {
+      "checklist": {
+        "n_cases": 68,
+        "n_records": 68,
+        "template_matches": 57,
+        "template_agreement": 0.8382352941176471,
+        "violation_recall_vs_template": 1.0,
+        "violation_false_positive_rate_vs_template": 0.125,
+        "violation_precision_vs_template": 0.8484848484848485,
+        "error_count": 2,
+        "confusion": [
+          {
+            "template_label": "compliant",
+            "prediction": "ERROR",
+            "n": 2
+          },
+          {
+            "template_label": "compliant",
+            "prediction": "compliant",
+            "n": 22
+          },
+          {
+            "template_label": "compliant",
+            "prediction": "insufficient",
+            "n": 4
+          },
+          {
+            "template_label": "insufficient",
+            "prediction": "insufficient",
+            "n": 7
+          },
+          {
+            "template_label": "insufficient",
+            "prediction": "violation",
+            "n": 5
+          },
+          {
+            "template_label": "violation",
+            "prediction": "violation",
+            "n": 28
+          }
+        ],
+        "tokens": {
+          "prompt_tokens": 18578,
+          "completion_tokens": 10085,
+          "total_tokens": 28663
+        },
+        "median_request_seconds": 2.3423499999999997
+      },
+      "baseline": {
+        "n_cases": 68,
+        "n_records": 68,
+        "template_matches": 59,
+        "template_agreement": 0.8676470588235294,
+        "violation_recall_vs_template": 1.0,
+        "violation_false_positive_rate_vs_template": 0.175,
+        "violation_precision_vs_template": 0.8,
+        "error_count": 0,
+        "confusion": [
+          {
+            "template_label": "compliant",
+            "prediction": "compliant",
+            "n": 25
+          },
+          {
+            "template_label": "compliant",
+            "prediction": "insufficient",
+            "n": 2
+          },
+          {
+            "template_label": "compliant",
+            "prediction": "violation",
+            "n": 1
+          },
+          {
+            "template_label": "insufficient",
+            "prediction": "insufficient",
+            "n": 6
+          },
+          {
+            "template_label": "insufficient",
+            "prediction": "violation",
+            "n": 6
+          },
+          {
+            "template_label": "violation",
+            "prediction": "violation",
+            "n": 28
+          }
+        ],
+        "tokens": {
+          "prompt_tokens": 15246,
+          "completion_tokens": 7857,
+          "total_tokens": 23103
+        },
+        "median_request_seconds": 2.24885
+      },
+      "structured": {
+        "n_cases": 68,
+        "n_records": 68,
+        "template_matches": 55,
+        "template_agreement": 0.8088235294117647,
+        "violation_recall_vs_template": 1.0,
+        "violation_false_positive_rate_vs_template": 0.2,
+        "violation_precision_vs_template": 0.7777777777777778,
+        "error_count": 2,
+        "confusion": [
+          {
+            "template_label": "compliant",
+            "prediction": "ERROR",
+            "n": 2
+          },
+          {
+            "template_label": "compliant",
+            "prediction": "compliant",
+            "n": 20
+          },
+          {
+            "template_label": "compliant",
+            "prediction": "insufficient",
+            "n": 3
+          },
+          {
+            "template_label": "compliant",
+            "prediction": "violation",
+            "n": 3
+          },
+          {
+            "template_label": "insufficient",
+            "prediction": "insufficient",
+            "n": 7
+          },
+          {
+            "template_label": "insufficient",
+            "prediction": "violation",
+            "n": 5
+          },
+          {
+            "template_label": "violation",
+            "prediction": "violation",
+            "n": 28
+          }
+        ],
+        "tokens": {
+          "prompt_tokens": 20414,
+          "completion_tokens": 13475,
+          "total_tokens": 33889
+        },
+        "median_request_seconds": 8.92235
+      }
+    },
+    "heldout": {
+      "checklist": {
+        "n_cases": 52,
+        "n_records": 52,
+        "template_matches": 35,
+        "template_agreement": 0.6730769230769231,
+        "violation_recall_vs_template": 1.0,
+        "violation_false_positive_rate_vs_template": 0.25806451612903225,
+        "violation_precision_vs_template": 0.7241379310344828,
+        "error_count": 0,
+        "confusion": [
+          {
+            "template_label": "compliant",
+            "prediction": "compliant",
+            "n": 10
+          },
+          {
+            "template_label": "compliant",
+            "prediction": "insufficient",
+            "n": 9
+          },
+          {
+            "template_label": "compliant",
+            "prediction": "violation",
+            "n": 2
+          },
+          {
+            "template_label": "insufficient",
+            "prediction": "insufficient",
+            "n": 4
+          },
+          {
+            "template_label": "insufficient",
+            "prediction": "violation",
+            "n": 6
+          },
+          {
+            "template_label": "violation",
+            "prediction": "violation",
+            "n": 21
+          }
+        ],
+        "tokens": {
+          "prompt_tokens": 14390,
+          "completion_tokens": 9786,
+          "total_tokens": 24176
+        },
+        "median_request_seconds": 2.6530500000000004
+      },
+      "structured": {
+        "n_cases": 52,
+        "n_records": 52,
+        "template_matches": 29,
+        "template_agreement": 0.5576923076923077,
+        "violation_recall_vs_template": 1.0,
+        "violation_false_positive_rate_vs_template": 0.3548387096774194,
+        "violation_precision_vs_template": 0.65625,
+        "error_count": 1,
+        "confusion": [
+          {
+            "template_label": "compliant",
+            "prediction": "ERROR",
+            "n": 1
+          },
+          {
+            "template_label": "compliant",
+            "prediction": "compliant",
+            "n": 4
+          },
+          {
+            "template_label": "compliant",
+            "prediction": "insufficient",
+            "n": 11
+          },
+          {
+            "template_label": "compliant",
+            "prediction": "violation",
+            "n": 5
+          },
+          {
+            "template_label": "insufficient",
+            "prediction": "insufficient",
+            "n": 4
+          },
+          {
+            "template_label": "insufficient",
+            "prediction": "violation",
+            "n": 6
+          },
+          {
+            "template_label": "violation",
+            "prediction": "violation",
+            "n": 21
+          }
+        ],
+        "tokens": {
+          "prompt_tokens": 15794,
+          "completion_tokens": 11214,
+          "total_tokens": 27008
+        },
+        "median_request_seconds": 6.0664
+      },
+      "baseline": {
+        "n_cases": 52,
+        "n_records": 52,
+        "template_matches": 37,
+        "template_agreement": 0.7115384615384616,
+        "violation_recall_vs_template": 1.0,
+        "violation_false_positive_rate_vs_template": 0.3870967741935484,
+        "violation_precision_vs_template": 0.6363636363636364,
+        "error_count": 1,
+        "confusion": [
+          {
+            "template_label": "compliant",
+            "prediction": "ERROR",
+            "n": 1
+          },
+          {
+            "template_label": "compliant",
+            "prediction": "compliant",
+            "n": 13
+          },
+          {
+            "template_label": "compliant",
+            "prediction": "insufficient",
+            "n": 2
+          },
+          {
+            "template_label": "compliant",
+            "prediction": "violation",
+            "n": 5
+          },
+          {
+            "template_label": "insufficient",
+            "prediction": "insufficient",
+            "n": 3
+          },
+          {
+            "template_label": "insufficient",
+            "prediction": "violation",
+            "n": 7
+          },
+          {
+            "template_label": "violation",
+            "prediction": "violation",
+            "n": 21
+          }
+        ],
+        "tokens": {
+          "prompt_tokens": 11842,
+          "completion_tokens": 7865,
+          "total_tokens": 19707
+        },
+        "median_request_seconds": 2.7512
+      }
+    }
+  },
+  "limitations": [
+    "Templates share policy wording; effective sample size is not 120 independent cases.",
+    "No improvement in human oversight is tested.",
+    "Prompt structure, instruction length and checklist content are confounded.",
+    "Model judgments and rule-derived labels can share biases. No independent human annotation.",
+    "Actual API outputs are distinct from their synthetic candidate inputs.",
+    "No inferential intervals: correlated, unreviewed design labels do not support population inference."
+  ],
+  "disagreements": [
+    {
+      "case_id": "POL-01-01",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "compliant",
+        "checklist": "compliant",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-01-02",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "insufficient",
+        "checklist": "insufficient",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-01-03",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": null,
+        "structured": "compliant"
+      }
+    },
+    {
+      "case_id": "POL-01-04",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "compliant",
+        "checklist": "compliant",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-01-09",
+      "unreviewed_template_label": "insufficient",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "violation",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-01-10",
+      "unreviewed_template_label": "insufficient",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "violation",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-03-02",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "compliant",
+        "checklist": "compliant",
+        "structured": null
+      }
+    },
+    {
+      "case_id": "POL-03-09",
+      "unreviewed_template_label": "insufficient",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "violation",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-03-10",
+      "unreviewed_template_label": "insufficient",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "insufficient",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "POL-05-02",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "compliant",
+        "checklist": null,
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "POL-05-09",
+      "unreviewed_template_label": "insufficient",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "insufficient",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "POL-05-10",
+      "unreviewed_template_label": "insufficient",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "violation",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-06-09",
+      "unreviewed_template_label": "insufficient",
+      "predictions": {
+        "baseline": "insufficient",
+        "checklist": "violation",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-07-01",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "insufficient",
+        "checklist": "insufficient",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-07-02",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "insufficient",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "POL-07-03",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": null,
+        "checklist": "insufficient",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "POL-07-04",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "insufficient",
+        "checklist": "compliant",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-07-09",
+      "unreviewed_template_label": "insufficient",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "violation",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-07-10",
+      "unreviewed_template_label": "insufficient",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "violation",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-08-01",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "compliant",
+        "checklist": "compliant",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "POL-08-02",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "compliant",
+        "checklist": "insufficient",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "POL-08-04",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "compliant",
+        "checklist": "compliant",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "POL-08-09",
+      "unreviewed_template_label": "insufficient",
+      "predictions": {
+        "baseline": "insufficient",
+        "checklist": "violation",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "POL-08-10",
+      "unreviewed_template_label": "insufficient",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "insufficient",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "POL-09-01",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "compliant",
+        "checklist": "compliant",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "POL-09-02",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "compliant",
+        "checklist": "insufficient",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "POL-09-03",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "compliant",
+        "checklist": "compliant",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "POL-09-04",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "compliant",
+        "checklist": "compliant",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "POL-09-09",
+      "unreviewed_template_label": "insufficient",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "insufficient",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-09-10",
+      "unreviewed_template_label": "insufficient",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "violation",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-10-02",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "compliant",
+        "checklist": "compliant",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "POL-10-03",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "compliant",
+        "checklist": "violation",
+        "structured": null
+      }
+    },
+    {
+      "case_id": "POL-11-01",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "insufficient",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-11-02",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "insufficient",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-11-03",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "violation",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-11-04",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "compliant",
+        "checklist": "insufficient",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "POL-11-09",
+      "unreviewed_template_label": "insufficient",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "violation",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "POL-11-10",
+      "unreviewed_template_label": "insufficient",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "violation",
+        "structured": "violation"
+      }
+    },
+    {
+      "case_id": "EPI-01",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "compliant",
+        "checklist": "insufficient",
+        "structured": null
+      }
+    },
+    {
+      "case_id": "EPI-03",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "insufficient",
+        "checklist": "insufficient",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "EPI-05",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "compliant",
+        "checklist": "insufficient",
+        "structured": "insufficient"
+      }
+    },
+    {
+      "case_id": "EPI-07",
+      "unreviewed_template_label": "compliant",
+      "predictions": {
+        "baseline": "violation",
+        "checklist": "insufficient",
+        "structured": "compliant"
+      }
+    }
+  ],
+  "paired_template_matches": {
+    "structured_vs_baseline": {
+      "comparator_only_matches": 17,
+      "neither_matches": 19,
+      "structured_only_matches": 5,
+      "both_match": 79
+    },
+    "structured_vs_checklist": {
+      "comparator_only_matches": 11,
+      "neither_matches": 25,
+      "structured_only_matches": 3,
+      "both_match": 81
+    }
+  }
+}

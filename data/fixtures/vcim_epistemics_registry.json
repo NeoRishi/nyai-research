@@ -1,0 +1,62 @@
+{
+  "source_workbook": "NeoRishi_VCIM_v3.0.xlsx",
+  "sheet": "68_Epistemics",
+  "rows": [
+    {
+      "id": "EP-EMPIRICAL",
+      "layer": "Empirical A/B/C",
+      "warrant": "Claim-specific population, task, dose, comparator and outcome",
+      "allowed_use": "May inform eligible actions only for the applicable claim",
+      "prohibited_inference": "Tier is a rubric, not a clinical probability; numerical V2 confidence retained as historical expert judgement",
+      "source": "VCIM_v3.0:68_Epistemics"
+    },
+    {
+      "id": "EP-METHODS",
+      "layer": "Methods / measurement",
+      "warrant": "Study design, scoring or measurement practice",
+      "allowed_use": "Can govern methods; cannot raise therapeutic benefit",
+      "prohibited_inference": "JITAI/HRV design knowledge is not efficacy evidence",
+      "source": "VCIM_v3.0:68_Epistemics"
+    },
+    {
+      "id": "EP-TRADITION",
+      "layer": "Traditional T",
+      "warrant": "Named text, edition, locator, excerpt/translation/interpretation",
+      "allowed_use": "Opt-in reflection, chosen practices, meaning and tie preference among safe feasible choices",
+      "prohibited_inference": "Zero biomedical predictive weight; no kosha score, astrological mandate or attainment number",
+      "source": "VCIM_v3.0:68_Epistemics"
+    },
+    {
+      "id": "EP-HYPOTHESIS",
+      "layer": "NeoRishi H",
+      "warrant": "Founder design or V3 operational proposal",
+      "allowed_use": "Transparent supervised specification/pilot candidate",
+      "prohibited_inference": "No claim of validation; thresholds/weights are versioned and tested before release",
+      "source": "VCIM_v3.0:68_Epistemics"
+    },
+    {
+      "id": "EP-PERSONAL",
+      "layer": "Personal P",
+      "warrant": "Dated consented self-report with context and uncertainty",
+      "allowed_use": "Descriptive association; future validated personal modifier",
+      "prohibited_inference": "Completion ≠ helpfulness; confounding ≠ causation; corrected events invalidate derived patterns",
+      "source": "VCIM_v3.0:68_Epistemics"
+    },
+    {
+      "id": "EP-FRONTIER",
+      "layer": "Frontier F1/F2/F3",
+      "warrant": "Exploratory/theoretical literature",
+      "allowed_use": "Research agenda only",
+      "prohibited_inference": "Zero eligibility, efficacy or ranking contribution; no quantum, lunar or gut prescription bridge",
+      "source": "VCIM_v3.0:68_Epistemics"
+    },
+    {
+      "id": "EP-QUARANTINE",
+      "layer": "Quarantined",
+      "warrant": "Exact assertion/edition/translation or scope unestablished",
+      "allowed_use": "No active predictive or medical use",
+      "prohibited_inference": "Named evidence/edition review required; no relabelling as verified",
+      "source": "VCIM_v3.0:68_Epistemics"
+    }
+  ]
+}

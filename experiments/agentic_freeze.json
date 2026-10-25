@@ -1,0 +1,17 @@
+{
+  "frozen_at": "2026-10-25T13:57:04.004623+00:00",
+  "dataset_sha256": "c84fdac64ae47a03e02247ff43536138ca7c8686c7dea89c27443bed56d63a2d",
+  "n_cases": 24,
+  "n_counterfactual_pairs": 12,
+  "model": "gpt-6-luna",
+  "temperature": 0,
+  "max_completion_tokens": 512,
+  "primary": "Contract decision agreement with independently recomputed finite-set oracle; not human oversight",
+  "controls": [
+    "any_evidence",
+    "permission_only",
+    "original_nyai_v1",
+    "all_contract_gates"
+  ],
+  "inference": "Descriptive finite test-suite conformance. No IID confidence interval or external generalisation."
+}

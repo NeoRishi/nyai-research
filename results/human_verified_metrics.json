@@ -1,0 +1,12 @@
+{
+  "status": "VERIFIED LABELS ONLY; comparison is prompt protocol, not product efficacy",
+  "scores": {},
+  "n_judgments": 360,
+  "n_verified_annotations": 0,
+  "caveats": [
+    "Reviewer could be biased; blind independent annotation recommended.",
+    "Synthetic template cases are not independent model outputs.",
+    "No human-oversight or catastrophic-risk outcome measured.",
+    "Paired protocol prompts are not equal-length; attribution remains uncertain."
+  ]
+}

@@ -1,0 +1,2 @@
+# Core evaluation and fixture processing uses Python stdlib.
+# Install with `pip install -e .[llm,graph]` for integrations.

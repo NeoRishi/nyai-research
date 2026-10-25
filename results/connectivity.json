@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-10-25T13:49:10.700009+00:00",
+  "database_writes": false,
+  "aura": {
+    "connected": true,
+    "instance_id": "8ed83df4",
+    "nodes": 2297
+  },
+  "generation": {
+    "connected": true,
+    "requested_model": "gpt-6-luna",
+    "returned_model": "gpt-6-luna",
+    "response_id": "chatcmpl-Ecst1pPlCou7NdYTne6wuTzDz5BpO",
+    "text": "OK",
+    "usage": {
+      "completion_tokens": 18,
+      "prompt_tokens": 22,
+      "total_tokens": 40,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 8,
+        "rejected_prediction_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      }
+    }
+  }
+}

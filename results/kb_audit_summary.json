@@ -1,0 +1,49 @@
+{
+  "roots": {
+    "VBR Project": {
+      "markdown_files_read": 1799,
+      "bytes": 82134301,
+      "words": 11171110,
+      "frontmatter": 1798,
+      "wikilinks": 10573,
+      "unresolved_basename_links": 1240,
+      "ambiguous_basename_links": 18,
+      "source_markers": 2488,
+      "prompt_like": 86
+    },
+    "master-all": {
+      "markdown_files_read": 497,
+      "bytes": 10158326,
+      "words": 1467071,
+      "frontmatter": 69,
+      "wikilinks": 554,
+      "unresolved_basename_links": 554,
+      "ambiguous_basename_links": 0,
+      "source_markers": 0,
+      "prompt_like": 64
+    },
+    "my-knowledge-base": {
+      "markdown_files_read": 501,
+      "bytes": 26647378,
+      "words": 3780071,
+      "frontmatter": 365,
+      "wikilinks": 5695,
+      "unresolved_basename_links": 444,
+      "ambiguous_basename_links": 636,
+      "source_markers": 2377,
+      "prompt_like": 23
+    }
+  },
+  "total_files_read": 2797,
+  "unique_byte_hashes": 2615,
+  "redundant_copies": 182,
+  "duplicate_hash_groups": 153,
+  "read_failures": 78,
+  "notes": [
+    "Duplicate counts use exact bytes; near-duplicates are not detected.",
+    "Link resolution is a root-local basename heuristic, not an Obsidian resolver.",
+    "Source markers establish presence of a string, not validity or entailment.",
+    "Prompt-like matches are screening signals, not evidence of malicious instructions.",
+    "No scientific, clinical, philosophical or copyright verification is implied."
+  ]
+}

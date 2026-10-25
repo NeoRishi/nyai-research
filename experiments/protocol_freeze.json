@@ -1,0 +1,33 @@
+{
+  "frozen_at": "2026-10-25T13:53:03.788363+00:00",
+  "status": "Timestamped local protocol freeze, not an external preregistration",
+  "model": "gpt-6-luna",
+  "temperature": 0,
+  "max_completion_tokens": 512,
+  "seed_for_request_order": 20261025,
+  "arms": [
+    "baseline",
+    "checklist",
+    "structured"
+  ],
+  "cases": 120,
+  "primary": "Descriptive agreement with UNREVIEWED design labels; no confirmatory efficacy test",
+  "baseline_control": "Checklist controls some extra instruction effects; token lengths are reported and are not exactly matched",
+  "metrics": [
+    "3-way template agreement",
+    "violation recall versus template",
+    "violation false-positive rate versus template",
+    "invalid responses",
+    "tokens",
+    "latency",
+    "paired disagreements"
+  ],
+  "exclusions": "None; errors count as nonmatches. No failed response is silently discarded.",
+  "statistics": "No inferential interval for correlated unreviewed templates. Do not treat 120 variants as 120 independent draws.",
+  "heldout": "Original development/heldout field retained, but all primary results are exploratory harness diagnostics. No source-disjoint validation claimed.",
+  "hashes": {
+    "scripts/run_pilot.py": "68d214bbec3108541a79079769df5ebccf3407e9f1008f156bef9c9d430473f2",
+    "src/nyai_research/evaluate.py": "9f224a43c81c1d7eaa7dfa8137149512050a1d5c47dab2db0c4ca97410867f1a",
+    "data/fixtures/120_synthetic_cases.jsonl": "412f381740b73e2af4ce2a7cb895c081ae6c944e0131bc1fa0fc9cc0a32e9641"
+  }
+}

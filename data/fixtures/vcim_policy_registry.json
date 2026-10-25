@@ -1,0 +1,116 @@
+{
+  "source_workbook": "NeoRishi_VCIM_v3.0.xlsx",
+  "sheet": "74_Policy",
+  "rows": [
+    {
+      "id": "POL-01",
+      "order": 1,
+      "gate": "Urgent safety / care",
+      "trigger": "Immediate danger, urgent symptoms or time-critical protocol",
+      "required_behavior": "Route appropriate immediate support; suspend optional optimisation",
+      "boundary": "Always first; no sleep-on-it or readiness deferral",
+      "status": "H product precedence; clinical routes require specialist approval",
+      "source": "VCIM_v3.0:74_Policy"
+    },
+    {
+      "id": "POL-02",
+      "order": 2,
+      "gate": "Consent / data validity",
+      "trigger": "No guidance consent, revoked source, tenant mismatch, stale critical facts",
+      "required_behavior": "Stop prohibited processing; manual fallback only within remaining consent",
+      "boundary": "Never silently reacquire or infer withheld data",
+      "status": "Founder architecture; privacy contract",
+      "source": "VCIM_v3.0:74_Policy"
+    },
+    {
+      "id": "POL-03",
+      "order": 3,
+      "gate": "Contraindications / adverse experience",
+      "trigger": "Relevant contraindication, unknown higher-risk eligibility or affected practice causes distress",
+      "required_behavior": "Exclude practice; stop/escalate proportionately; offer reviewed low-risk alternative",
+      "boundary": "No score can offset an exclusion",
+      "status": "10 CI registry; exact release approval required",
+      "source": "VCIM_v3.0:74_Policy"
+    },
+    {
+      "id": "POL-04",
+      "order": 4,
+      "gate": "Sleep / occupational safety",
+      "trigger": "Sleep opportunity, unsafe driving or mandated emergency work",
+      "required_behavior": "Preserve sleep and prescribed/occupational protocol; no productivity optimisation of dangerous drowsiness",
+      "boundary": "No pre-dawn routine at cost of needed sleep",
+      "status": "RULE-002;RULE-032;H implementation",
+      "source": "VCIM_v3.0:74_Policy"
+    },
+    {
+      "id": "POL-05",
+      "order": 5,
+      "gate": "Fixed obligations and capacity",
+      "trigger": "Caregiving, deadline, meeting or compulsory shift",
+      "required_behavior": "Prepare/resize/change mode; include transition; protect subsequent recovery",
+      "boundary": "Do not mark unavoidable work as a lifestyle failure",
+      "status": "Approved Q4;H",
+      "source": "VCIM_v3.0:74_Policy"
+    },
+    {
+      "id": "POL-06",
+      "order": 6,
+      "gate": "Evidence eligibility",
+      "trigger": "Quarantined, frontier, methods-only or unsupported biomedical bridge",
+      "required_behavior": "Exclude unwarranted prediction/benefit contribution; suspend disputed claims",
+      "boundary": "Metadata verification is not claim validation",
+      "status": "68_Epistemics",
+      "source": "VCIM_v3.0:74_Policy"
+    },
+    {
+      "id": "POL-07",
+      "order": 7,
+      "gate": "User priority / supporting needs",
+      "trigger": "Life Compass focus conflicts with capacity or supporting need",
+      "required_behavior": "Explain tradeoff; offer smaller priority step or necessary recovery; user remains in control",
+      "boundary": "Never silently switch long-term goal",
+      "status": "Approved Q2;H",
+      "source": "VCIM_v3.0:74_Policy"
+    },
+    {
+      "id": "POL-08",
+      "order": 8,
+      "gate": "Duration and timing fit",
+      "trigger": "Action + preparation + transition must fit a real interval",
+      "required_behavior": "Select feasible variants; do not invent calendar availability; allow abstention",
+      "boundary": "Use elapsed time; no forced nominal ultradian90min",
+      "status": "VBR Blueprint;H",
+      "source": "VCIM_v3.0:74_Policy"
+    },
+    {
+      "id": "POL-09",
+      "order": 9,
+      "gate": "Eligible-action ranking",
+      "trigger": "Only actions passing all previous gates",
+      "required_behavior": "Versioned explicit fit features; default personal predictive weight zero; disclose ties/unknowns",
+      "boundary": "V2 weights are expert priors; no production calibration claimed",
+      "status": "VBR weighted rubric;H",
+      "source": "VCIM_v3.0:74_Policy"
+    },
+    {
+      "id": "POL-10",
+      "order": 10,
+      "gate": "Optional cultural meaning",
+      "trigger": "User opts into specified tradition/observance",
+      "required_behavior": "Values shape chosen goal/practice; timing preference may resolve equal feasibility without causal claim",
+      "boundary": "No astrology health/money/career permit/deny; no spiritual score",
+      "status": "Approved Q5;T + H",
+      "source": "VCIM_v3.0:74_Policy"
+    },
+    {
+      "id": "POL-11",
+      "order": 11,
+      "gate": "Explanation and feedback",
+      "trigger": "Selected record validated before rendering",
+      "required_behavior": "Plain reason, duration, tradeoff, uncertainty and alternative; record correction / stop / helpfulness separately",
+      "boundary": "Explanation must match actual gates; never generate a novel action",
+      "status": "NyAI;80;84",
+      "source": "VCIM_v3.0:74_Policy"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "amended_at": "2026-10-25T13:59:19.735829+00:00",
+  "reason": "API rejects temperature=0; default=1 only. No successful experimental responses existed before amendment.",
+  "temperature": "omitted; provider default 1",
+  "budget": 512,
+  "prompts": "unchanged",
+  "failed_requests": 384,
+  "rerun_policy": "Full rerun on unchanged cases; preserve all failed request records",
+  "hashes": {
+    "scripts/run_pilot.py": "38c1f8b6d2fe921f766c258a126086574d509e18ee97102b4781a886eedc2cbb",
+    "scripts/generate_agentic_responses.py": "adc2d223c2f7e795c5cdd1456d52a3c075aed5c44133b4a68b0b3aa82fa93f05"
+  }
+}

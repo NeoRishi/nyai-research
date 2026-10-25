@@ -1,0 +1,19 @@
+{
+  "dataset_name": "NyAI VCIM policy and epistemic compliance fixtures",
+  "version": "synthetic_v0.1",
+  "created_on": "2026-10-25",
+  "n_cases": 120,
+  "label_counts": {
+    "compliant": 49,
+    "violation": 49,
+    "insufficient": 22
+  },
+  "status": "SYNTHETIC UNREVIEWED; NO REAL MODEL RESPONSES OR EXPERIMENTAL RESULTS",
+  "construction": "Deterministic paraphrases and corrupted recommendations generated from VCIM v3 policy/epistemic rules; not independent observations",
+  "not_for": "Claims of improved oversight, clinical validity, AI alignment success or human study evidence",
+  "workbook_sha256": "996023a352b8782594aa01473f5708b430c0ae23c4c809789643c25675b58e8c",
+  "source_repositories": [
+    "https://github.com/NeoRishi/nyai-dashboard",
+    "https://github.com/NeoRishi/vedic-graphrag"
+  ]
+}

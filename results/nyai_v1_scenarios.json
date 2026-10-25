@@ -1,0 +1,982 @@
+[
+  {
+    "scenario": {
+      "id": "s1",
+      "number": 1,
+      "domain": "wellness",
+      "title": "Vata winter care",
+      "subtitle": "Happy path \u2014 all sources agree",
+      "claim": "Warm sesame oil abhyanga is recommended for this person",
+      "expected_verdict": "accepted"
+    },
+    "nyai_result": {
+      "claim": "Warm sesame oil abhyanga is recommended for this person",
+      "verdict": "accepted",
+      "belief": {
+        "claim": "Warm sesame oil abhyanga is recommended for this person",
+        "status": "active",
+        "evidence": [
+          {
+            "content": "User reports dry skin and cold extremities",
+            "pramana_type": "pratyaksha",
+            "pramana_english": "direct perception",
+            "source": "User check-in",
+            "tags": [
+              "vata",
+              "dry_skin",
+              "winter"
+            ],
+            "strength": 4,
+            "timestamp": "2026-10-25T19:24:11.204665"
+          },
+          {
+            "content": "Vata-predominant prakriti derived from constitution assessment",
+            "pramana_type": "anumana",
+            "pramana_english": "inference",
+            "source": "BioRhythm engine",
+            "tags": [
+              "vata"
+            ],
+            "strength": 3,
+            "timestamp": "2026-10-25T19:24:11.204747"
+          },
+          {
+            "content": "Charaka Samhita recommends warm oil for Vata in Hemanta/Shishira",
+            "pramana_type": "shabda",
+            "pramana_english": "testimony",
+            "source": "Charaka Samhita Ch.5",
+            "tags": [
+              "vata",
+              "oil",
+              "warm",
+              "winter"
+            ],
+            "strength": 2,
+            "timestamp": "2026-10-25T19:24:11.204829"
+          },
+          {
+            "content": "85% of similar Vata users reported improvement with warm oil abhyanga in winter",
+            "pramana_type": "upamana",
+            "pramana_english": "analogy",
+            "source": "NeoRishi cohort data",
+            "tags": [
+              "vata",
+              "oil",
+              "warm"
+            ],
+            "strength": 1,
+            "timestamp": "2026-10-25T19:24:11.204909"
+          }
+        ],
+        "pramana_types": [
+          "anumana",
+          "shabda",
+          "upamana",
+          "pratyaksha"
+        ],
+        "strongest_pramana": "pratyaksha",
+        "revision_history": [],
+        "all_tags": [
+          "warm",
+          "winter",
+          "oil",
+          "dry_skin",
+          "vata"
+        ]
+      },
+      "fallacy_results": [
+        {
+          "fallacy_type": "savyabhichara",
+          "fallacy_english": "overgeneralization",
+          "detected": false,
+          "explanation": "No counter-cases found for the given evidence tags.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "viruddha",
+          "fallacy_english": "contradiction",
+          "detected": false,
+          "explanation": "No contradictions found in evidence tags.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "asiddha",
+          "fallacy_english": "unestablished",
+          "detected": false,
+          "explanation": "Belief is supported by 4 piece(s) of evidence.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "satpratipaksha",
+          "fallacy_english": "equal-force counterargument",
+          "detected": false,
+          "explanation": "No equal-force counterarguments detected.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "kalatita",
+          "fallacy_english": "stale evidence",
+          "detected": false,
+          "explanation": "All Pratyaksha evidence is within freshness threshold.",
+          "is_extension": true
+        }
+      ],
+      "detected_fallacies": [],
+      "pancavayava": [
+        {
+          "step_number": 1,
+          "sanskrit_name": "Pratij\u00f1a",
+          "english_name": "proposition",
+          "content": "Warm sesame oil abhyanga is recommended for this person",
+          "pramana_used": null,
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 2,
+          "sanskrit_name": "Hetu",
+          "english_name": "reason",
+          "content": "User reports dry skin and cold extremities (direct perception); Vata-predominant prakriti derived from constitution assessment (inference); Charaka Samhita recommends warm oil for Vata in Hemanta/Shishira (testimony); 85% of similar Vata users reported improvement with warm oil abhyanga in winter (analogy)",
+          "pramana_used": "pratyaksha",
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 3,
+          "sanskrit_name": "Ud\u0101hara\u1e47a",
+          "english_name": "example",
+          "content": "In Vata-predominant individuals during cold seasons, warm oil application has consistently shown benefits across both traditional texts and modern practice.",
+          "pramana_used": "upamana",
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 4,
+          "sanskrit_name": "Upanaya",
+          "english_name": "application",
+          "content": "This person is Vata-predominant, it is winter (cold+dry), and they report dry skin. All evidence sources converge on warm sesame oil abhyanga.",
+          "pramana_used": null,
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 5,
+          "sanskrit_name": "Nigamana",
+          "english_name": "conclusion",
+          "content": "The claim is ACCEPTED. Warm sesame oil abhyanga is recommended for this person",
+          "pramana_used": null,
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        }
+      ],
+      "pramana_gate": {
+        "passed": true,
+        "pramana_count": 4,
+        "has_strong_source": true,
+        "explanation": "PASSED: 4 pramana type(s) present (need \u22652), strong source found (need \u22651 with strength \u22653)."
+      },
+      "evidence_count": 4,
+      "pramana_types_used": [
+        "anumana",
+        "shabda",
+        "upamana",
+        "pratyaksha"
+      ]
+    },
+    "naive_result": {
+      "claim": "Warm sesame oil abhyanga is recommended for this person",
+      "verdict": "accepted",
+      "explanation": "Found 4 piece(s) of evidence. Accepting claim.",
+      "checks_performed": {
+        "source_tracking": false,
+        "fallacy_detection": false,
+        "belief_revision": false,
+        "pramana_gate": false,
+        "staleness_check": false
+      },
+      "what_it_missed": []
+    },
+    "diverges": false
+  },
+  {
+    "scenario": {
+      "id": "s2",
+      "number": 2,
+      "domain": "wellness",
+      "title": "Stale check-in data",
+      "subtitle": "Kalatita \u2014 evidence too old",
+      "claim": "Summer diet plan is appropriate for this person",
+      "expected_verdict": "suspended"
+    },
+    "nyai_result": {
+      "claim": "Summer diet plan is appropriate for this person",
+      "verdict": "suspended",
+      "belief": {
+        "claim": "Summer diet plan is appropriate for this person",
+        "status": "suspended",
+        "evidence": [
+          {
+            "content": "User reported feeling hot and thirsty (12 days ago)",
+            "pramana_type": "pratyaksha",
+            "pramana_english": "direct perception",
+            "source": "User check-in (stale)",
+            "tags": [
+              "pitta",
+              "summer",
+              "grishma"
+            ],
+            "strength": 4,
+            "timestamp": "2026-10-13T19:24:11.205211"
+          },
+          {
+            "content": "Grishma rtu calls for cooling foods and lighter meals",
+            "pramana_type": "shabda",
+            "pramana_english": "testimony",
+            "source": "Charaka Samhita",
+            "tags": [
+              "summer",
+              "cooling",
+              "grishma"
+            ],
+            "strength": 2,
+            "timestamp": "2026-10-25T19:24:11.205310"
+          },
+          {
+            "content": "Pitta dosha increases in summer months",
+            "pramana_type": "anumana",
+            "pramana_english": "inference",
+            "source": "Seasonal inference",
+            "tags": [
+              "pitta",
+              "summer"
+            ],
+            "strength": 3,
+            "timestamp": "2026-10-25T19:24:11.205395"
+          }
+        ],
+        "pramana_types": [
+          "shabda",
+          "anumana",
+          "pratyaksha"
+        ],
+        "strongest_pramana": "pratyaksha",
+        "revision_history": [
+          {
+            "from": "active",
+            "to": "suspended",
+            "reason": "Evidence stale or insufficient",
+            "timestamp": "2026-10-25T19:24:11.205656"
+          }
+        ],
+        "all_tags": [
+          "grishma",
+          "summer",
+          "pitta",
+          "cooling"
+        ]
+      },
+      "fallacy_results": [
+        {
+          "fallacy_type": "savyabhichara",
+          "fallacy_english": "overgeneralization",
+          "detected": false,
+          "explanation": "No counter-cases found for the given evidence tags.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "viruddha",
+          "fallacy_english": "contradiction",
+          "detected": false,
+          "explanation": "No contradictions found in evidence tags.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "asiddha",
+          "fallacy_english": "unestablished",
+          "detected": false,
+          "explanation": "Belief is supported by 3 piece(s) of evidence.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "satpratipaksha",
+          "fallacy_english": "equal-force counterargument",
+          "detected": false,
+          "explanation": "No equal-force counterarguments detected.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "kalatita",
+          "fallacy_english": "stale evidence",
+          "detected": true,
+          "explanation": "Pratyaksha evidence is 12 days old (threshold: 7 days). Fresh observation needed before proceeding.",
+          "is_extension": true
+        }
+      ],
+      "detected_fallacies": [
+        {
+          "fallacy_type": "kalatita",
+          "fallacy_english": "stale evidence",
+          "detected": true,
+          "explanation": "Pratyaksha evidence is 12 days old (threshold: 7 days). Fresh observation needed before proceeding.",
+          "is_extension": true
+        }
+      ],
+      "pancavayava": [
+        {
+          "step_number": 1,
+          "sanskrit_name": "Pratij\u00f1a",
+          "english_name": "proposition",
+          "content": "Summer diet plan is appropriate for this person",
+          "pramana_used": null,
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 2,
+          "sanskrit_name": "Hetu",
+          "english_name": "reason",
+          "content": "User reported feeling hot and thirsty (12 days ago) (direct perception); Grishma rtu calls for cooling foods and lighter meals (testimony); Pitta dosha increases in summer months (inference)",
+          "pramana_used": "pratyaksha",
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 3,
+          "sanskrit_name": "Ud\u0101hara\u1e47a",
+          "english_name": "example",
+          "content": "Seasonal diet recommendations require current body observations as the basis for any advice.",
+          "pramana_used": "upamana",
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 4,
+          "sanskrit_name": "Upanaya",
+          "english_name": "application",
+          "content": "HETV\u0100BH\u0100SA DETECTED \u2014 kalatita (stale evidence): Pratyaksha evidence is 12 days old (threshold: 7 days). Fresh observation needed before proceeding.",
+          "pramana_used": null,
+          "is_fallacy_step": true,
+          "fallacy_type": "kalatita"
+        },
+        {
+          "step_number": 5,
+          "sanskrit_name": "Nigamana",
+          "english_name": "conclusion",
+          "content": "The claim is SUSPENDED. More information is needed before a conclusion can be drawn.",
+          "pramana_used": null,
+          "is_fallacy_step": true,
+          "fallacy_type": null
+        }
+      ],
+      "pramana_gate": {
+        "passed": true,
+        "pramana_count": 3,
+        "has_strong_source": true,
+        "explanation": "PASSED: 3 pramana type(s) present (need \u22652), strong source found (need \u22651 with strength \u22653)."
+      },
+      "evidence_count": 3,
+      "pramana_types_used": [
+        "shabda",
+        "anumana",
+        "pratyaksha"
+      ]
+    },
+    "naive_result": {
+      "claim": "Summer diet plan is appropriate for this person",
+      "verdict": "accepted",
+      "explanation": "Found 3 piece(s) of evidence. Accepting claim.",
+      "checks_performed": {
+        "source_tracking": false,
+        "fallacy_detection": false,
+        "belief_revision": false,
+        "pramana_gate": false,
+        "staleness_check": false
+      },
+      "what_it_missed": [
+        "No staleness check \u2014 12-day-old data treated as current",
+        "Would recommend a summer diet plan based on stale observations"
+      ]
+    },
+    "diverges": true
+  },
+  {
+    "scenario": {
+      "id": "s3",
+      "number": 3,
+      "domain": "wellness",
+      "title": "Ginger for Pitta",
+      "subtitle": "Savyabhichara \u2014 the money moment",
+      "claim": "Ginger tea is recommended for this person's digestive issues",
+      "expected_verdict": "rejected"
+    },
+    "nyai_result": {
+      "claim": "Ginger tea is recommended for this person's digestive issues",
+      "verdict": "rejected",
+      "belief": {
+        "claim": "Ginger tea is recommended for this person's digestive issues",
+        "status": "rejected",
+        "evidence": [
+          {
+            "content": "User reports acid reflux and burning sensation after meals",
+            "pramana_type": "pratyaksha",
+            "pramana_english": "direct perception",
+            "source": "User symptom report",
+            "tags": [
+              "pitta",
+              "acid_reflux",
+              "digestive"
+            ],
+            "strength": 4,
+            "timestamp": "2026-10-25T19:24:11.205851"
+          },
+          {
+            "content": "Ayurvedic texts recommend ginger for digestive complaints",
+            "pramana_type": "shabda",
+            "pramana_english": "testimony",
+            "source": "Bhavaprakasha Nighantu",
+            "tags": [
+              "ginger",
+              "digestive",
+              "heating"
+            ],
+            "strength": 2,
+            "timestamp": "2026-10-25T19:24:11.205931"
+          },
+          {
+            "content": "Pitta-predominant prakriti inferred from assessment",
+            "pramana_type": "anumana",
+            "pramana_english": "inference",
+            "source": "BioRhythm engine",
+            "tags": [
+              "pitta"
+            ],
+            "strength": 3,
+            "timestamp": "2026-10-25T19:24:11.206008"
+          }
+        ],
+        "pramana_types": [
+          "shabda",
+          "anumana",
+          "pratyaksha"
+        ],
+        "strongest_pramana": "pratyaksha",
+        "revision_history": [
+          {
+            "from": "active",
+            "to": "rejected",
+            "reason": "Fallacy detected",
+            "timestamp": "2026-10-25T19:24:11.206262"
+          }
+        ],
+        "all_tags": [
+          "ginger",
+          "pitta",
+          "heating",
+          "digestive",
+          "acid_reflux"
+        ]
+      },
+      "fallacy_results": [
+        {
+          "fallacy_type": "savyabhichara",
+          "fallacy_english": "overgeneralization",
+          "detected": true,
+          "explanation": "Counter-case detected: 'ginger' has known exceptions when these conditions are present: acid_reflux, pitta. Ginger helps digestion generally, but aggravates Pitta and worsens acid reflux.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "viruddha",
+          "fallacy_english": "contradiction",
+          "detected": true,
+          "explanation": "Contradictory tags 'pitta' and 'heating': Heating substances aggravate Pitta dosha.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "asiddha",
+          "fallacy_english": "unestablished",
+          "detected": false,
+          "explanation": "Belief is supported by 3 piece(s) of evidence.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "satpratipaksha",
+          "fallacy_english": "equal-force counterargument",
+          "detected": false,
+          "explanation": "No equal-force counterarguments detected.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "kalatita",
+          "fallacy_english": "stale evidence",
+          "detected": false,
+          "explanation": "All Pratyaksha evidence is within freshness threshold.",
+          "is_extension": true
+        }
+      ],
+      "detected_fallacies": [
+        {
+          "fallacy_type": "savyabhichara",
+          "fallacy_english": "overgeneralization",
+          "detected": true,
+          "explanation": "Counter-case detected: 'ginger' has known exceptions when these conditions are present: acid_reflux, pitta. Ginger helps digestion generally, but aggravates Pitta and worsens acid reflux.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "viruddha",
+          "fallacy_english": "contradiction",
+          "detected": true,
+          "explanation": "Contradictory tags 'pitta' and 'heating': Heating substances aggravate Pitta dosha.",
+          "is_extension": false
+        }
+      ],
+      "pancavayava": [
+        {
+          "step_number": 1,
+          "sanskrit_name": "Pratij\u00f1a",
+          "english_name": "proposition",
+          "content": "Ginger tea is recommended for this person's digestive issues",
+          "pramana_used": null,
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 2,
+          "sanskrit_name": "Hetu",
+          "english_name": "reason",
+          "content": "User reports acid reflux and burning sensation after meals (direct perception); Ayurvedic texts recommend ginger for digestive complaints (testimony); Pitta-predominant prakriti inferred from assessment (inference)",
+          "pramana_used": "pratyaksha",
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 3,
+          "sanskrit_name": "Ud\u0101hara\u1e47a",
+          "english_name": "example",
+          "content": "In Vata and Kapha types, ginger relieves sluggish digestion. However, in Pitta types, ginger's heating quality can aggravate existing heat-related symptoms.",
+          "pramana_used": "upamana",
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 4,
+          "sanskrit_name": "Upanaya",
+          "english_name": "application",
+          "content": "HETV\u0100BH\u0100SA DETECTED \u2014 savyabhichara (overgeneralization): Counter-case detected: 'ginger' has known exceptions when these conditions are present: acid_reflux, pitta. Ginger helps digestion generally, but aggravates Pitta and worsens acid reflux.",
+          "pramana_used": null,
+          "is_fallacy_step": true,
+          "fallacy_type": "savyabhichara"
+        },
+        {
+          "step_number": 5,
+          "sanskrit_name": "Nigamana",
+          "english_name": "conclusion",
+          "content": "The claim is REJECTED. The reasoning contains a fallacy that invalidates the recommendation.",
+          "pramana_used": null,
+          "is_fallacy_step": true,
+          "fallacy_type": null
+        }
+      ],
+      "pramana_gate": {
+        "passed": true,
+        "pramana_count": 3,
+        "has_strong_source": true,
+        "explanation": "PASSED: 3 pramana type(s) present (need \u22652), strong source found (need \u22651 with strength \u22653)."
+      },
+      "evidence_count": 3,
+      "pramana_types_used": [
+        "shabda",
+        "anumana",
+        "pratyaksha"
+      ]
+    },
+    "naive_result": {
+      "claim": "Ginger tea is recommended for this person's digestive issues",
+      "verdict": "accepted",
+      "explanation": "Found 3 piece(s) of evidence. Accepting claim.",
+      "checks_performed": {
+        "source_tracking": false,
+        "fallacy_detection": false,
+        "belief_revision": false,
+        "pramana_gate": false,
+        "staleness_check": false
+      },
+      "what_it_missed": [
+        "No fallacy detection \u2014 ginger recommended despite Pitta + acid reflux",
+        "No counter-case awareness \u2014 general rule blindly applied",
+        "This recommendation could cause harm"
+      ]
+    },
+    "diverges": true
+  },
+  {
+    "scenario": {
+      "id": "s4",
+      "number": 4,
+      "domain": "general",
+      "title": "Lab overrides guideline",
+      "subtitle": "Belief revision \u2014 Pratyaksha > Shabda",
+      "claim": "The bridge is safe for continued use",
+      "expected_verdict": "revised"
+    },
+    "nyai_result": {
+      "claim": "The bridge is safe for continued use",
+      "verdict": "revised",
+      "revision": {
+        "action": "revised",
+        "explanation": "New evidence (pratyaksha, strength 4) overrides existing (strength 2). Belief revised.",
+        "belief": {
+          "claim": "The bridge is safe for continued use",
+          "status": "revised",
+          "evidence": [
+            {
+              "content": "Clinical guideline states material is safe below 500 PSI",
+              "pramana_type": "shabda",
+              "pramana_english": "testimony",
+              "source": "Engineering safety manual",
+              "tags": [
+                "safe",
+                "bridge"
+              ],
+              "strength": 2,
+              "timestamp": "2026-10-25T19:24:11.206443"
+            },
+            {
+              "content": "Lab stress test shows micro-fractures at 450 PSI",
+              "pramana_type": "pratyaksha",
+              "pramana_english": "direct perception",
+              "source": "Lab test results",
+              "tags": [
+                "unsafe",
+                "bridge",
+                "fracture"
+              ],
+              "strength": 4,
+              "timestamp": "2026-10-25T19:24:11.206525"
+            }
+          ],
+          "pramana_types": [
+            "shabda",
+            "pratyaksha"
+          ],
+          "strongest_pramana": "pratyaksha",
+          "revision_history": [
+            {
+              "from": "active",
+              "to": "revised",
+              "reason": "Stronger pramana overrides weaker",
+              "timestamp": "2026-10-25T19:24:11.206685"
+            }
+          ],
+          "all_tags": [
+            "safe",
+            "bridge",
+            "unsafe",
+            "fracture"
+          ]
+        }
+      },
+      "belief": {
+        "claim": "The bridge is safe for continued use",
+        "status": "revised",
+        "evidence": [
+          {
+            "content": "Clinical guideline states material is safe below 500 PSI",
+            "pramana_type": "shabda",
+            "pramana_english": "testimony",
+            "source": "Engineering safety manual",
+            "tags": [
+              "safe",
+              "bridge"
+            ],
+            "strength": 2,
+            "timestamp": "2026-10-25T19:24:11.206443"
+          },
+          {
+            "content": "Lab stress test shows micro-fractures at 450 PSI",
+            "pramana_type": "pratyaksha",
+            "pramana_english": "direct perception",
+            "source": "Lab test results",
+            "tags": [
+              "unsafe",
+              "bridge",
+              "fracture"
+            ],
+            "strength": 4,
+            "timestamp": "2026-10-25T19:24:11.206525"
+          }
+        ],
+        "pramana_types": [
+          "shabda",
+          "pratyaksha"
+        ],
+        "strongest_pramana": "pratyaksha",
+        "revision_history": [
+          {
+            "from": "active",
+            "to": "revised",
+            "reason": "Stronger pramana overrides weaker",
+            "timestamp": "2026-10-25T19:24:11.206685"
+          }
+        ],
+        "all_tags": [
+          "safe",
+          "bridge",
+          "unsafe",
+          "fracture"
+        ]
+      },
+      "pancavayava": [
+        {
+          "step_number": 1,
+          "sanskrit_name": "Pratij\u00f1a",
+          "english_name": "proposition",
+          "content": "The bridge is safe for continued use",
+          "pramana_used": null,
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 2,
+          "sanskrit_name": "Hetu",
+          "english_name": "reason",
+          "content": "Clinical guideline states material is safe below 500 PSI (testimony); Lab stress test shows micro-fractures at 450 PSI (direct perception)",
+          "pramana_used": "shabda",
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 3,
+          "sanskrit_name": "Ud\u0101hara\u1e47a",
+          "english_name": "example",
+          "content": "When direct measurement contradicts published guidance, the measurement takes precedence in epistemic hierarchy.",
+          "pramana_used": "upamana",
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 4,
+          "sanskrit_name": "Upanaya",
+          "english_name": "application",
+          "content": "The lab test (Pratyaksha, strength 4) directly contradicts the clinical guideline (Shabda, strength 2). By Nyaya hierarchy, direct perception overrides testimony.",
+          "pramana_used": null,
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 5,
+          "sanskrit_name": "Nigamana",
+          "english_name": "conclusion",
+          "content": "The belief has been REVISED based on stronger incoming evidence.",
+          "pramana_used": null,
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        }
+      ],
+      "pramana_gate": {
+        "passed": true,
+        "pramana_count": 2,
+        "has_strong_source": true,
+        "explanation": "PASSED: 2 pramana type(s) present (need \u22652), strong source found (need \u22651 with strength \u22653)."
+      }
+    },
+    "naive_result": {
+      "claim": "The bridge is safe for continued use",
+      "verdict": "accepted",
+      "explanation": "Found 2 piece(s) of evidence. Accepting claim.",
+      "checks_performed": {
+        "source_tracking": false,
+        "fallacy_detection": false,
+        "belief_revision": false,
+        "pramana_gate": false,
+        "staleness_check": false
+      },
+      "what_it_missed": [
+        "Did not track evidence sources or their strength",
+        "Cannot perform belief revision \u2014 new evidence is just more data",
+        "Pratyaksha (lab test) contradicts Shabda (guideline) but naive agent ignores hierarchy"
+      ]
+    },
+    "diverges": true
+  },
+  {
+    "scenario": {
+      "id": "s5",
+      "number": 5,
+      "domain": "general",
+      "title": "Conflicting studies",
+      "subtitle": "Honest uncertainty",
+      "claim": "Screen time of 2+ hours daily harms children's development",
+      "expected_verdict": "uncertain"
+    },
+    "nyai_result": {
+      "claim": "Screen time of 2+ hours daily harms children's development",
+      "verdict": "uncertain",
+      "belief": {
+        "claim": "Screen time of 2+ hours daily harms children's development",
+        "status": "active",
+        "evidence": [
+          {
+            "content": "Government-funded 5-year study found significant developmental delays with 2+ hours screen time",
+            "pramana_type": "shabda",
+            "pramana_english": "testimony",
+            "source": "NIH longitudinal study 2024",
+            "tags": [
+              "screen_time",
+              "harmful",
+              "children"
+            ],
+            "strength": 2,
+            "timestamp": "2026-10-25T19:24:11.206863"
+          },
+          {
+            "content": "Meta-analysis of 50 studies shows no significant effect when controlling for socioeconomic factors",
+            "pramana_type": "anumana",
+            "pramana_english": "inference",
+            "source": "Oxford meta-analysis 2025",
+            "tags": [
+              "screen_time",
+              "harmless",
+              "children"
+            ],
+            "strength": 3,
+            "timestamp": "2026-10-25T19:24:11.206941"
+          }
+        ],
+        "pramana_types": [
+          "shabda",
+          "anumana"
+        ],
+        "strongest_pramana": "anumana",
+        "revision_history": [],
+        "all_tags": [
+          "screen_time",
+          "harmless",
+          "harmful",
+          "children"
+        ]
+      },
+      "fallacy_results": [
+        {
+          "fallacy_type": "savyabhichara",
+          "fallacy_english": "overgeneralization",
+          "detected": false,
+          "explanation": "No counter-cases found for the given evidence tags.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "viruddha",
+          "fallacy_english": "contradiction",
+          "detected": false,
+          "explanation": "No contradictions found in evidence tags.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "asiddha",
+          "fallacy_english": "unestablished",
+          "detected": false,
+          "explanation": "Belief is supported by 2 piece(s) of evidence.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "satpratipaksha",
+          "fallacy_english": "equal-force counterargument",
+          "detected": true,
+          "explanation": "Evidence contains contradictory positions: 'harmful' and 'harmless' are present. Neither side has sufficient strength to override the other.",
+          "is_extension": false
+        },
+        {
+          "fallacy_type": "kalatita",
+          "fallacy_english": "stale evidence",
+          "detected": false,
+          "explanation": "All Pratyaksha evidence is within freshness threshold.",
+          "is_extension": true
+        }
+      ],
+      "detected_fallacies": [
+        {
+          "fallacy_type": "satpratipaksha",
+          "fallacy_english": "equal-force counterargument",
+          "detected": true,
+          "explanation": "Evidence contains contradictory positions: 'harmful' and 'harmless' are present. Neither side has sufficient strength to override the other.",
+          "is_extension": false
+        }
+      ],
+      "pancavayava": [
+        {
+          "step_number": 1,
+          "sanskrit_name": "Pratij\u00f1a",
+          "english_name": "proposition",
+          "content": "Screen time of 2+ hours daily harms children's development",
+          "pramana_used": null,
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 2,
+          "sanskrit_name": "Hetu",
+          "english_name": "reason",
+          "content": "Government-funded 5-year study found significant developmental delays with 2+ hours screen time (testimony); Meta-analysis of 50 studies shows no significant effect when controlling for socioeconomic factors (inference)",
+          "pramana_used": "shabda",
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 3,
+          "sanskrit_name": "Ud\u0101hara\u1e47a",
+          "english_name": "example",
+          "content": "Research on this topic shows genuinely conflicting results from credible sources.",
+          "pramana_used": "upamana",
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        },
+        {
+          "step_number": 4,
+          "sanskrit_name": "Upanaya",
+          "english_name": "application",
+          "content": "HETV\u0100BH\u0100SA DETECTED \u2014 satpratipaksha (equal-force counterargument): Evidence contains contradictory positions: 'harmful' and 'harmless' are present. Neither side has sufficient strength to override the other.",
+          "pramana_used": null,
+          "is_fallacy_step": true,
+          "fallacy_type": "satpratipaksha"
+        },
+        {
+          "step_number": 5,
+          "sanskrit_name": "Nigamana",
+          "english_name": "conclusion",
+          "content": "The claim is UNCERTAIN. Conflicting evidence of comparable strength prevents a definitive conclusion.",
+          "pramana_used": null,
+          "is_fallacy_step": false,
+          "fallacy_type": null
+        }
+      ],
+      "pramana_gate": {
+        "passed": true,
+        "pramana_count": 2,
+        "has_strong_source": true,
+        "explanation": "PASSED: 2 pramana type(s) present (need \u22652), strong source found (need \u22651 with strength \u22653)."
+      },
+      "evidence_count": 2,
+      "pramana_types_used": [
+        "shabda",
+        "anumana"
+      ]
+    },
+    "naive_result": {
+      "claim": "Screen time of 2+ hours daily harms children's development",
+      "verdict": "accepted",
+      "explanation": "Found 2 piece(s) of evidence. Accepting claim.",
+      "checks_performed": {
+        "source_tracking": false,
+        "fallacy_detection": false,
+        "belief_revision": false,
+        "pramana_gate": false,
+        "staleness_check": false
+      },
+      "what_it_missed": [
+        "Accepted the first piece of evidence without considering conflicts",
+        "No mechanism to express genuine uncertainty",
+        "Pramana gate would catch insufficient source diversity"
+      ]
+    },
+    "diverges": true
+  }
+]

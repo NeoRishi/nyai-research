@@ -1,0 +1,15 @@
+{
+  "python_version": "3.13.5",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "upstream_api_tests_passed": 5,
+  "research_tests_passed": 12,
+  "vendor_byte_comparisons": 8,
+  "vendor_files_unchanged": true,
+  "privacy_scan": "No plausible API tokens, private workbook or .env in release files; private_audit and temporary previews excluded",
+  "pdf_review": {
+    "pages": 5,
+    "all_pages_visually_inspected": true,
+    "clipping_or_overlap_observed": false
+  },
+  "scientific_review": "No independent human annotation; no empirical oversight improvement claim"
+}

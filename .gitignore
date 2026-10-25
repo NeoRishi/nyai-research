@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+# NEVER commit user's private Obsidian vault or credentials
+my-knowledge-base/
+NeoRishi_VCIM_v3.0.xlsx
+
+private_audit/
+tmp/

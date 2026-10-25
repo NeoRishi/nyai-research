@@ -1,0 +1,55 @@
+{
+  "status": "FINITE SYNTHETIC CONTRACT TEST; AUTOMATED ORACLE, NO HUMAN REVIEW",
+  "n_cases": 24,
+  "counterfactual_pairs": 12,
+  "summary": {
+    "model_api": {
+      "n_cases": 24,
+      "matches": 24,
+      "contract_agreement": 1.0,
+      "false_execution_count": 0,
+      "false_withholding_count": 0,
+      "invalid_or_missing": 0
+    },
+    "original_nyai_v1": {
+      "n_cases": 24,
+      "matches": 12,
+      "contract_agreement": 0.5,
+      "false_execution_count": 12,
+      "false_withholding_count": 0,
+      "invalid_or_missing": 0
+    },
+    "any_evidence": {
+      "n_cases": 24,
+      "matches": 12,
+      "contract_agreement": 0.5,
+      "false_execution_count": 12,
+      "false_withholding_count": 0,
+      "invalid_or_missing": 0
+    },
+    "all_contract_gates": {
+      "n_cases": 24,
+      "matches": 24,
+      "contract_agreement": 1.0,
+      "false_execution_count": 0,
+      "false_withholding_count": 0,
+      "invalid_or_missing": 0
+    },
+    "permission_only": {
+      "n_cases": 24,
+      "matches": 13,
+      "contract_agreement": 0.5416666666666666,
+      "false_execution_count": 11,
+      "false_withholding_count": 0,
+      "invalid_or_missing": 0
+    }
+  },
+  "limits": [
+    "Inputs are trusted structured runtime facts; free-text extraction not tested.",
+    "All rule families were known during engine design; no held-out rules.",
+    "Pairs and duplicated permitted states are correlated; no population accuracy estimate.",
+    "The oracle is independently coded by the same AI assistant, not an independent researcher.",
+    "Passing a user-defined contract is not proof of real-world safety.",
+    "v1 adapter cannot express most task-specific contract fields; not a general model capability ranking."
+  ]
+}
