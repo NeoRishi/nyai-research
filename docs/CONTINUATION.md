@@ -2,6 +2,8 @@
 
 As of 25 October 2026, the local research implementation and preliminary experiments are complete. The work sample reports negative or ceiling results honestly. The central human-oversight hypothesis remains untested.
 
+After the user identified the missing retrieval integration, a real read-only GraphRAG-to-NyAI adapter was added and run against Aura. See `docs/live-graphrag-integration.md` and `results/graph_nyai_integration.json`. This is distinct from the prior synthetic experiments. Private passages stay local; it is not a generated-answer evaluation and makes no claim of entailment validation. No Neo4j writes were performed.
+
 ## What to open
 
 1. `docs/work-sample.md` and the PDF in `output/pdf/`.

@@ -6,6 +6,8 @@ The new repository retains the starter fixtures and guards, and vendors pinned u
 
 GraphRAG contributes its frontmatter, wikilink, citation and environment parsers. The new corpus audit works recursively and keeps per-file paths/hashes in ignored local storage. The upstream parser itself handles only flat YAML-like frontmatter and a single directory. The existing cloud graph has already been built; rebuilding it is unnecessary for the pilot.
 
+A later live adapter, `integrations/graph_nyai.py`, also reuses the upstream vector retrieval, graph reranking, source expansion and context construction. It passes actual retrieved text through NyAI v1 and a separate provenance check. This was added after the initial pilot; it does not change the synthetic experimental results. See `docs/live-graphrag-integration.md` for actual observations and limits.
+
 ## Executable warrant and defeater contract
 
 `src/nyai_research/contracts.py` implements a deliberately small decision layer. Twelve explicit checks constrain an action using supplied runtime facts. Any failed or unknown required fact withholds execution. Resource or preference scores cannot offset a failed gate. A brief decision record is derived from the checks that actually ran, with an explicit condition for reconsidering the decision.

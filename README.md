@@ -49,6 +49,19 @@ No installation, API key or database connection is required. The demo runs the a
 
 **The trust boundary matters:** the engine checks the supplied record. It does not independently run tests, authenticate source documents or establish that an arbitrary scientific claim is true. The correction in the demo is simulated. The recorded model also catches the missing-check defect.
 
+## Live GraphRAG to NyAI integration
+
+A separate private-data adapter now connects the existing Aura graph to the original GraphRAG retrieval code and NyAI v1:
+
+```bash
+python3 integrations/graph_nyai.py --env /path/to/local.env \
+  --query "How does Nyaya distinguish evidence sources and warranted inference?"
+```
+
+This requires the live dependencies and your own graph/API credentials. It embeds only the question, retrieves plain-RAG and graph-expanded evidence, runs the original NyAI v1 engine and audits citation/provenance structure. Private passages are saved only in ignored local storage and are not sent to a generation model. The adapter performs no database writes. A `--seed-note` diagnostic can instead use an existing chunk vector without any model API call.
+
+The first live run returned six passages from two notes for plain RAG and six from four notes for GraphRAG, with 12 source-file references supplied by graph expansion. This shows a working integration and additional provenance availability, not better answer accuracy. Semantic support, applicability and source currentness remain unverified; a validated-answer claim is withheld. [Integration details and recorded run](docs/live-graphrag-integration.md).
+
 ## What we tested
 
 Two experiments examine different parts of the research question:
@@ -100,7 +113,7 @@ These are research connections, not a compliance determination. Article 86 has a
 
 NyAI draws selectively on Nyaya concepts of warranted knowledge, defeaters and revisable conclusions. The philosophical framing supplies research questions; it does not establish correctness. The prototype uses task-specific conditions rather than treating evidence categories as a universal numerical hierarchy.
 
-The project reuses [NyAI v1](https://github.com/NeoRishi/nyai-dashboard), which demonstrates source classification, belief revision and reasoning traces, and parsing utilities from [Vedic GraphRAG](https://github.com/NeoRishi/vedic-graphrag). The existing graph and corpus were audited; retrieval is not connected to the new action-contract demo. Selected VCIM mechanisms inform evidence scope, policy precedence and explanation records. See [source provenance](vendor/PROVENANCE.md) and [the source audit](docs/repository-audit.md).
+The project reuses [NyAI v1](https://github.com/NeoRishi/nyai-dashboard), which demonstrates source classification, belief revision and reasoning traces, and parsing/retrieval code from [Vedic GraphRAG](https://github.com/NeoRishi/vedic-graphrag). The live graph adapter is separate from the 24-case action-contract demo and the completed 120-case prompt pilot. Selected VCIM mechanisms inform evidence scope, policy precedence and explanation records. See [source provenance](vendor/PROVENANCE.md) and [the source audit](docs/repository-audit.md).
 
 ## AI assistance
 

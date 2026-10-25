@@ -1,0 +1,102 @@
+{
+  "run_at": "2026-10-25T17:40:21.216922+00:00",
+  "status": "LIVE RETRIEVAL INTEGRATION; NOT A RETRIEVAL-QUALITY OR HUMAN-OVERSIGHT EVALUATION",
+  "retrieval_input": "stored_chunk_seed_vector",
+  "embedding_model": null,
+  "query_sha256": "7a49468d2199ef420907142eb0a67e23d97ac26d226a0eb6290d89d7935258fc",
+  "private_passages_sent_to_model": false,
+  "generation_api_calls": 0,
+  "database_writes": false,
+  "nodes_before": 2297,
+  "nodes_after": 2297,
+  "executed_query_observations": [
+    {
+      "query_sha256": "a29d25c5e3b43a99e9f0a6fcddd356f23f32b3fc38204f61c4ce57452ffa8298",
+      "rows": 1,
+      "contains_updates": false
+    },
+    {
+      "query_sha256": "0235047beef7f4786638d3a1fd4633ef46de9217423385e0b58088dba0a11553",
+      "rows": 1,
+      "contains_updates": false
+    },
+    {
+      "query_sha256": "275d891ba1951bd7584af44e33ad2526a981217ae990959b263e062d918a1fe6",
+      "rows": 6,
+      "contains_updates": false
+    },
+    {
+      "query_sha256": "275d891ba1951bd7584af44e33ad2526a981217ae990959b263e062d918a1fe6",
+      "rows": 30,
+      "contains_updates": false
+    },
+    {
+      "query_sha256": "5e876a68b80230a0589cd386d821458898dbe2dc79483eaf8dce5b627d621971",
+      "rows": 4,
+      "contains_updates": false
+    },
+    {
+      "query_sha256": "a29d25c5e3b43a99e9f0a6fcddd356f23f32b3fc38204f61c4ce57452ffa8298",
+      "rows": 1,
+      "contains_updates": false
+    }
+  ],
+  "modes": [
+    {
+      "mode": "plain_rag",
+      "passages": 6,
+      "selected_notes": 1,
+      "max_passages_per_note": 6,
+      "expanded_notes": 0,
+      "provided_source_file_refs": 0,
+      "provided_review_cues": {
+        "BRIDGE": 0,
+        "CONTRADICTION": 0
+      },
+      "context_sha256": "9402d824474b447747468c11be54fc9bec6101e70a0ba5abed9ccde895b8c78a",
+      "nyai_v1_verdict": "uncertain",
+      "provenance_check_statuses": {
+        "retrieval": "passed",
+        "chunk_identity": "passed",
+        "passage_locator": "passed",
+        "citation_resolution": "passed",
+        "source_lineage": "unknown",
+        "entailment": "unknown",
+        "applicability": "unknown",
+        "currentness": "unknown"
+      },
+      "validated_answer_permitted": false
+    },
+    {
+      "mode": "graph_rag",
+      "passages": 6,
+      "selected_notes": 4,
+      "max_passages_per_note": 2,
+      "expanded_notes": 4,
+      "provided_source_file_refs": 38,
+      "provided_review_cues": {
+        "BRIDGE": 22,
+        "CONTRADICTION": 1
+      },
+      "context_sha256": "fc4ce83217e30012abca358c146253689cafb9b7bbcbcca07fd1b092d6e7f313",
+      "nyai_v1_verdict": "uncertain",
+      "provenance_check_statuses": {
+        "retrieval": "passed",
+        "chunk_identity": "passed",
+        "passage_locator": "passed",
+        "citation_resolution": "passed",
+        "source_lineage": "passed",
+        "entailment": "unknown",
+        "applicability": "unknown",
+        "currentness": "unknown"
+      },
+      "validated_answer_permitted": false
+    }
+  ],
+  "limits": [
+    "CITES entries and graph links are provenance, not entailment or source validation.",
+    "BRIDGE/CONTRADICTION markers are unreviewed cues; relevance is not established.",
+    "The candidate sufficiency claim/citations are constructed, not model-generated answers.",
+    "No accuracy gain or end-to-end generated-answer validation is measured."
+  ]
+}

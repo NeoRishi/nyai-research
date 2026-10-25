@@ -6,11 +6,15 @@ https://github.com/NeoRishi/nyai-dashboard at commit
 The original comments include claims about philosophical correctness and fixed
 hierarchies that this research does not endorse. They remain intact for comparison.
 
-`graphrag/import_wiki.py` is copied without modification from
+`graphrag/import_wiki.py`, `graphrag/ask.py` and `graphrag/kb_common.py` are copied without modification from
 https://github.com/NeoRishi/vedic-graphrag at commit
 `a6e0bc7e7b4b90e39b34dd6b192869bd92f9e9ab`.
-Only parsing and environment-reading helpers are called by the new audit scripts.
-Its database-writing functions are not invoked.
+The audit scripts call parsing and environment-reading helpers. The live
+`integrations/graph_nyai.py` adapter calls the original plain/graph vector retrieval,
+graph expansion and context-building functions, then passes the resulting passages
+through the original NyAI v1 engine and a scoped provenance audit. Its optional
+embedding request sends only the query. The answer-generation and graph-writing
+functions are not invoked. Private passages stay local.
 
 Both repositories are attributed to the applicant, who explicitly requested reuse.
 No LICENSE file was found in either checkout. This private reuse does not assert
