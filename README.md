@@ -1,58 +1,79 @@
-# NyAI research
+# NyAI: making AI conclusions checkable
 
-Evidence validation and checkable AI oversight. Preliminary research pilot, 25 October 2026.
+An AI-generated explanation can sound convincing even when its evidence does not justify the conclusion. A citation may be irrelevant, a source may have been superseded, or an agent may claim it performed a check that never ran. A reviewer needs a way to inspect those grounds before accepting the answer or allowing the next action.
 
-**The experiments do not establish an improvement over a competent model baseline.**
+**NyAI investigates whether explicit evidence warrants, defeaters and revision conditions can make that review more reliable.** The goal is to help people see what supports a conclusion, what blocks it, and what new evidence would change the decision.
 
-- On 120 **unreviewed synthetic candidates**, ordinary, checklist and NyAI-style structured prompts matched template labels on **96, 92 and 84** cases. All found all 49 template violations. Six truncated responses remain counted as nonmatches.
-- On 24 **synthetic action-policy cases**, both the API model and the new executable contract matched a separately coded oracle on **24/24**. These easy cases have a ceiling effect.
-- There are **360 actual API audit responses and 24 actual generated action decisions**. The candidate inputs and expected labels remain clearly distinguished from those responses.
-- There are **zero independent human-reviewed labels** and no measured human-oversight benefit.
+This repository contains a runnable research prototype and reproducible pilot experiments. Improved human oversight has not yet been demonstrated.
 
-Start with [the work sample](docs/work-sample.md), [verification status](docs/verification-status.md), [implementation limits](docs/implementation-notes.md), and [the research plan](docs/research-plan.md). The standalone PDF is in `output/pdf/`.
+## How it works
 
-## Reproduce the recorded results without credentials
+The executable prototype checks a proposed action against a supplied policy and structured runtime facts:
 
-Python 3.11 or later; no external packages are required for these commands:
+1. **Establish the grounds:** identify the action, permission, evidence scope, source version and reported check outcomes.
+2. **Look for defeaters:** check for revoked consent, mismatched scope, superseded evidence, unresolved conflicts, missing checks and other blocking conditions.
+3. **Permit or withhold:** every mandatory condition must pass; failed or unknown facts withhold execution.
+4. **Make the decision inspectable:** return the actual check results, a brief decision record and a condition for reconsideration. Reevaluate when facts change.
 
-```bash
-python -m unittest discover -s tests -v
-python scripts/summarize_pilot.py
-python scripts/verify_agentic.py
-PYTHONPATH=src python -m nyai_research.metrics \
-  --judgments results/template_pilot.jsonl \
-  --output results/human_verified_metrics.json
-python scripts/verify_artifacts.py
-```
+For example, a high confidence score cannot override missing permission or a failed test. The explanation is derived from the checks that ran; it is not a model's private chain-of-thought.
 
-The human-reviewed metrics correctly return an empty score table. Template agreement is intentionally computed by a separately labelled descriptive path. Replays use stored API responses and never incur charges. Dataset and model outputs must not be silently relabelled after outcome inspection.
+## Try the local demonstration
 
-## Live reruns
-
-Install `requirements-live.lock.txt` into a local virtual environment. Keep credentials in a protected local file outside the repository. Then run:
+From the repository folder, with Python 3.11 or later:
 
 ```bash
-python scripts/run_pilot.py --env /path/to/local.env --output /path/to/new_run.jsonl
+python3 scripts/demo.py
 ```
 
-The runner resumes by case, condition and input/prompt hashes. For a new experiment use a new output file; it will not replace the recorded pilot. The recorded protocol uses the provider's default temperature of one because this model rejects temperature zero. Model alias and stochastic output are not immutable. Stored raw outputs and the failed first attempt are retained with a protocol amendment. The starter `evaluate.py` is retained for provenance; the recorded experiment uses `scripts/run_pilot.py`.
+No installation, API key or database connection is required. The demo runs the actual engine on synthetic facts and replays one recorded model response. It performs no real publication or other external action.
 
-The agentic generator is resume-safe and will not repeat existing responses. Before new live runs, freeze a new protocol and output path rather than editing existing results. API costs are user-billed; token usage is recorded, monetary totals are not inferred.
+| Situation | Engine decision | Reason |
+|---|---|---|
+| A record claims unit tests ran, but lists no executed checks | Withhold | Claimed checks lack an execution record |
+| The supplied record is corrected to include the executed tests | Permit | All mandatory conditions now pass |
+| Required consent information is then removed | Withhold | A required fact is unknown |
 
-## Existing code and infrastructure
+**The trust boundary matters:** the engine checks the supplied record. It does not independently run tests, authenticate source documents or establish that an arbitrary scientific claim is true. The correction in the demo is simulated. The recorded model also catches the missing-check defect.
 
-[NyAI v1](https://github.com/NeoRishi/nyai-dashboard) and [GraphRAG](https://github.com/NeoRishi/vedic-graphrag) remain unchanged. Pinned source files are reused under `vendor/`; see [provenance](vendor/PROVENANCE.md). v1's ordinal evidence weights and seven-day heuristic remain visible but are not endorsed as universal philosophical rules.
+## What we tested
 
-Read-only audits found 2,797 readable Markdown files, 2,615 unique exact byte hashes, and 78 skipped cloud placeholders across the three supplied folders. The private file manifest stays local. Aura contains 100 Notes and 1,976 Chunks, with its vector index online. No graph writes, embedding refresh or new infrastructure was needed. Source and link markers are not treated as truth.
+Two experiments examine different parts of the research question:
 
-The 18 policy/epistemic registry rows and all 120 fixture reference fields matched the VCIM workbook text. Relevant sheets in the latest workbook copy match after excluding empty formatting. This is transcription verification, not clinical or empirical validation.
+- **Auditing explanations:** compare ordinary, general-checklist and NyAI-style structured prompts on the same 120 synthetic candidate answers. These are prompt comparisons, not tests of the executable engine.
+- **Checking action conditions:** compare an API model, the executable contract and simpler baselines on 24 synthetic action-policy cases, using a separately coded checker.
 
-## Review and next step
+| Pilot | Observed result | What it tells us |
+|---|---|---|
+| 120 candidates, three audit prompts | Ordinary: 96/120 template matches; checklist: 92/120; structured: 84/120 | No demonstrated structured-prompt advantage; the reference labels need independent review |
+| 24 action-policy cases | API model and executable contract: 24/24 checker matches each | Both handle these simple cases; no incremental benefit is observed |
 
-The 24 real-output review worksheet is `data/annotations/live_output_review.csv`; human labels are blank. Keep its mapping key away from reviewers until annotations freeze. The starter's 120-case review queue remains separate. The next study needs independently authored source-backed cases and independent reviewer labels before any efficacy claim.
+The repository retains **360 actual API audit responses and 24 actual model-generated action decisions**, separately from their synthetic inputs. Six truncated audit outputs remain counted as nonmatches. The 120 design labels are unreviewed, and the separate checker was coded by the same AI assistant. Neither experiment measures human reviewer performance or establishes general safety or accuracy gains.
 
-Application logistics and CV work are deferred at the user's request. The research report is a draft for applicant review, not an application submission.
+The next useful test is a harder, independently labelled set of plausible unsupported conclusions and conflicting evidence, followed by a study of reviewer decisions and effort.
+
+## Reproduce and inspect
+
+```bash
+python3 -m unittest discover -s tests -v
+python3 scripts/summarize_pilot.py
+python3 scripts/verify_agentic.py
+python3 scripts/verify_artifacts.py
+```
+
+These commands use stored outputs and need no credentials. Full replay and live-run instructions are in [Running experiments](docs/running-experiments.md).
+
+- [Research work sample](docs/work-sample.md) and [standalone PDF](output/pdf/NyAI_Research_Work_Sample_2026-10-25.pdf)
+- [Research question and proposed study](docs/research-plan.md)
+- [Implementation and trust boundaries](docs/implementation-notes.md)
+- [What has actually been verified](docs/verification-status.md)
+- [Protocol, controls and limitations](docs/methodology.md)
+
+## Foundations and scope
+
+NyAI draws selectively on Nyaya concepts of warranted knowledge, defeaters and revisable conclusions. The philosophical framing supplies research questions; it does not establish correctness. The prototype uses task-specific conditions rather than treating evidence categories as a universal numerical hierarchy.
+
+The project reuses [NyAI v1](https://github.com/NeoRishi/nyai-dashboard), which demonstrates source classification, belief revision and reasoning traces, and parsing utilities from [Vedic GraphRAG](https://github.com/NeoRishi/vedic-graphrag). The existing graph and corpus were audited; retrieval is not connected to the new action-contract demo. Selected VCIM mechanisms inform evidence scope, policy precedence and explanation records. See [source provenance](vendor/PROVENANCE.md) and [the source audit](docs/repository-audit.md).
 
 ## AI assistance
 
-The applicant supplied the framing, existing projects and private sources. AI assisted inspection, code, cases, experiment orchestration, analysis and documentation. The API model generated recorded judgments and decisions. No assistant annotation is called independent human review. Original starter documents are preserved under `docs/archive/` and `WORK_HANDOFF.md`.
+AI assisted code, synthetic cases, experiment orchestration, analysis and documentation. API-generated outputs are recorded explicitly. No assistant-generated annotation is represented as independent human verification.
