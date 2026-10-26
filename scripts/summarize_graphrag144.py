@@ -110,7 +110,7 @@ if __name__=='__main__':
             'No IID confidence interval or significance claim for correlated design cases.'])
     (RESULTS/'summary.json').write_text(json.dumps(result,indent=2)+'\n')
     with (RESULTS/'predictions.csv').open('w') as f:
-        w=csv.DictWriter(f,fieldnames=list(predictions[0]));w.writeheader();w.writerows(predictions)
+        w=csv.DictWriter(f,fieldnames=list(predictions[0]),lineterminator='\n');w.writeheader();w.writerows(predictions)
     # Independent tally from the saved flat export, not the in-memory score totals.
     exported=list(csv.DictReader((RESULTS/'predictions.csv').open()))
     for domain in scores:
