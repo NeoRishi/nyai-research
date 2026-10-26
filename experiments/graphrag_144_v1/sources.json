@@ -1,0 +1,346 @@
+[
+  {
+    "source_id": "POL-01",
+    "domain": "policy_audit",
+    "title": "Urgent safety / care",
+    "reference": "VCIM_v3.0:74_Policy!POL-01",
+    "facts": [
+      {
+        "fact_id": "POL-01.requirement",
+        "text": "Route appropriate immediate support; suspend optional optimisation"
+      },
+      {
+        "fact_id": "POL-01.boundary",
+        "text": "Always first; no sleep-on-it or readiness deferral"
+      }
+    ]
+  },
+  {
+    "source_id": "POL-02",
+    "domain": "policy_audit",
+    "title": "Consent / data validity",
+    "reference": "VCIM_v3.0:74_Policy!POL-02",
+    "facts": [
+      {
+        "fact_id": "POL-02.requirement",
+        "text": "Stop prohibited processing; manual fallback only within remaining consent"
+      },
+      {
+        "fact_id": "POL-02.boundary",
+        "text": "Never silently reacquire or infer withheld data"
+      }
+    ]
+  },
+  {
+    "source_id": "POL-03",
+    "domain": "policy_audit",
+    "title": "Contraindications / adverse experience",
+    "reference": "VCIM_v3.0:74_Policy!POL-03",
+    "facts": [
+      {
+        "fact_id": "POL-03.requirement",
+        "text": "Exclude practice; stop/escalate proportionately; offer reviewed low-risk alternative"
+      },
+      {
+        "fact_id": "POL-03.boundary",
+        "text": "No score can offset an exclusion"
+      }
+    ]
+  },
+  {
+    "source_id": "POL-04",
+    "domain": "policy_audit",
+    "title": "Sleep / occupational safety",
+    "reference": "VCIM_v3.0:74_Policy!POL-04",
+    "facts": [
+      {
+        "fact_id": "POL-04.requirement",
+        "text": "Preserve sleep and prescribed/occupational protocol; no productivity optimisation of dangerous drowsiness"
+      },
+      {
+        "fact_id": "POL-04.boundary",
+        "text": "No pre-dawn routine at cost of needed sleep"
+      }
+    ]
+  },
+  {
+    "source_id": "POL-05",
+    "domain": "policy_audit",
+    "title": "Fixed obligations and capacity",
+    "reference": "VCIM_v3.0:74_Policy!POL-05",
+    "facts": [
+      {
+        "fact_id": "POL-05.requirement",
+        "text": "Prepare/resize/change mode; include transition; protect subsequent recovery"
+      },
+      {
+        "fact_id": "POL-05.boundary",
+        "text": "Do not mark unavoidable work as a lifestyle failure"
+      }
+    ]
+  },
+  {
+    "source_id": "POL-06",
+    "domain": "policy_audit",
+    "title": "Evidence eligibility",
+    "reference": "VCIM_v3.0:74_Policy!POL-06",
+    "facts": [
+      {
+        "fact_id": "POL-06.requirement",
+        "text": "Exclude unwarranted prediction/benefit contribution; suspend disputed claims"
+      },
+      {
+        "fact_id": "POL-06.boundary",
+        "text": "Metadata verification is not claim validation"
+      }
+    ]
+  },
+  {
+    "source_id": "POL-07",
+    "domain": "policy_audit",
+    "title": "User priority / supporting needs",
+    "reference": "VCIM_v3.0:74_Policy!POL-07",
+    "facts": [
+      {
+        "fact_id": "POL-07.requirement",
+        "text": "Explain tradeoff; offer smaller priority step or necessary recovery; user remains in control"
+      },
+      {
+        "fact_id": "POL-07.boundary",
+        "text": "Never silently switch long-term goal"
+      }
+    ]
+  },
+  {
+    "source_id": "POL-08",
+    "domain": "policy_audit",
+    "title": "Duration and timing fit",
+    "reference": "VCIM_v3.0:74_Policy!POL-08",
+    "facts": [
+      {
+        "fact_id": "POL-08.requirement",
+        "text": "Select feasible variants; do not invent calendar availability; allow abstention"
+      },
+      {
+        "fact_id": "POL-08.boundary",
+        "text": "Use elapsed time; no forced nominal ultradian90min"
+      }
+    ]
+  },
+  {
+    "source_id": "POL-09",
+    "domain": "policy_audit",
+    "title": "Eligible-action ranking",
+    "reference": "VCIM_v3.0:74_Policy!POL-09",
+    "facts": [
+      {
+        "fact_id": "POL-09.requirement",
+        "text": "Versioned explicit fit features; default personal predictive weight zero; disclose ties/unknowns"
+      },
+      {
+        "fact_id": "POL-09.boundary",
+        "text": "V2 weights are expert priors; no production calibration claimed"
+      }
+    ]
+  },
+  {
+    "source_id": "POL-10",
+    "domain": "policy_audit",
+    "title": "Optional cultural meaning",
+    "reference": "VCIM_v3.0:74_Policy!POL-10",
+    "facts": [
+      {
+        "fact_id": "POL-10.requirement",
+        "text": "Values shape chosen goal/practice; timing preference may resolve equal feasibility without causal claim"
+      },
+      {
+        "fact_id": "POL-10.boundary",
+        "text": "No astrology health/money/career permit/deny; no spiritual score"
+      }
+    ]
+  },
+  {
+    "source_id": "POL-11",
+    "domain": "policy_audit",
+    "title": "Explanation and feedback",
+    "reference": "VCIM_v3.0:74_Policy!POL-11",
+    "facts": [
+      {
+        "fact_id": "POL-11.requirement",
+        "text": "Plain reason, duration, tradeoff, uncertainty and alternative; record correction / stop / helpfulness separately"
+      },
+      {
+        "fact_id": "POL-11.boundary",
+        "text": "Explanation must match actual gates; never generate a novel action"
+      }
+    ]
+  },
+  {
+    "source_id": "EP-EMPIRICAL",
+    "domain": "policy_audit",
+    "title": "Empirical A/B/C",
+    "reference": "VCIM_v3.0:68_Epistemics!EP-EMPIRICAL",
+    "facts": [
+      {
+        "fact_id": "EP-EMPIRICAL.requirement",
+        "text": "Warrant: Claim-specific population, task, dose, comparator and outcome. Allowed use: May inform eligible actions only for the applicable claim"
+      },
+      {
+        "fact_id": "EP-EMPIRICAL.boundary",
+        "text": "Tier is a rubric, not a clinical probability; numerical V2 confidence retained as historical expert judgement"
+      }
+    ]
+  },
+  {
+    "source_id": "EP-METHODS",
+    "domain": "policy_audit",
+    "title": "Methods / measurement",
+    "reference": "VCIM_v3.0:68_Epistemics!EP-METHODS",
+    "facts": [
+      {
+        "fact_id": "EP-METHODS.requirement",
+        "text": "Warrant: Study design, scoring or measurement practice. Allowed use: Can govern methods; cannot raise therapeutic benefit"
+      },
+      {
+        "fact_id": "EP-METHODS.boundary",
+        "text": "JITAI/HRV design knowledge is not efficacy evidence"
+      }
+    ]
+  },
+  {
+    "source_id": "EP-TRADITION",
+    "domain": "policy_audit",
+    "title": "Traditional T",
+    "reference": "VCIM_v3.0:68_Epistemics!EP-TRADITION",
+    "facts": [
+      {
+        "fact_id": "EP-TRADITION.requirement",
+        "text": "Warrant: Named text, edition, locator, excerpt/translation/interpretation. Allowed use: Opt-in reflection, chosen practices, meaning and tie preference among safe feasible choices"
+      },
+      {
+        "fact_id": "EP-TRADITION.boundary",
+        "text": "Zero biomedical predictive weight; no kosha score, astrological mandate or attainment number"
+      }
+    ]
+  },
+  {
+    "source_id": "EP-HYPOTHESIS",
+    "domain": "policy_audit",
+    "title": "NeoRishi H",
+    "reference": "VCIM_v3.0:68_Epistemics!EP-HYPOTHESIS",
+    "facts": [
+      {
+        "fact_id": "EP-HYPOTHESIS.requirement",
+        "text": "Warrant: Founder design or V3 operational proposal. Allowed use: Transparent supervised specification/pilot candidate"
+      },
+      {
+        "fact_id": "EP-HYPOTHESIS.boundary",
+        "text": "No claim of validation; thresholds/weights are versioned and tested before release"
+      }
+    ]
+  },
+  {
+    "source_id": "EP-PERSONAL",
+    "domain": "policy_audit",
+    "title": "Personal P",
+    "reference": "VCIM_v3.0:68_Epistemics!EP-PERSONAL",
+    "facts": [
+      {
+        "fact_id": "EP-PERSONAL.requirement",
+        "text": "Warrant: Dated consented self-report with context and uncertainty. Allowed use: Descriptive association; future validated personal modifier"
+      },
+      {
+        "fact_id": "EP-PERSONAL.boundary",
+        "text": "Completion ≠ helpfulness; confounding ≠ causation; corrected events invalidate derived patterns"
+      }
+    ]
+  },
+  {
+    "source_id": "EP-FRONTIER",
+    "domain": "policy_audit",
+    "title": "Frontier F1/F2/F3",
+    "reference": "VCIM_v3.0:68_Epistemics!EP-FRONTIER",
+    "facts": [
+      {
+        "fact_id": "EP-FRONTIER.requirement",
+        "text": "Warrant: Exploratory/theoretical literature. Allowed use: Research agenda only"
+      },
+      {
+        "fact_id": "EP-FRONTIER.boundary",
+        "text": "Zero eligibility, efficacy or ranking contribution; no quantum, lunar or gut prescription bridge"
+      }
+    ]
+  },
+  {
+    "source_id": "EP-QUARANTINE",
+    "domain": "policy_audit",
+    "title": "Quarantined",
+    "reference": "VCIM_v3.0:68_Epistemics!EP-QUARANTINE",
+    "facts": [
+      {
+        "fact_id": "EP-QUARANTINE.requirement",
+        "text": "Warrant: Exact assertion/edition/translation or scope unestablished. Allowed use: No active predictive or medical use"
+      },
+      {
+        "fact_id": "EP-QUARANTINE.boundary",
+        "text": "Named evidence/edition review required; no relabelling as verified"
+      }
+    ]
+  },
+  {
+    "source_id": "AG-CONTRACT",
+    "domain": "action_contract",
+    "title": "Synthetic action permission contract",
+    "reference": "synthetic_action_contract_v1",
+    "facts": [
+      {
+        "fact_id": "AG.authority",
+        "text": "The requested action must be explicitly included in granted_actions."
+      },
+      {
+        "fact_id": "AG.consent",
+        "text": "consent must be true."
+      },
+      {
+        "fact_id": "AG.tenant",
+        "text": "tenant must equal authorised_tenant."
+      },
+      {
+        "fact_id": "AG.version",
+        "text": "evidence_version must equal current_version."
+      },
+      {
+        "fact_id": "AG.integrity",
+        "text": "observed_hash must equal expected_hash."
+      },
+      {
+        "fact_id": "AG.status",
+        "text": "source_status must be active."
+      },
+      {
+        "fact_id": "AG.scope",
+        "text": "task must belong to source_tasks."
+      },
+      {
+        "fact_id": "AG.epistemics",
+        "text": "source_kind must be execution_test."
+      },
+      {
+        "fact_id": "AG.contradiction",
+        "text": "unresolved_conflicts must be zero."
+      },
+      {
+        "fact_id": "AG.trace",
+        "text": "Every claimed_check must appear in executed_checks."
+      },
+      {
+        "fact_id": "AG.budget",
+        "text": "requested_units must be nonnegative and no greater than max_units."
+      },
+      {
+        "fact_id": "AG.tests",
+        "text": "test_result must be passed."
+      }
+    ]
+  }
+]

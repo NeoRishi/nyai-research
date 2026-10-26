@@ -1,0 +1,7 @@
+{
+  "amended_at": "2026-10-26T02:33:15.854950+00:00",
+  "reason": "Pre-execution safeguards: assert 86-node scope, compare actual Neo4j passage/expansion text to the frozen snapshot, and assert configured model. No model judgments observed.",
+  "hashes": {
+    "scripts/evaluate_graphrag144.py": "beb9874d2c106fac04c38aa400f13db791add41eaba7debf9984876ae5f11267"
+  }
+}

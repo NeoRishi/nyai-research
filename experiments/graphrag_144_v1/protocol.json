@@ -1,0 +1,53 @@
+{
+  "frozen_at": "2026-10-26T02:29:30.658625+00:00",
+  "status": "Local exploratory protocol freeze, not external preregistration",
+  "namespace": "nyai_eval_20261026_v1",
+  "cases": 144,
+  "strata": {
+    "unreviewed_policy_candidates": 120,
+    "synthetic_action_contracts": 24
+  },
+  "source_notes": 19,
+  "source_facts": 48,
+  "source_nodes": 19,
+  "namespace_nodes": 86,
+  "original_graph_mutation": false,
+  "candidate_answers_or_labels_in_graph": false,
+  "arms": [
+    "full_reference",
+    "vector_rag",
+    "graph_rag",
+    "graph_rag_structured"
+  ],
+  "model": "gpt-6-luna",
+  "temperature": "provider default 1",
+  "max_completion_tokens": 1024,
+  "generation_requests": 576,
+  "embedding_model": "text-embedding-3-small",
+  "query_variants": 31,
+  "retrieval_top_k": 6,
+  "candidates": 30,
+  "context_max_chars": 8000,
+  "request_order_seed": 20261026,
+  "algorithm": "Unmodified upstream plain_rag/graph_rag selection with an adapter for isolated labels, domain filtering and parent-to-fact expansion",
+  "fairness": "Same cases, model, response budget and context cap. Structured arm reuses exactly the graph_rag evidence. Realised context lengths may differ.",
+  "metrics": [
+    "Reference-fact recall",
+    "Reference-source hit rate",
+    "Unreviewed template-label agreement (120 only)",
+    "Explicit contract-oracle agreement (24 only)",
+    "Invalid outputs",
+    "Citation-ID resolution",
+    "Tokens and latency",
+    "Paired disagreements"
+  ],
+  "inference": "Descriptive diagnostic; correlated templates, known source families, no independent human labels or safety claim",
+  "exclusions": "None; errors count as nonmatches; no silent truncation retry",
+  "privacy": "Only fixture-reference excerpts and fictional runtime facts go to model APIs; no private wellness passages",
+  "hashes": {
+    "src/nyai_research/rag_benchmark.py": "00a4b62a75a01a7ceb128abfffd27c45fe224c0ba4a0147fbc4a119722b443d4",
+    "scripts/evaluate_graphrag144.py": "446e9e02951a4b04114182c748b5cf657dc01fcfe25afcca04092f435feac092",
+    "experiments/graphrag_144_v1/sources.json": "eee17f49ea2268610e03053e7035a9f5594c7d335a06380ea4d85ffaf0a5df7d",
+    "experiments/graphrag_144_v1/cases.json": "d01e78152b6a481c9c369aacd5863bbb899a934499bd84c2dcbee2765a8d151b"
+  }
+}

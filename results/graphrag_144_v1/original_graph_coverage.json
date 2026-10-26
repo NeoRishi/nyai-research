@@ -1,0 +1,83 @@
+{
+  "scope": "Original Note corpus only; no benchmark namespace nodes",
+  "reference_id_coverage": [
+    {
+      "source_id": "POL-01",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "POL-02",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "POL-03",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "POL-04",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "POL-05",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "POL-06",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "POL-07",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "POL-08",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "POL-09",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "POL-10",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "POL-11",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "EP-EMPIRICAL",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "EP-METHODS",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "EP-TRADITION",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "EP-HYPOTHESIS",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "EP-PERSONAL",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "EP-FRONTIER",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "EP-QUARANTINE",
+      "exact_reference_id_matches": 0
+    },
+    {
+      "source_id": "AG-CONTRACT",
+      "exact_reference_id_matches": 0
+    }
+  ],
+  "limitation": "Zero ID matches are a coverage screen, not proof no semantically related passage exists.",
+  "database_writes": false
+}

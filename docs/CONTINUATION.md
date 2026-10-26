@@ -4,6 +4,8 @@ As of 25 October 2026, the local research implementation and preliminary experim
 
 After the user identified the missing retrieval integration, a real read-only GraphRAG-to-NyAI adapter was added and run against Aura. See `docs/live-graphrag-integration.md` and `results/graph_nyai_integration.json`. This is distinct from the prior synthetic experiments. Private passages stay local; it is not a generated-answer evaluation and makes no claim of entailment validation. No Neo4j writes were performed.
 
+On 26 October the user requested GraphRAG evaluation of both existing sets. A controlled 144-case/four-arm protocol is frozen in `experiments/graphrag_144_v1/`, with design in `docs/graphrag-evaluation-design.md`. The live original-corpus reference-ID coverage check is complete. Importing an isolated 86-node evaluation namespace and making 576 model requests requires the pending explicit approval requested in chat. At this checkpoint, no benchmark nodes have been imported and no new evaluation model requests made. Do not describe the prepared protocol as completed results or assume approval from elapsed time. Once approved, run import, retrieve, run and summarize phases; keep source KB nodes unchanged and private wellness passages out of model requests.
+
 ## What to open
 
 1. `docs/work-sample.md` and the PDF in `output/pdf/`.
