@@ -1,0 +1,8 @@
+{
+  "status": "Secondary complete-response diagnostic; primary results retain all failures",
+  "n": 117,
+  "matches": {
+    "vector_rag": 63,
+    "graph_rag": 70
+  }
+}

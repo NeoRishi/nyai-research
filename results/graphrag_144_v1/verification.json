@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "model_request_records": 576,
+  "actual_api_responses": 573,
+  "case_arm_uniqueness": true,
+  "no_label_fields_in_payload": true,
+  "structured_arm_evidence_identical": true,
+  "frozen_source_and_code_hashes_match": true,
+  "independent_csv_tally_matches": true,
+  "namespace_nodes": 86,
+  "original_note_count_unchanged": true,
+  "limits": "Integrity/replay checks only; no independent human verification or scientific efficacy certification"
+}

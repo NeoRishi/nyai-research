@@ -1,0 +1,26 @@
+{
+  "status": "POST HOC DESCRIPTIVE DIAGNOSTIC; not the frozen primary endpoint",
+  "scores": {
+    "full_reference": {
+      "permission_with_incomplete_reference_coverage": 0,
+      "positive_case_withholding_with_incomplete_reference_coverage": 0,
+      "negative_cases_with_designated_defeater_fact_available": 12
+    },
+    "vector_rag": {
+      "permission_with_incomplete_reference_coverage": 6,
+      "positive_case_withholding_with_incomplete_reference_coverage": 6,
+      "negative_cases_with_designated_defeater_fact_available": 6
+    },
+    "graph_rag": {
+      "permission_with_incomplete_reference_coverage": 0,
+      "positive_case_withholding_with_incomplete_reference_coverage": 0,
+      "negative_cases_with_designated_defeater_fact_available": 12
+    },
+    "graph_rag_structured": {
+      "permission_with_incomplete_reference_coverage": 0,
+      "positive_case_withholding_with_incomplete_reference_coverage": 0,
+      "negative_cases_with_designated_defeater_fact_available": 12
+    }
+  },
+  "interpretation": "Full-policy oracle agreement does not measure whether a decision is justified by partial retrieved evidence. Withholding can be appropriate under source uncertainty."
+}

@@ -1,0 +1,415 @@
+{
+  "status": "CONTROLLED ACTUAL-NEO4J POLICY-RETRIEVAL PILOT; NO HUMAN OVERSIGHT CLAIM",
+  "model_request_records": 576,
+  "actual_api_responses": 573,
+  "requests_without_api_response": 3,
+  "unique_retrieval_queries": 31,
+  "scores": {
+    "policy_audit": {
+      "full_reference": {
+        "n_cases": 120,
+        "matches": 96,
+        "agreement": 0.8,
+        "reference_fact_recall_mean_per_case": 1.0,
+        "unique_retrieval_queries": 18,
+        "reference_fact_recall_mean_per_unique_query": 1.0,
+        "reference_source_hit_rate": 1.0,
+        "violation_or_defeat_recall": 1.0,
+        "violation_or_defeat_false_positive_rate": 0.2676056338028169,
+        "invalid_outputs": 0,
+        "unresolvable_cited_fact_ids": 0,
+        "cited_fact_ids": 218,
+        "parsed_outputs_without_citations": 0,
+        "tokens": {
+          "prompt_tokens": 36348,
+          "completion_tokens": 18891,
+          "total_tokens": 55239
+        },
+        "median_request_seconds": 2.8612,
+        "confusion": [
+          {
+            "expected": "compliant",
+            "prediction": "compliant",
+            "n": 34
+          },
+          {
+            "expected": "compliant",
+            "prediction": "insufficient",
+            "n": 5
+          },
+          {
+            "expected": "compliant",
+            "prediction": "violation",
+            "n": 10
+          },
+          {
+            "expected": "insufficient",
+            "prediction": "insufficient",
+            "n": 13
+          },
+          {
+            "expected": "insufficient",
+            "prediction": "violation",
+            "n": 9
+          },
+          {
+            "expected": "violation",
+            "prediction": "violation",
+            "n": 49
+          }
+        ]
+      },
+      "vector_rag": {
+        "n_cases": 120,
+        "matches": 63,
+        "agreement": 0.525,
+        "reference_fact_recall_mean_per_case": 0.9166666666666666,
+        "unique_retrieval_queries": 18,
+        "reference_fact_recall_mean_per_unique_query": 0.9444444444444444,
+        "reference_source_hit_rate": 1.0,
+        "violation_or_defeat_recall": 0.9795918367346939,
+        "violation_or_defeat_false_positive_rate": 0.7183098591549296,
+        "invalid_outputs": 3,
+        "unresolvable_cited_fact_ids": 0,
+        "cited_fact_ids": 284,
+        "parsed_outputs_without_citations": 0,
+        "tokens": {
+          "prompt_tokens": 55987,
+          "completion_tokens": 31908,
+          "total_tokens": 87895
+        },
+        "median_request_seconds": 3.5071000000000003,
+        "confusion": [
+          {
+            "expected": "compliant",
+            "prediction": "None",
+            "n": 2
+          },
+          {
+            "expected": "compliant",
+            "prediction": "compliant",
+            "n": 13
+          },
+          {
+            "expected": "compliant",
+            "prediction": "insufficient",
+            "n": 3
+          },
+          {
+            "expected": "compliant",
+            "prediction": "violation",
+            "n": 31
+          },
+          {
+            "expected": "insufficient",
+            "prediction": "insufficient",
+            "n": 2
+          },
+          {
+            "expected": "insufficient",
+            "prediction": "violation",
+            "n": 20
+          },
+          {
+            "expected": "violation",
+            "prediction": "None",
+            "n": 1
+          },
+          {
+            "expected": "violation",
+            "prediction": "violation",
+            "n": 48
+          }
+        ]
+      },
+      "graph_rag": {
+        "n_cases": 120,
+        "matches": 71,
+        "agreement": 0.5916666666666667,
+        "reference_fact_recall_mean_per_case": 1.0,
+        "unique_retrieval_queries": 18,
+        "reference_fact_recall_mean_per_unique_query": 1.0,
+        "reference_source_hit_rate": 1.0,
+        "violation_or_defeat_recall": 1.0,
+        "violation_or_defeat_false_positive_rate": 0.5352112676056338,
+        "invalid_outputs": 0,
+        "unresolvable_cited_fact_ids": 0,
+        "cited_fact_ids": 305,
+        "parsed_outputs_without_citations": 0,
+        "tokens": {
+          "prompt_tokens": 72377,
+          "completion_tokens": 29244,
+          "total_tokens": 101621
+        },
+        "median_request_seconds": 3.3781499999999998,
+        "confusion": [
+          {
+            "expected": "compliant",
+            "prediction": "compliant",
+            "n": 21
+          },
+          {
+            "expected": "compliant",
+            "prediction": "insufficient",
+            "n": 11
+          },
+          {
+            "expected": "compliant",
+            "prediction": "violation",
+            "n": 17
+          },
+          {
+            "expected": "insufficient",
+            "prediction": "insufficient",
+            "n": 1
+          },
+          {
+            "expected": "insufficient",
+            "prediction": "violation",
+            "n": 21
+          },
+          {
+            "expected": "violation",
+            "prediction": "violation",
+            "n": 49
+          }
+        ]
+      },
+      "graph_rag_structured": {
+        "n_cases": 120,
+        "matches": 61,
+        "agreement": 0.5083333333333333,
+        "reference_fact_recall_mean_per_case": 1.0,
+        "unique_retrieval_queries": 18,
+        "reference_fact_recall_mean_per_unique_query": 1.0,
+        "reference_source_hit_rate": 1.0,
+        "violation_or_defeat_recall": 1.0,
+        "violation_or_defeat_false_positive_rate": 0.647887323943662,
+        "invalid_outputs": 2,
+        "unresolvable_cited_fact_ids": 0,
+        "cited_fact_ids": 346,
+        "parsed_outputs_without_citations": 0,
+        "tokens": {
+          "prompt_tokens": 79938,
+          "completion_tokens": 41166,
+          "total_tokens": 121104
+        },
+        "median_request_seconds": 4.5484,
+        "confusion": [
+          {
+            "expected": "compliant",
+            "prediction": "None",
+            "n": 2
+          },
+          {
+            "expected": "compliant",
+            "prediction": "compliant",
+            "n": 12
+          },
+          {
+            "expected": "compliant",
+            "prediction": "insufficient",
+            "n": 11
+          },
+          {
+            "expected": "compliant",
+            "prediction": "violation",
+            "n": 24
+          },
+          {
+            "expected": "insufficient",
+            "prediction": "violation",
+            "n": 22
+          },
+          {
+            "expected": "violation",
+            "prediction": "violation",
+            "n": 49
+          }
+        ]
+      }
+    },
+    "action_contract": {
+      "full_reference": {
+        "n_cases": 24,
+        "matches": 24,
+        "agreement": 1.0,
+        "reference_fact_recall_mean_per_case": 1.0,
+        "unique_retrieval_queries": 13,
+        "reference_fact_recall_mean_per_unique_query": 1.0,
+        "reference_source_hit_rate": 1.0,
+        "violation_or_defeat_recall": 1.0,
+        "violation_or_defeat_false_positive_rate": 0.0,
+        "invalid_outputs": 0,
+        "unresolvable_cited_fact_ids": 0,
+        "cited_fact_ids": 156,
+        "parsed_outputs_without_citations": 0,
+        "tokens": {
+          "prompt_tokens": 16557,
+          "completion_tokens": 2464,
+          "total_tokens": 19021
+        },
+        "median_request_seconds": 2.2847999999999997,
+        "confusion": [
+          {
+            "expected": "False",
+            "prediction": "False",
+            "n": 12
+          },
+          {
+            "expected": "True",
+            "prediction": "True",
+            "n": 12
+          }
+        ]
+      },
+      "vector_rag": {
+        "n_cases": 24,
+        "matches": 18,
+        "agreement": 0.75,
+        "reference_fact_recall_mean_per_case": 0.5,
+        "unique_retrieval_queries": 13,
+        "reference_fact_recall_mean_per_unique_query": 0.5,
+        "reference_source_hit_rate": 1.0,
+        "violation_or_defeat_recall": 1.0,
+        "violation_or_defeat_false_positive_rate": 0.5,
+        "invalid_outputs": 0,
+        "unresolvable_cited_fact_ids": 0,
+        "cited_fact_ids": 102,
+        "parsed_outputs_without_citations": 2,
+        "tokens": {
+          "prompt_tokens": 12141,
+          "completion_tokens": 8437,
+          "total_tokens": 20578
+        },
+        "median_request_seconds": 5.0188500000000005,
+        "confusion": [
+          {
+            "expected": "False",
+            "prediction": "False",
+            "n": 12
+          },
+          {
+            "expected": "True",
+            "prediction": "False",
+            "n": 6
+          },
+          {
+            "expected": "True",
+            "prediction": "True",
+            "n": 6
+          }
+        ]
+      },
+      "graph_rag": {
+        "n_cases": 24,
+        "matches": 24,
+        "agreement": 1.0,
+        "reference_fact_recall_mean_per_case": 1.0,
+        "unique_retrieval_queries": 13,
+        "reference_fact_recall_mean_per_unique_query": 1.0,
+        "reference_source_hit_rate": 1.0,
+        "violation_or_defeat_recall": 1.0,
+        "violation_or_defeat_false_positive_rate": 0.0,
+        "invalid_outputs": 0,
+        "unresolvable_cited_fact_ids": 0,
+        "cited_fact_ids": 156,
+        "parsed_outputs_without_citations": 0,
+        "tokens": {
+          "prompt_tokens": 16557,
+          "completion_tokens": 2495,
+          "total_tokens": 19052
+        },
+        "median_request_seconds": 2.3047,
+        "confusion": [
+          {
+            "expected": "False",
+            "prediction": "False",
+            "n": 12
+          },
+          {
+            "expected": "True",
+            "prediction": "True",
+            "n": 12
+          }
+        ]
+      },
+      "graph_rag_structured": {
+        "n_cases": 24,
+        "matches": 24,
+        "agreement": 1.0,
+        "reference_fact_recall_mean_per_case": 1.0,
+        "unique_retrieval_queries": 13,
+        "reference_fact_recall_mean_per_unique_query": 1.0,
+        "reference_source_hit_rate": 1.0,
+        "violation_or_defeat_recall": 1.0,
+        "violation_or_defeat_false_positive_rate": 0.0,
+        "invalid_outputs": 0,
+        "unresolvable_cited_fact_ids": 0,
+        "cited_fact_ids": 156,
+        "parsed_outputs_without_citations": 0,
+        "tokens": {
+          "prompt_tokens": 18213,
+          "completion_tokens": 3275,
+          "total_tokens": 21488
+        },
+        "median_request_seconds": 3.0243,
+        "confusion": [
+          {
+            "expected": "False",
+            "prediction": "False",
+            "n": 12
+          },
+          {
+            "expected": "True",
+            "prediction": "True",
+            "n": 12
+          }
+        ]
+      }
+    }
+  },
+  "paired": {
+    "policy_audit": {
+      "graph_rag_vs_vector_rag": {
+        "left_only": 15,
+        "neither": 42,
+        "both_match": 56,
+        "right_only": 7
+      },
+      "graph_rag_structured_vs_graph_rag": {
+        "both_match": 55,
+        "right_only": 16,
+        "neither": 43,
+        "left_only": 6
+      },
+      "graph_rag_vs_full_reference": {
+        "both_match": 66,
+        "left_only": 5,
+        "neither": 19,
+        "right_only": 30
+      }
+    },
+    "action_contract": {
+      "graph_rag_vs_vector_rag": {
+        "both_match": 18,
+        "left_only": 6
+      },
+      "graph_rag_structured_vs_graph_rag": {
+        "both_match": 24
+      },
+      "graph_rag_vs_full_reference": {
+        "both_match": 24
+      }
+    }
+  },
+  "limitations": [
+    "The source graph was created from reference policies for these same known cases; no source-family holdout.",
+    "Graph expansion supplies sibling requirements; a gain can be due to evidence coverage and context length, not better reasoning.",
+    "Policy labels remain unreviewed. Contract oracle and implementation share an AI author.",
+    "Existing wellness knowledge graph does not contain the exact benchmark reference IDs; this is a separate evaluation namespace.",
+    "The underlying cases remain synthetic even though retrieval and model calls are real.",
+    "One mutable model alias and one stochastic response per arm; no human study or independent scientific validation.",
+    "No IID confidence interval or significance claim for correlated design cases."
+  ]
+}

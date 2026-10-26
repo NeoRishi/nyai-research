@@ -43,7 +43,7 @@ if __name__=='__main__':
         scores[domain]={}
         selected=[c for c in cases.values() if c['domain']==domain]
         for arm in ARMS:
-            matches=errors=tp=fp=fn=tn=invalid_citations=total_citations=0
+            matches=errors=tp=fp=fn=tn=invalid_citations=total_citations=empty_citations=0
             tokens=Counter();latencies=[];confusion=Counter()
             for c in selected:
                 r=by[(c['case_id'],arm)];context=contexts[(c['case_id'],arm)]
@@ -62,6 +62,7 @@ if __name__=='__main__':
                 if isinstance(citations,list):
                     total_citations+=len(citations)
                     invalid_citations+=sum(type(v) is not str or v not in ids for v in citations)
+                    empty_citations+=bool(parsed) and not citations
                 for field in ['prompt_tokens','completion_tokens','total_tokens']:
                     tokens[field]+=r.get('usage',{}).get(field,0)
                 latencies.append(r['latency_seconds'])
@@ -69,12 +70,16 @@ if __name__=='__main__':
                     reference_kind='unreviewed_design_label' if domain=='policy_audit' else 'automated_contract_oracle',
                     expected=expected,prediction=pred,match=match,error_type=r.get('error_type','')))
             cts=[contexts[(c['case_id'],arm)] for c in selected]
+            unique_cts={sha(c['query']):contexts[(c['case_id'],arm)] for c in selected}
             scores[domain][arm]=dict(n_cases=len(selected),matches=matches,agreement=matches/len(selected),
                 reference_fact_recall_mean_per_case=statistics.mean(c['target_fact_recall'] for c in cts),
+                unique_retrieval_queries=len(unique_cts),
+                reference_fact_recall_mean_per_unique_query=statistics.mean(c['target_fact_recall'] for c in unique_cts.values()),
                 reference_source_hit_rate=sum(c['target_source_hit'] for c in cts)/len(cts),
                 violation_or_defeat_recall=tp/(tp+fn) if tp+fn else None,
                 violation_or_defeat_false_positive_rate=fp/(fp+tn) if fp+tn else None,
                 invalid_outputs=errors,unresolvable_cited_fact_ids=invalid_citations,cited_fact_ids=total_citations,
+                parsed_outputs_without_citations=empty_citations,
                 tokens=dict(tokens),median_request_seconds=statistics.median(latencies),
                 confusion=[dict(expected=a,prediction=b,n=n) for (a,b),n in sorted(confusion.items())])
     paired={}
@@ -92,7 +97,9 @@ if __name__=='__main__':
                 counts['both_match' if a and b else 'left_only' if a else 'right_only' if b else 'neither']+=1
             paired[domain][left+'_vs_'+right]=dict(counts)
     result=dict(status='CONTROLLED ACTUAL-NEO4J POLICY-RETRIEVAL PILOT; NO HUMAN OVERSIGHT CLAIM',
-        model_responses=len(rows),unique_retrieval_queries=protocol['query_variants'],
+        model_request_records=len(rows),actual_api_responses=sum(bool(r.get('response_id')) for r in rows),
+        requests_without_api_response=sum(not r.get('response_id') for r in rows),
+        unique_retrieval_queries=protocol['query_variants'],
         scores=scores,paired=paired,
         limitations=['The source graph was created from reference policies for these same known cases; no source-family holdout.',
             'Graph expansion supplies sibling requirements; a gain can be due to evidence coverage and context length, not better reasoning.',
@@ -110,6 +117,6 @@ if __name__=='__main__':
         for arm in ARMS:
             subset=[r for r in exported if r['domain']==domain and r['arm']==arm]
             assert sum(r['match']=='True' for r in subset)==scores[domain][arm]['matches']
-    print(json.dumps(dict(model_responses=len(rows),scores={domain:{arm:{k:v for k,v in score.items() if k in
+    print(json.dumps(dict(model_request_records=len(rows),actual_api_responses=result['actual_api_responses'],scores={domain:{arm:{k:v for k,v in score.items() if k in
         ['n_cases','matches','agreement','reference_fact_recall_mean_per_case','invalid_outputs','unresolvable_cited_fact_ids']}
         for arm,score in arms.items()} for domain,arms in scores.items()}),indent=2))

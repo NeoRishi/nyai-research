@@ -62,7 +62,7 @@ This requires the live dependencies and your own graph/API credentials. It embed
 
 The first live run returned six passages from two notes for plain RAG and six from four notes for GraphRAG, with 12 source-file references supplied by graph expansion. This shows a working integration and additional provenance availability, not better answer accuracy. Semantic support, applicability and source currentness remain unverified; a validated-answer claim is withheld. [Integration details and recorded run](docs/live-graphrag-integration.md).
 
-## What we tested
+## Initial experiments on 25 October
 
 Two experiments examine different parts of the research question:
 
@@ -78,6 +78,21 @@ The repository retains **360 actual API audit responses and 24 actual model-gene
 
 The next useful test is a harder, independently labelled set of plausible unsupported conclusions and conflicting evidence, followed by a study of reviewer decisions and effort.
 
+## Controlled GraphRAG evaluation on 26 October
+
+We also ran both case sets through actual Neo4j retrieval and a new four-condition model comparison. Because their exact reference policies are not indexed in the original wellness corpus, this experiment uses an isolated 86-node reference-policy graph. It contains source facts, not candidate answers or labels. The original knowledge-base nodes and relationships remain unchanged.
+
+| Condition | 120 policy template matches | 24 contract-oracle matches |
+|---|---|---|
+| Full reference supplied directly | 96/120 | 24/24 |
+| Vector RAG | 63/120 | 18/24 |
+| GraphRAG | 71/120 | 24/24 |
+| GraphRAG with structured audit prompt | 61/120 | 24/24 |
+
+Graph expansion recovered all designated reference facts, compared with 91.7% for vector retrieval on the policy cases and 50% on the contract cases. It improved the recorded outcomes over vector RAG, but did not beat direct-reference access. The extra structured instruction did not improve them. The six vector-RAG contract disagreements were conservative withholding when rules were missing, not unsafe permissions.
+
+There are 576 request records, 573 returned API responses and five failed/invalid outputs counted as nonmatches. Model calls and retrieval are real; the tasks remain synthetic. Policy labels are still unreviewed, graph structure is designed around known sources, and human oversight remains untested. [Results and interpretation](docs/graphrag-evaluation-results.md), [PDF addendum](output/pdf/NyAI_GraphRAG_Evaluation_2026-10-26.pdf), and [protocol](docs/graphrag-evaluation-design.md).
+
 ## Reproduce and inspect
 
 ```bash
@@ -85,6 +100,8 @@ python3 -m unittest discover -s tests -v
 python3 scripts/summarize_pilot.py
 python3 scripts/verify_agentic.py
 python3 scripts/verify_artifacts.py
+python3 scripts/summarize_graphrag144.py
+python3 scripts/verify_graphrag144.py
 ```
 
 These commands use stored outputs and need no credentials. Full replay and live-run instructions are in [Running experiments](docs/running-experiments.md).

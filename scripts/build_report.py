@@ -1,5 +1,5 @@
 """Build a compact standalone PDF from the reviewed Markdown report source."""
-import html,re
+import argparse,html,re
 from pathlib import Path
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_LEFT
@@ -9,6 +9,7 @@ from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,Table,TableSty
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'output/pdf/NyAI_Research_Work_Sample_2026-10-25.pdf'
+REPORT_DATE='25 October 2026'
 
 
 def inline(text):
@@ -23,18 +24,25 @@ def footer(canvas,doc):
     canvas.line(43,39,A4[0]-43,39)
     canvas.setFont('Helvetica',8)
     canvas.setFillColor(colors.HexColor('#475569'))
-    canvas.drawString(43,26,'NyAI | Preliminary research pilot | 25 October 2026')
+    canvas.drawString(43,26,'NyAI | Preliminary research pilot | '+REPORT_DATE)
     canvas.drawRightString(A4[0]-43,26,str(doc.page))
 
 
 if __name__=='__main__':
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--source',type=Path,default=ROOT/'docs/work-sample.md')
+    parser.add_argument('--output',type=Path,default=OUT)
+    parser.add_argument('--date',default=REPORT_DATE)
+    parser.add_argument('--title',default='NyAI evidence validation and checkable oversight')
+    args=parser.parse_args()
+    OUT=args.output.resolve();REPORT_DATE=args.date
     OUT.parent.mkdir(parents=True,exist_ok=True)
     styles=getSampleStyleSheet()
     styles.add(ParagraphStyle(name='ReportTitle',fontName='Helvetica-Bold',fontSize=23,leading=27,spaceAfter=14,textColor=colors.HexColor('#102A43')))
     styles.add(ParagraphStyle(name='ReportHeading',fontName='Helvetica-Bold',fontSize=12.5,leading=16,spaceBefore=10,spaceAfter=7,textColor=colors.HexColor('#102A43'),keepWithNext=True))
     styles.add(ParagraphStyle(name='ReportBody',fontName='Helvetica',fontSize=10,leading=14,spaceAfter=9,splitLongWords=True))
     styles.add(ParagraphStyle(name='Cell',fontName='Helvetica',fontSize=8,leading=11,spaceAfter=0))
-    source=(ROOT/'docs/work-sample.md').read_text()
+    source=args.source.read_text()
     blocks=source.split('\n\n');story=[]
     for block in blocks:
         block=block.strip()
@@ -59,6 +67,6 @@ if __name__=='__main__':
             story.extend([table,Spacer(1,10)]);continue
         story.append(Paragraph(inline(block.replace('\n',' ')),styles['ReportBody']))
     doc=SimpleDocTemplate(str(OUT),pagesize=A4,rightMargin=43,leftMargin=43,topMargin=42,bottomMargin=51,
-        title='NyAI evidence validation and checkable oversight',author='Hrishikesh Wattamwar; prepared with AI assistance')
+        title=args.title,author='Hrishikesh Wattamwar; prepared with AI assistance')
     doc.build(story,onFirstPage=footer,onLaterPages=footer)
     print(OUT)

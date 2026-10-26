@@ -10,6 +10,7 @@
 - [ ] Heldout examples annotated independently (prefer two reviewers; resolve disagreements).
 - [x] Results and failure cases reproducibly archived, including settings failures and truncations.
 - [x] Stronger model and generic-checklist comparisons included; no improvement demonstrated.
+- [x] Controlled 144-case GraphRAG comparison completed on an isolated reference-policy namespace, with raw records, coverage metrics and mixed outcomes retained. This is not independent source or human-oversight validation.
 - [x] Separate allowlisted 24-case replay package prepared and tested locally and on a hosted runner.
 - [ ] Applicant has approved the work sample's factual content and contribution attribution.
 - [ ] Sanitized package publication/reviewer access and reuse terms decided; current candidate remains unpublished.

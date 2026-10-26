@@ -2,6 +2,8 @@
 
 Protocol prepared on 26 October 2026. This document defines the controlled experiment; execution status is determined by its recorded artifacts, not by this design document.
 
+Execution is now complete following the user's explicit approval of the isolated import and API batch. The observed outcomes, failure handling and post-hoc diagnostics are in [the results addendum](graphrag-evaluation-results.md). The original frozen plan and pre-execution amendment remain unchanged.
+
 ## Why an isolated reference graph is necessary
 
 The 120 policy candidates concern 18 VCIM reference rules; the 24 action decisions concern an explicit synthetic software contract. These are not ordinary questions about the wellness corpus. A read-only check of the original Aura Note corpus found zero exact reference-ID matches for these sources. A local wiki check also found no exact requirement phrases. These are coverage screens, not proof that no related concepts exist.

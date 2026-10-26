@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-26",
+  "source": "Explicit user reply to the scoped approval question in this conversation",
+  "approved_scope": {
+    "isolated_benchmark_nodes": 86,
+    "logical_model_requests": 576,
+    "embeddings": true,
+    "fixture_reference_policy_excerpts_and_fictional_runtime_facts_only": true,
+    "existing_knowledge_base_nodes_unchanged": true,
+    "private_wellness_passages_sent_to_model": false
+  },
+  "user_selection": "Run the isolated GraphRAG evaluation (Recommended)",
+  "note": "Execution approval is not author approval of research claims or independent human validation."
+}

@@ -20,6 +20,9 @@ jobs:
           python scripts/summarize_pilot.py
           python scripts/verify_agentic.py
           python scripts/verify_artifacts.py
+          python scripts/summarize_graphrag144.py
+          python scripts/report_graphrag144.py
+          python scripts/verify_graphrag144.py
       - name: Verify the separate sanitized package in isolation
         run: |
           python scripts/build_review_bundle.py

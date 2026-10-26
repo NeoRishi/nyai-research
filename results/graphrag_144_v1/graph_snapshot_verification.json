@@ -1,0 +1,1216 @@
+{
+  "status": "PASS",
+  "database_writes": false,
+  "model_calls": 0,
+  "queries_replayed": 31,
+  "original_label_counts_unchanged": true,
+  "original_relationship_counts_unchanged": true,
+  "original_node_count": 2297,
+  "benchmark_nodes": 86,
+  "trace": [
+    {
+      "query_sha256": "46f04cc8d49ef93b652b21e00ad6a95c4e32c691becbe447bc5f7d7e46a78ad0",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "POL-01.boundary",
+        "POL-01.requirement",
+        "POL-07.requirement",
+        "POL-11.boundary",
+        "EP-EMPIRICAL.requirement",
+        "POL-03.requirement"
+      ],
+      "graph_ids": [
+        "POL-01.boundary",
+        "POL-01.requirement",
+        "POL-07.requirement",
+        "POL-11.boundary",
+        "EP-EMPIRICAL.requirement",
+        "POL-03.requirement",
+        "EP-EMPIRICAL.boundary",
+        "POL-03.boundary",
+        "POL-07.boundary",
+        "POL-11.requirement"
+      ],
+      "vector_scores": [
+        0.7326463460922241,
+        0.7213106155395508,
+        0.6906487941741943,
+        0.6896156072616577,
+        0.6857929825782776,
+        0.681525707244873
+      ],
+      "selected_graph_scores": [
+        0.7326463460922241,
+        0.7213106155395508,
+        0.6906487941741943,
+        0.6896156072616577,
+        0.6857929825782776,
+        0.681525707244873
+      ]
+    },
+    {
+      "query_sha256": "c2405ab36e094e0b40639e9bb488f7a0c8ebe17338ee26804190fa3b82d9e755",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "POL-02.requirement",
+        "POL-06.requirement",
+        "POL-02.boundary",
+        "POL-11.boundary",
+        "EP-EMPIRICAL.requirement",
+        "POL-11.requirement"
+      ],
+      "graph_ids": [
+        "POL-02.requirement",
+        "POL-06.requirement",
+        "POL-02.boundary",
+        "POL-11.boundary",
+        "EP-EMPIRICAL.requirement",
+        "POL-11.requirement",
+        "EP-EMPIRICAL.boundary",
+        "POL-06.boundary"
+      ],
+      "vector_scores": [
+        0.7546913623809814,
+        0.7273941040039062,
+        0.7168718576431274,
+        0.7026386857032776,
+        0.6919463872909546,
+        0.6845932006835938
+      ],
+      "selected_graph_scores": [
+        0.7546913623809814,
+        0.7273941040039062,
+        0.7168718576431274,
+        0.7026386857032776,
+        0.6919463872909546,
+        0.6845932006835938
+      ]
+    },
+    {
+      "query_sha256": "3dd00bc14fb74deb1d913fe2de899510235b00982f8a7b3fb477a3ae74d2d772",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "POL-03.requirement",
+        "POL-06.requirement",
+        "POL-03.boundary",
+        "EP-EMPIRICAL.requirement",
+        "POL-11.boundary",
+        "POL-11.requirement"
+      ],
+      "graph_ids": [
+        "POL-03.requirement",
+        "POL-06.requirement",
+        "POL-03.boundary",
+        "EP-EMPIRICAL.requirement",
+        "POL-11.boundary",
+        "POL-11.requirement",
+        "EP-EMPIRICAL.boundary",
+        "POL-06.boundary"
+      ],
+      "vector_scores": [
+        0.7286207675933838,
+        0.7167249917984009,
+        0.7131763696670532,
+        0.7120959162712097,
+        0.689778208732605,
+        0.6826437711715698
+      ],
+      "selected_graph_scores": [
+        0.7286207675933838,
+        0.7167249917984009,
+        0.7131763696670532,
+        0.7120959162712097,
+        0.689778208732605,
+        0.6826437711715698
+      ]
+    },
+    {
+      "query_sha256": "d54226e9a6a04b4f1d1efbc0a660ef520ca38193ec2550fa5a9fed88fd2304ee",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "POL-04.requirement",
+        "POL-04.boundary",
+        "POL-01.boundary",
+        "POL-01.requirement",
+        "POL-11.boundary",
+        "POL-07.requirement"
+      ],
+      "graph_ids": [
+        "POL-04.requirement",
+        "POL-04.boundary",
+        "POL-01.boundary",
+        "POL-01.requirement",
+        "POL-11.boundary",
+        "POL-07.requirement",
+        "POL-07.boundary",
+        "POL-11.requirement"
+      ],
+      "vector_scores": [
+        0.7473393678665161,
+        0.7339810132980347,
+        0.7238677740097046,
+        0.6915767192840576,
+        0.6861677169799805,
+        0.6801581382751465
+      ],
+      "selected_graph_scores": [
+        0.7473393678665161,
+        0.7339810132980347,
+        0.7238677740097046,
+        0.6915767192840576,
+        0.6861677169799805,
+        0.6801581382751465
+      ]
+    },
+    {
+      "query_sha256": "e363a33fed1d0b9fd9e469b234baff37b39d216022ac273e87afe7a71e56a0c6",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "POL-11.boundary",
+        "POL-05.requirement",
+        "POL-07.requirement",
+        "POL-08.requirement",
+        "POL-07.boundary",
+        "POL-05.boundary"
+      ],
+      "graph_ids": [
+        "POL-11.boundary",
+        "POL-05.requirement",
+        "POL-07.requirement",
+        "POL-08.requirement",
+        "POL-07.boundary",
+        "POL-05.boundary",
+        "POL-08.boundary",
+        "POL-11.requirement"
+      ],
+      "vector_scores": [
+        0.6957676410675049,
+        0.6954306364059448,
+        0.6817970871925354,
+        0.679776132106781,
+        0.678554356098175,
+        0.676418662071228
+      ],
+      "selected_graph_scores": [
+        0.6957676410675049,
+        0.6954306364059448,
+        0.6817970871925354,
+        0.679776132106781,
+        0.678554356098175,
+        0.676418662071228
+      ]
+    },
+    {
+      "query_sha256": "e1db1ff997040723e84c45abaa72038165e6b5716539461e6f3358e0b8765fc5",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "POL-06.requirement",
+        "EP-QUARANTINE.boundary",
+        "EP-EMPIRICAL.requirement",
+        "EP-QUARANTINE.requirement",
+        "EP-FRONTIER.requirement",
+        "POL-11.boundary"
+      ],
+      "graph_ids": [
+        "POL-06.requirement",
+        "EP-QUARANTINE.boundary",
+        "EP-EMPIRICAL.requirement",
+        "EP-QUARANTINE.requirement",
+        "EP-FRONTIER.requirement",
+        "POL-11.boundary",
+        "EP-EMPIRICAL.boundary",
+        "EP-FRONTIER.boundary",
+        "POL-06.boundary",
+        "POL-11.requirement"
+      ],
+      "vector_scores": [
+        0.7379521131515503,
+        0.7170469760894775,
+        0.7152554988861084,
+        0.7027636170387268,
+        0.6988483667373657,
+        0.693480372428894
+      ],
+      "selected_graph_scores": [
+        0.7379521131515503,
+        0.7170469760894775,
+        0.7152554988861084,
+        0.7027636170387268,
+        0.6988483667373657,
+        0.693480372428894
+      ]
+    },
+    {
+      "query_sha256": "e8ad112ba897e253cc9ab2847c779f50e1743cd6c1831df5e2b9669e80901f1e",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "POL-07.boundary",
+        "POL-07.requirement",
+        "POL-11.boundary",
+        "EP-EMPIRICAL.requirement",
+        "POL-06.requirement",
+        "EP-FRONTIER.requirement"
+      ],
+      "graph_ids": [
+        "POL-07.boundary",
+        "POL-07.requirement",
+        "POL-11.boundary",
+        "EP-EMPIRICAL.requirement",
+        "POL-06.requirement",
+        "EP-FRONTIER.requirement",
+        "EP-EMPIRICAL.boundary",
+        "EP-FRONTIER.boundary",
+        "POL-06.boundary",
+        "POL-11.requirement"
+      ],
+      "vector_scores": [
+        0.7167560458183289,
+        0.7122455835342407,
+        0.687091588973999,
+        0.6799439191818237,
+        0.6764653921127319,
+        0.6709720492362976
+      ],
+      "selected_graph_scores": [
+        0.7167560458183289,
+        0.7122455835342407,
+        0.687091588973999,
+        0.6799439191818237,
+        0.6764653921127319,
+        0.6709720492362976
+      ]
+    },
+    {
+      "query_sha256": "bcb76a690dc1f2fb6b5538a2f91cf6b40f484689e30419d0fbc3be0a2f941024",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "POL-11.boundary",
+        "POL-08.requirement",
+        "POL-11.requirement",
+        "POL-05.requirement",
+        "POL-06.requirement",
+        "POL-07.requirement"
+      ],
+      "graph_ids": [
+        "POL-11.boundary",
+        "POL-08.requirement",
+        "POL-11.requirement",
+        "POL-05.requirement",
+        "POL-06.requirement",
+        "POL-07.requirement",
+        "POL-05.boundary",
+        "POL-06.boundary",
+        "POL-07.boundary",
+        "POL-08.boundary"
+      ],
+      "vector_scores": [
+        0.7429701685905457,
+        0.7132023572921753,
+        0.704054594039917,
+        0.7039084434509277,
+        0.6939436197280884,
+        0.6866358518600464
+      ],
+      "selected_graph_scores": [
+        0.7429701685905457,
+        0.7132023572921753,
+        0.704054594039917,
+        0.7039084434509277,
+        0.6939436197280884,
+        0.6866358518600464
+      ]
+    },
+    {
+      "query_sha256": "9d5284f9f52122c9577b596b6310658c596e399566a04b6bc8c6d5a164a638c1",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "POL-11.boundary",
+        "POL-09.requirement",
+        "POL-09.boundary",
+        "POL-06.requirement",
+        "EP-EMPIRICAL.requirement",
+        "POL-07.requirement"
+      ],
+      "graph_ids": [
+        "POL-11.boundary",
+        "POL-09.requirement",
+        "POL-09.boundary",
+        "POL-06.requirement",
+        "EP-EMPIRICAL.requirement",
+        "POL-07.requirement",
+        "EP-EMPIRICAL.boundary",
+        "POL-06.boundary",
+        "POL-07.boundary",
+        "POL-11.requirement"
+      ],
+      "vector_scores": [
+        0.7478048205375671,
+        0.7105495929718018,
+        0.7096060514450073,
+        0.6974966526031494,
+        0.6874951720237732,
+        0.6694775223731995
+      ],
+      "selected_graph_scores": [
+        0.7478048205375671,
+        0.7105495929718018,
+        0.7096060514450073,
+        0.6974966526031494,
+        0.6874951720237732,
+        0.6694775223731995
+      ]
+    },
+    {
+      "query_sha256": "f46c16ac7a1edf4d07ef5606ebd55572098cfe27b78d304e1b81d02205ffde9f",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "POL-10.requirement",
+        "EP-TRADITION.requirement",
+        "POL-11.boundary",
+        "POL-06.requirement",
+        "POL-10.boundary",
+        "POL-08.requirement"
+      ],
+      "graph_ids": [
+        "POL-10.requirement",
+        "EP-TRADITION.requirement",
+        "POL-11.boundary",
+        "POL-06.requirement",
+        "POL-10.boundary",
+        "POL-08.requirement",
+        "EP-TRADITION.boundary",
+        "POL-06.boundary",
+        "POL-08.boundary",
+        "POL-11.requirement"
+      ],
+      "vector_scores": [
+        0.7131760120391846,
+        0.6874914765357971,
+        0.6860670447349548,
+        0.6813576221466064,
+        0.6734223365783691,
+        0.671683669090271
+      ],
+      "selected_graph_scores": [
+        0.7131760120391846,
+        0.6874914765357971,
+        0.6860670447349548,
+        0.6813576221466064,
+        0.6734223365783691,
+        0.671683669090271
+      ]
+    },
+    {
+      "query_sha256": "7644fd0f42a2b39ee382d168567ab4ed4972a56a11690164aa80e53729de9ce3",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "POL-11.boundary",
+        "POL-06.requirement",
+        "POL-11.requirement",
+        "POL-02.requirement",
+        "EP-EMPIRICAL.requirement",
+        "POL-09.requirement"
+      ],
+      "graph_ids": [
+        "POL-11.boundary",
+        "POL-06.requirement",
+        "POL-11.requirement",
+        "POL-02.requirement",
+        "EP-EMPIRICAL.requirement",
+        "POL-09.requirement",
+        "EP-EMPIRICAL.boundary",
+        "POL-02.boundary",
+        "POL-06.boundary",
+        "POL-09.boundary"
+      ],
+      "vector_scores": [
+        0.7444822192192078,
+        0.7127143144607544,
+        0.7025906443595886,
+        0.6826262474060059,
+        0.6796932816505432,
+        0.6746388673782349
+      ],
+      "selected_graph_scores": [
+        0.7444822192192078,
+        0.7127143144607544,
+        0.7025906443595886,
+        0.6826262474060059,
+        0.6796932816505432,
+        0.6746388673782349
+      ]
+    },
+    {
+      "query_sha256": "f7ca8c48ab4f18a1d4dda26b3ac34ee1fba53f09c01599b3a0adf2977630d4e9",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "EP-EMPIRICAL.requirement",
+        "EP-EMPIRICAL.boundary",
+        "POL-06.requirement",
+        "EP-METHODS.requirement",
+        "EP-FRONTIER.requirement",
+        "POL-09.boundary"
+      ],
+      "graph_ids": [
+        "EP-EMPIRICAL.requirement",
+        "EP-EMPIRICAL.boundary",
+        "POL-06.requirement",
+        "EP-METHODS.requirement",
+        "EP-FRONTIER.requirement",
+        "POL-09.boundary",
+        "EP-FRONTIER.boundary",
+        "EP-METHODS.boundary",
+        "POL-06.boundary",
+        "POL-09.requirement"
+      ],
+      "vector_scores": [
+        0.8714052438735962,
+        0.8267889022827148,
+        0.7781862616539001,
+        0.7612830996513367,
+        0.7423021793365479,
+        0.7208563089370728
+      ],
+      "selected_graph_scores": [
+        0.8714052438735962,
+        0.8267889022827148,
+        0.7781862616539001,
+        0.7612830996513367,
+        0.7423021793365479,
+        0.7208563089370728
+      ]
+    },
+    {
+      "query_sha256": "4afb7e908230442c0741147deecadcf719945757eda3c23e382cf464196ff2e0",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "EP-METHODS.boundary",
+        "EP-METHODS.requirement",
+        "POL-06.requirement",
+        "EP-EMPIRICAL.requirement",
+        "EP-FRONTIER.requirement",
+        "EP-EMPIRICAL.boundary"
+      ],
+      "graph_ids": [
+        "EP-METHODS.boundary",
+        "EP-METHODS.requirement",
+        "POL-06.requirement",
+        "EP-EMPIRICAL.requirement",
+        "EP-FRONTIER.requirement",
+        "EP-EMPIRICAL.boundary",
+        "EP-FRONTIER.boundary",
+        "POL-06.boundary"
+      ],
+      "vector_scores": [
+        0.828473687171936,
+        0.8086537718772888,
+        0.7555726170539856,
+        0.7536841034889221,
+        0.7318733930587769,
+        0.7072656154632568
+      ],
+      "selected_graph_scores": [
+        0.828473687171936,
+        0.8086537718772888,
+        0.7555726170539856,
+        0.7536841034889221,
+        0.7318733930587769,
+        0.7072656154632568
+      ]
+    },
+    {
+      "query_sha256": "972572e55b79d1b415fa1753b1718fab04eb8dc76c727c9f3973da5cbd57b215",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "EP-TRADITION.requirement",
+        "EP-TRADITION.boundary",
+        "POL-06.requirement",
+        "EP-EMPIRICAL.requirement",
+        "EP-METHODS.requirement",
+        "EP-FRONTIER.requirement"
+      ],
+      "graph_ids": [
+        "EP-TRADITION.requirement",
+        "EP-TRADITION.boundary",
+        "POL-06.requirement",
+        "EP-EMPIRICAL.requirement",
+        "EP-METHODS.requirement",
+        "EP-FRONTIER.requirement",
+        "EP-EMPIRICAL.boundary",
+        "EP-FRONTIER.boundary",
+        "EP-METHODS.boundary",
+        "POL-06.boundary"
+      ],
+      "vector_scores": [
+        0.7755205631256104,
+        0.7677149772644043,
+        0.7641626000404358,
+        0.7472692728042603,
+        0.7447061538696289,
+        0.7257667183876038
+      ],
+      "selected_graph_scores": [
+        0.7755205631256104,
+        0.7677149772644043,
+        0.7641626000404358,
+        0.7472692728042603,
+        0.7447061538696289,
+        0.7257667183876038
+      ]
+    },
+    {
+      "query_sha256": "cdc80bcfb9c1bab1231e4d291f85bda15621f385afcb63ce0ccdcea697b6caf3",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "EP-HYPOTHESIS.requirement",
+        "EP-HYPOTHESIS.boundary",
+        "POL-06.requirement",
+        "EP-FRONTIER.requirement",
+        "EP-EMPIRICAL.requirement",
+        "EP-METHODS.requirement"
+      ],
+      "graph_ids": [
+        "EP-HYPOTHESIS.requirement",
+        "EP-HYPOTHESIS.boundary",
+        "POL-06.requirement",
+        "EP-FRONTIER.requirement",
+        "EP-EMPIRICAL.requirement",
+        "EP-METHODS.requirement",
+        "EP-EMPIRICAL.boundary",
+        "EP-FRONTIER.boundary",
+        "EP-METHODS.boundary",
+        "POL-06.boundary"
+      ],
+      "vector_scores": [
+        0.8148460984230042,
+        0.7758418321609497,
+        0.7696927785873413,
+        0.7456637024879456,
+        0.7356493473052979,
+        0.7245609164237976
+      ],
+      "selected_graph_scores": [
+        0.8148460984230042,
+        0.7758418321609497,
+        0.7696927785873413,
+        0.7456637024879456,
+        0.7356493473052979,
+        0.7245609164237976
+      ]
+    },
+    {
+      "query_sha256": "97bb38a96071f6053fc0f836184fd019832e11405678be83304c39d01e2dc144",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "EP-PERSONAL.requirement",
+        "POL-06.requirement",
+        "EP-PERSONAL.boundary",
+        "EP-EMPIRICAL.requirement",
+        "EP-METHODS.requirement",
+        "EP-FRONTIER.requirement"
+      ],
+      "graph_ids": [
+        "EP-PERSONAL.requirement",
+        "POL-06.requirement",
+        "EP-PERSONAL.boundary",
+        "EP-EMPIRICAL.requirement",
+        "EP-METHODS.requirement",
+        "EP-FRONTIER.requirement",
+        "EP-EMPIRICAL.boundary",
+        "EP-FRONTIER.boundary",
+        "EP-METHODS.boundary",
+        "POL-06.boundary"
+      ],
+      "vector_scores": [
+        0.8240088820457458,
+        0.7924054861068726,
+        0.7784278392791748,
+        0.7634888887405396,
+        0.743841290473938,
+        0.736732006072998
+      ],
+      "selected_graph_scores": [
+        0.8240088820457458,
+        0.7924054861068726,
+        0.7784278392791748,
+        0.7634888887405396,
+        0.743841290473938,
+        0.736732006072998
+      ]
+    },
+    {
+      "query_sha256": "5e1d6722ada9c1fb52a0e587b7452b7dc7ecb02e8632abe227828a576fa23b5a",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "EP-FRONTIER.requirement",
+        "EP-FRONTIER.boundary",
+        "POL-06.requirement",
+        "EP-EMPIRICAL.requirement",
+        "EP-METHODS.requirement",
+        "EP-HYPOTHESIS.requirement"
+      ],
+      "graph_ids": [
+        "EP-FRONTIER.requirement",
+        "EP-FRONTIER.boundary",
+        "POL-06.requirement",
+        "EP-EMPIRICAL.requirement",
+        "EP-METHODS.requirement",
+        "EP-HYPOTHESIS.requirement",
+        "EP-EMPIRICAL.boundary",
+        "EP-HYPOTHESIS.boundary",
+        "EP-METHODS.boundary",
+        "POL-06.boundary"
+      ],
+      "vector_scores": [
+        0.8494051694869995,
+        0.7994932532310486,
+        0.774182915687561,
+        0.7572851777076721,
+        0.7319689393043518,
+        0.7233729958534241
+      ],
+      "selected_graph_scores": [
+        0.8494051694869995,
+        0.7994932532310486,
+        0.774182915687561,
+        0.7572851777076721,
+        0.7319689393043518,
+        0.7233729958534241
+      ]
+    },
+    {
+      "query_sha256": "34b928c0b6aa559cecb487676c4d8811edfb10131bc74cd209d03b0e4feb98a1",
+      "domain": "policy_audit",
+      "vector_ids": [
+        "EP-QUARANTINE.boundary",
+        "EP-QUARANTINE.requirement",
+        "POL-06.requirement",
+        "EP-TRADITION.requirement",
+        "EP-FRONTIER.requirement",
+        "EP-EMPIRICAL.requirement"
+      ],
+      "graph_ids": [
+        "EP-QUARANTINE.boundary",
+        "EP-QUARANTINE.requirement",
+        "POL-06.requirement",
+        "EP-TRADITION.requirement",
+        "EP-FRONTIER.requirement",
+        "EP-EMPIRICAL.requirement",
+        "EP-EMPIRICAL.boundary",
+        "EP-FRONTIER.boundary",
+        "EP-TRADITION.boundary",
+        "POL-06.boundary"
+      ],
+      "vector_scores": [
+        0.8379471302032471,
+        0.8049302697181702,
+        0.7755781412124634,
+        0.7388267517089844,
+        0.7383021712303162,
+        0.7305328249931335
+      ],
+      "selected_graph_scores": [
+        0.8379471302032471,
+        0.8049302697181702,
+        0.7755781412124634,
+        0.7388267517089844,
+        0.7383021712303162,
+        0.7305328249931335
+      ]
+    },
+    {
+      "query_sha256": "a7de2bc1a8faa2bf99bdceeca5eb7e77363a801671721224f25f78fea7604ba3",
+      "domain": "action_contract",
+      "vector_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.epistemics",
+        "AG.scope",
+        "AG.version",
+        "AG.tests"
+      ],
+      "graph_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.authority",
+        "AG.budget",
+        "AG.consent",
+        "AG.contradiction",
+        "AG.epistemics",
+        "AG.integrity",
+        "AG.scope",
+        "AG.status",
+        "AG.tests",
+        "AG.version"
+      ],
+      "vector_scores": [
+        0.7505080699920654,
+        0.7439597845077515,
+        0.7415028214454651,
+        0.7357300519943237,
+        0.7307249903678894,
+        0.7289361953735352
+      ],
+      "selected_graph_scores": [
+        0.7505080699920654,
+        0.7439597845077515
+      ]
+    },
+    {
+      "query_sha256": "d070476a27235cdf39b848df0100d17e360e93363fe236ac651afc193a1048ec",
+      "domain": "action_contract",
+      "vector_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.epistemics",
+        "AG.scope",
+        "AG.tests",
+        "AG.version"
+      ],
+      "graph_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.authority",
+        "AG.budget",
+        "AG.consent",
+        "AG.contradiction",
+        "AG.epistemics",
+        "AG.integrity",
+        "AG.scope",
+        "AG.status",
+        "AG.tests",
+        "AG.version"
+      ],
+      "vector_scores": [
+        0.7498255968093872,
+        0.7446044683456421,
+        0.7428473234176636,
+        0.7361994981765747,
+        0.7300813794136047,
+        0.7299336194992065
+      ],
+      "selected_graph_scores": [
+        0.7498255968093872,
+        0.7446044683456421
+      ]
+    },
+    {
+      "query_sha256": "a2624cef706ba486c884e313bdf07eb1f715cef1ffb2e887b3ee92b79895906e",
+      "domain": "action_contract",
+      "vector_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.epistemics",
+        "AG.scope",
+        "AG.tests",
+        "AG.version"
+      ],
+      "graph_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.authority",
+        "AG.budget",
+        "AG.consent",
+        "AG.contradiction",
+        "AG.epistemics",
+        "AG.integrity",
+        "AG.scope",
+        "AG.status",
+        "AG.tests",
+        "AG.version"
+      ],
+      "vector_scores": [
+        0.7499899864196777,
+        0.7439475059509277,
+        0.7429018020629883,
+        0.7355412840843201,
+        0.7305659055709839,
+        0.7304341197013855
+      ],
+      "selected_graph_scores": [
+        0.7499899864196777,
+        0.7439475059509277
+      ]
+    },
+    {
+      "query_sha256": "0016cc33b9c2b0d68eb8339df1630348ecb2b43755f06d4ed2b51facefe10638",
+      "domain": "action_contract",
+      "vector_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.epistemics",
+        "AG.scope",
+        "AG.version",
+        "AG.tests"
+      ],
+      "graph_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.authority",
+        "AG.budget",
+        "AG.consent",
+        "AG.contradiction",
+        "AG.epistemics",
+        "AG.integrity",
+        "AG.scope",
+        "AG.status",
+        "AG.tests",
+        "AG.version"
+      ],
+      "vector_scores": [
+        0.7510781288146973,
+        0.7457720637321472,
+        0.7417834997177124,
+        0.7370103001594543,
+        0.7312519550323486,
+        0.7293938994407654
+      ],
+      "selected_graph_scores": [
+        0.7510781288146973,
+        0.7457720637321472
+      ]
+    },
+    {
+      "query_sha256": "977df9240408aabe13cc96d73a7f11506d41baec247d0af632390693063baa0a",
+      "domain": "action_contract",
+      "vector_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.epistemics",
+        "AG.scope",
+        "AG.version",
+        "AG.tests"
+      ],
+      "graph_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.authority",
+        "AG.budget",
+        "AG.consent",
+        "AG.contradiction",
+        "AG.epistemics",
+        "AG.integrity",
+        "AG.scope",
+        "AG.status",
+        "AG.tests",
+        "AG.version"
+      ],
+      "vector_scores": [
+        0.7500718832015991,
+        0.743736982345581,
+        0.7427893877029419,
+        0.7353382110595703,
+        0.7303267121315002,
+        0.7302584648132324
+      ],
+      "selected_graph_scores": [
+        0.7500718832015991,
+        0.743736982345581
+      ]
+    },
+    {
+      "query_sha256": "2be7637fbfec89373f11601aac3699a143a1b78bc881cc3afa92b2276a252fba",
+      "domain": "action_contract",
+      "vector_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.epistemics",
+        "AG.scope",
+        "AG.version",
+        "AG.tests"
+      ],
+      "graph_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.authority",
+        "AG.budget",
+        "AG.consent",
+        "AG.contradiction",
+        "AG.epistemics",
+        "AG.integrity",
+        "AG.scope",
+        "AG.status",
+        "AG.tests",
+        "AG.version"
+      ],
+      "vector_scores": [
+        0.7502163648605347,
+        0.74358069896698,
+        0.740608811378479,
+        0.735040009021759,
+        0.7306175231933594,
+        0.728708028793335
+      ],
+      "selected_graph_scores": [
+        0.7502163648605347,
+        0.74358069896698
+      ]
+    },
+    {
+      "query_sha256": "b45848963ae75b8ca340036530eef2fe884af9dd0e21a5a62c8dfb7d8001c40d",
+      "domain": "action_contract",
+      "vector_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.epistemics",
+        "AG.scope",
+        "AG.version",
+        "AG.tests"
+      ],
+      "graph_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.authority",
+        "AG.budget",
+        "AG.consent",
+        "AG.contradiction",
+        "AG.epistemics",
+        "AG.integrity",
+        "AG.scope",
+        "AG.status",
+        "AG.tests",
+        "AG.version"
+      ],
+      "vector_scores": [
+        0.7509465217590332,
+        0.7440727949142456,
+        0.7432430982589722,
+        0.7363027334213257,
+        0.7318595051765442,
+        0.7311732172966003
+      ],
+      "selected_graph_scores": [
+        0.7509465217590332,
+        0.7440727949142456
+      ]
+    },
+    {
+      "query_sha256": "ee6fe9772bf7f7b917066429af09dfad9691fb7068e034e87a0cc0d491bd8d28",
+      "domain": "action_contract",
+      "vector_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.epistemics",
+        "AG.scope",
+        "AG.version",
+        "AG.tests"
+      ],
+      "graph_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.authority",
+        "AG.budget",
+        "AG.consent",
+        "AG.contradiction",
+        "AG.epistemics",
+        "AG.integrity",
+        "AG.scope",
+        "AG.status",
+        "AG.tests",
+        "AG.version"
+      ],
+      "vector_scores": [
+        0.7510403394699097,
+        0.746019721031189,
+        0.7438002824783325,
+        0.7368768453598022,
+        0.7316364049911499,
+        0.7313831448554993
+      ],
+      "selected_graph_scores": [
+        0.7510403394699097,
+        0.746019721031189
+      ]
+    },
+    {
+      "query_sha256": "f4db1b341e41546d15d3926d8bc04651b17a8f404724d4cb418bbfff200d6f2d",
+      "domain": "action_contract",
+      "vector_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.epistemics",
+        "AG.scope",
+        "AG.version",
+        "AG.tests"
+      ],
+      "graph_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.authority",
+        "AG.budget",
+        "AG.consent",
+        "AG.contradiction",
+        "AG.epistemics",
+        "AG.integrity",
+        "AG.scope",
+        "AG.status",
+        "AG.tests",
+        "AG.version"
+      ],
+      "vector_scores": [
+        0.7485847473144531,
+        0.7450411319732666,
+        0.7371588945388794,
+        0.7369884252548218,
+        0.7304569482803345,
+        0.7275258898735046
+      ],
+      "selected_graph_scores": [
+        0.7485847473144531,
+        0.7450411319732666
+      ]
+    },
+    {
+      "query_sha256": "0c0d07e4fc12b1a36af05301d971ca6e28c4f75f9ac1eca332d2acc0cd1b2ddf",
+      "domain": "action_contract",
+      "vector_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.epistemics",
+        "AG.scope",
+        "AG.version",
+        "AG.tests"
+      ],
+      "graph_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.authority",
+        "AG.budget",
+        "AG.consent",
+        "AG.contradiction",
+        "AG.epistemics",
+        "AG.integrity",
+        "AG.scope",
+        "AG.status",
+        "AG.tests",
+        "AG.version"
+      ],
+      "vector_scores": [
+        0.7513477802276611,
+        0.7457249760627747,
+        0.7423917055130005,
+        0.7370524406433105,
+        0.7316040992736816,
+        0.7295275926589966
+      ],
+      "selected_graph_scores": [
+        0.7513477802276611,
+        0.7457249760627747
+      ]
+    },
+    {
+      "query_sha256": "21acf6aded65bed29ec4aa0d02d5be30f80673703cdd0f039550e4a0e87e53c6",
+      "domain": "action_contract",
+      "vector_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.epistemics",
+        "AG.scope",
+        "AG.version",
+        "AG.tests"
+      ],
+      "graph_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.authority",
+        "AG.budget",
+        "AG.consent",
+        "AG.contradiction",
+        "AG.epistemics",
+        "AG.integrity",
+        "AG.scope",
+        "AG.status",
+        "AG.tests",
+        "AG.version"
+      ],
+      "vector_scores": [
+        0.749564528465271,
+        0.7452771067619324,
+        0.7411292791366577,
+        0.7360323071479797,
+        0.7302482724189758,
+        0.7278207540512085
+      ],
+      "selected_graph_scores": [
+        0.749564528465271,
+        0.7452771067619324
+      ]
+    },
+    {
+      "query_sha256": "96eefbaaf67a932c48d5ffffdd892b50676e9a793c9a0eeb32b993ac8366888f",
+      "domain": "action_contract",
+      "vector_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.epistemics",
+        "AG.scope",
+        "AG.version",
+        "AG.tests"
+      ],
+      "graph_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.authority",
+        "AG.budget",
+        "AG.consent",
+        "AG.contradiction",
+        "AG.epistemics",
+        "AG.integrity",
+        "AG.scope",
+        "AG.status",
+        "AG.tests",
+        "AG.version"
+      ],
+      "vector_scores": [
+        0.7507156133651733,
+        0.7440670728683472,
+        0.7418195605278015,
+        0.7359833717346191,
+        0.7310417890548706,
+        0.729315996170044
+      ],
+      "selected_graph_scores": [
+        0.7507156133651733,
+        0.7440670728683472
+      ]
+    },
+    {
+      "query_sha256": "ac6e6bdb2e18b38817b952b8759a018631e1a6ed4d310b06335af66004130059",
+      "domain": "action_contract",
+      "vector_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.epistemics",
+        "AG.scope",
+        "AG.version",
+        "AG.tests"
+      ],
+      "graph_ids": [
+        "AG.trace",
+        "AG.tenant",
+        "AG.authority",
+        "AG.budget",
+        "AG.consent",
+        "AG.contradiction",
+        "AG.epistemics",
+        "AG.integrity",
+        "AG.scope",
+        "AG.status",
+        "AG.tests",
+        "AG.version"
+      ],
+      "vector_scores": [
+        0.7500715255737305,
+        0.7439084649085999,
+        0.741481363773346,
+        0.7359426021575928,
+        0.7304290533065796,
+        0.7278481125831604
+      ],
+      "selected_graph_scores": [
+        0.7500715255737305,
+        0.7439084649085999
+      ]
+    }
+  ]
+}
