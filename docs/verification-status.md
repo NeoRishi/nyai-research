@@ -9,7 +9,10 @@ The word **verified** must name the specific check. It must not collapse these d
 | VCIM registry transcription | Exact values from 18 workbook rows | Automated match; no scientific validation |
 | Latest VCIM workbook copy | Four relevant sheets, ignoring empty cells/rows | Same substantive cell values as scaffold source |
 | Local corpus | Readable file bytes, hashes, structural markers | Audited; private per-file manifest remains local |
-| Aura | Read-only schema/count queries | Connected, vector index online; no database writes |
+| Original Aura graph | Schema/count queries and preserved pre/post original label and relationship counts | Connected, vector index online; original graph counts unchanged |
+| Isolated Aura benchmark | Approved 86-node namespace and real retrieval | Added and evaluated separately from private wellness graph |
+| Controlled GraphRAG comparison | 576 request records, 573 returned API responses; replayed scoring | Real model/retrieval experiment on constructed tasks; unreviewed policy labels |
+| Observed execution/revision diagnostic | Actual local subprocess tests, hashes and approval bindings | 12 constructed trajectories / 24 correlated decision points; conventional baseline ties NyAI; no human review |
 | 120 initial cases | Design-derived expected labels | Unreviewed; never promoted to human ground truth |
 | Paired model audit | Raw API outputs, prompts and protocol hashes | Actual model judgments, not human judgments |
 | 24 action-policy cases | Separate finite-set oracle vs engine implementation | Automated independent recomputation by the same assistant |

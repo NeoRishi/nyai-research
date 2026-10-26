@@ -95,6 +95,18 @@ There are 576 request records, 573 returned API responses and five failed/invali
 
 ## Reproduce and inspect
 
+### Observed execution and evidence revision
+
+The new local diagnostic runs real tests against small fictional Python artifacts, records exit codes and content hashes, and reevaluates permission after edits, failures, missing records, changed task scope and revoked approval:
+
+```bash
+python3 scripts/run_runtime_revision.py --output /tmp/nyai-runtime-replay
+```
+
+It needs no credentials, private knowledge base or LLM framework. Twelve constructed trajectories contain 24 correlated decision points. Both a conventional rechecking workflow and the NyAI observed-evidence contract agree with all 24 design decisions; each withholds all eight designated invalid permissions. Trusting a synthetic success claim or caching the initial permission permits those eight. **This shows the importance of current execution evidence; it does not show an advantage over conventional checks.** The programs are trivial, approval changes are simulated, and no model responses or human review are involved. [Protocol, results and remaining validation](docs/runtime-evidence-study.md).
+
+### Earlier experiment replay
+
 ```bash
 python3 -m unittest discover -s tests -v
 python3 scripts/summarize_pilot.py
@@ -109,6 +121,7 @@ These commands use stored outputs and need no credentials. Full replay and live-
 The demo and recorded action-policy results do not depend on the private knowledge base. A separate, allowlisted reproducibility package is prepared for review; see [Sharing and independent validation](docs/sharing-and-validation.md). It excludes private corpus content, proprietary policy excerpts, credentials and repository history. The full private repository should not be made public as a shortcut.
 
 - [Research work sample](docs/work-sample.md) and [standalone PDF](output/pdf/NyAI_Research_Work_Sample_2026-10-25.pdf)
+- [Current consolidated research summary](docs/current-research-summary.md), including the runtime revision diagnostic and its limits
 - [Research question and proposed study](docs/research-plan.md)
 - [Implementation and trust boundaries](docs/implementation-notes.md)
 - [What has actually been verified](docs/verification-status.md)

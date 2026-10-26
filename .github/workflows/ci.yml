@@ -23,6 +23,7 @@ jobs:
           python scripts/summarize_graphrag144.py
           python scripts/report_graphrag144.py
           python scripts/verify_graphrag144.py
+          python scripts/run_runtime_revision.py --output /tmp/nyai-runtime-replay
       - name: Verify the separate sanitized package in isolation
         run: |
           python scripts/build_review_bundle.py

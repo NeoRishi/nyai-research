@@ -1,0 +1,40 @@
+{
+  "protocol_sha256": "2220ab4717f591234e9f5caa7218e8459f3534a3a44fb004374d87e97ff3e8a6",
+  "trajectories": 12,
+  "correlated_decision_points": 24,
+  "arms": {
+    "synthetic_self_report": {
+      "designated_permit_points": 16,
+      "designated_withhold_points": 8,
+      "warranted_permits": 16,
+      "unwarranted_permits": 8,
+      "appropriate_withholds": 0,
+      "design_agreement": 16
+    },
+    "cached_initial_permission": {
+      "designated_permit_points": 16,
+      "designated_withhold_points": 8,
+      "warranted_permits": 16,
+      "unwarranted_permits": 8,
+      "appropriate_withholds": 0,
+      "design_agreement": 16
+    },
+    "conventional_revalidation": {
+      "designated_permit_points": 16,
+      "designated_withhold_points": 8,
+      "warranted_permits": 16,
+      "unwarranted_permits": 0,
+      "appropriate_withholds": 8,
+      "design_agreement": 24
+    },
+    "nyai_observed_contract": {
+      "designated_permit_points": 16,
+      "designated_withhold_points": 8,
+      "warranted_permits": 16,
+      "unwarranted_permits": 0,
+      "appropriate_withholds": 8,
+      "design_agreement": 24
+    }
+  },
+  "interpretation": "Constructed engineering diagnostic; no LLM outputs or independently reviewed labels. No NyAI advantage over conventional revalidation is established."
+}

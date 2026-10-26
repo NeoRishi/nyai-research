@@ -1,0 +1,14 @@
+{
+  "protocol_sha256": "2220ab4717f591234e9f5caa7218e8459f3534a3a44fb004374d87e97ff3e8a6",
+  "runner_sha256": "99a412f280b84742684a57148ce35967d44b0df1e60b9b9138e8f870ffc3d0f1",
+  "engine_sha256": "f04f67e009df27fda692b8fcaa375b683d8f6616952685b3aa55c98d763e2607",
+  "records_sha256": "4a44076168fe48e743c37d79d2da18144b1daadbcb652b37ac8edf436d195565",
+  "python": "3.13.5 (v3.13.5:6cb20a219a8, Jun 11 2025, 12:23:45) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "candidate_programs": {
+    "valid": "def score(values):\n    return sum(values)\n",
+    "revised_valid": "def score(values):\n    return sum(values)\n# A new artifact version with identical behaviour.\n",
+    "invalid": "def score(values):\n    return 0\n"
+  },
+  "test_harness": "import runpy, sys\nscore = runpy.run_path(sys.argv[1])['score']\nassert score([1, 2, 3]) == 6\nassert score([-2, 2]) == 0\nassert score([]) == 0\nprint('3 assertions passed')\n",
+  "note": "stderr may contain temporary absolute paths; compare decisions and hashes of fictional artifacts across machines, not byte-identical tracebacks."
+}
