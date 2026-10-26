@@ -25,34 +25,96 @@ def digest(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def observe_test(artifact, harness, task, run_id):
-    """Run fixed local tests; reject an artifact that changes during execution."""
-    before = digest(artifact)
-    completed = subprocess.run(
-        [sys.executable, '-I', str(harness), str(artifact)],
-        capture_output=True, text=True, timeout=5, check=False,
-    )
-    after = digest(artifact)
-    return dict(run_id=run_id, task=task, artifact_sha256=before,
-                artifact_stable=before == after, harness_sha256=digest(harness),
-                exit_code=completed.returncode, stdout=completed.stdout,
-                stderr=completed.stderr)
+def observe_test(artifact, harness, task, run_id, timeout=5):
+    """Observe a fixed local test, including failed launches and timeouts.
+
+    Before/after hashes detect some mutations, not swap-and-restore attacks.
+    No claim of sandboxing or atomic downstream artifact consumption is made.
+    """
+    observation = dict(run_id=run_id, task=task, artifact_sha256=None,
+                       harness_sha256=None, artifact_stable=False,
+                       harness_stable=False, exit_code=None,
+                       stdout='', stderr='', error=None)
+    try:
+        before, harness_before = digest(artifact), digest(harness)
+        observation.update(artifact_sha256=before, harness_sha256=harness_before)
+        completed = subprocess.run(
+            [sys.executable, '-I', str(harness), str(artifact)],
+            capture_output=True, text=True, timeout=timeout, check=False,
+        )
+        observation.update(exit_code=completed.returncode, stdout=completed.stdout,
+                           stderr=completed.stderr)
+    except subprocess.TimeoutExpired as error:
+        observation['error'] = 'timeout'
+        # TimeoutExpired may return bytes even when subprocess text=True.
+        for field in ('stdout', 'stderr'):
+            value = getattr(error, field, None) or ''
+            observation[field] = value.decode(errors='replace') if isinstance(value, bytes) else value
+    except OSError as error:
+        observation['error'] = 'observation_or_launch_error:' + type(error).__name__
+    finally:
+        try:
+            observation['artifact_stable'] = observation['artifact_sha256'] == digest(artifact)
+            observation['harness_stable'] = observation['harness_sha256'] == digest(harness)
+        except OSError:
+            observation['error'] = observation['error'] or 'post_run_identity_unavailable'
+    return observation
+
+
+def _nonempty(value):
+    return type(value) is str and bool(value.strip())
+
+
+def _hash(value):
+    return _nonempty(value) and len(value) == 64 and all(c in '0123456789abcdef' for c in value)
+
+
+def _run_id(value):
+    return (type(value) is int and value > 0) or _nonempty(value)
+
+
+def _valid_state(state):
+    """Shared strict schema validation, not a second scientific oracle."""
+    if type(state) is not dict:
+        return False
+    run, approval = state.get('observation'), state.get('approval')
+    if type(run) is not dict or type(approval) is not dict:
+        return False
+    return all([
+        _hash(state.get('artifact_sha256')), _hash(state.get('harness_sha256')),
+        _nonempty(state.get('task')), _run_id(run.get('run_id')),
+        type(run.get('exit_code')) is int,
+        type(run.get('artifact_stable')) is bool,
+        type(run.get('harness_stable')) is bool,
+        _hash(run.get('artifact_sha256')), _hash(run.get('harness_sha256')),
+        _nonempty(run.get('task')), 'error' in run,
+        run.get('error') is None or _nonempty(run.get('error')),
+        type(approval.get('active')) is bool,
+        _hash(approval.get('artifact_sha256')), _nonempty(approval.get('task')),
+        _run_id(approval.get('run_id')),
+    ])
 
 
 def observed_contract(state):
     """Explain the actual external gates; never consume the proposed explanation."""
-    observation = state['observation'] or {}
-    approval = state['approval'] or {}
+    valid = _valid_state(state)
+    state = state if type(state) is dict else {}
+    observation = state.get('observation') if type(state.get('observation')) is dict else {}
+    approval = state.get('approval') if type(state.get('approval')) is dict else {}
     checks = {
+        'runtime_schema_valid': valid,
         'execution_observed': bool(observation),
-        'test_passed': observation.get('exit_code') == 0,
+        'test_passed': type(observation.get('exit_code')) is int and observation.get('exit_code') == 0,
+        'observation_completed': observation.get('error') is None and 'error' in observation,
         'artifact_stable_during_run': observation.get('artifact_stable') is True,
-        'current_artifact_tested': observation.get('artifact_sha256') == state['artifact_sha256'],
-        'current_task_tested': observation.get('task') == state['task'],
+        'harness_stable_during_run': observation.get('harness_stable') is True,
+        'expected_harness_used': _hash(state.get('harness_sha256')) and observation.get('harness_sha256') == state.get('harness_sha256'),
+        'current_artifact_tested': _hash(state.get('artifact_sha256')) and observation.get('artifact_sha256') == state.get('artifact_sha256'),
+        'current_task_tested': _nonempty(state.get('task')) and observation.get('task') == state.get('task'),
         'approval_active': approval.get('active') is True,
-        'approval_current_artifact': approval.get('artifact_sha256') == state['artifact_sha256'],
-        'approval_current_task': approval.get('task') == state['task'],
-        'approval_current_execution': bool(observation) and approval.get('run_id') == observation.get('run_id'),
+        'approval_current_artifact': _hash(state.get('artifact_sha256')) and approval.get('artifact_sha256') == state.get('artifact_sha256'),
+        'approval_current_task': _nonempty(state.get('task')) and approval.get('task') == state.get('task'),
+        'approval_current_execution': _run_id(observation.get('run_id')) and _run_id(approval.get('run_id')) and type(approval.get('run_id')) is type(observation.get('run_id')) and approval.get('run_id') == observation.get('run_id'),
     }
     return dict(permit=all(checks.values()), checks=checks,
                 unmet=[key for key, value in checks.items() if not value])
@@ -64,11 +126,15 @@ def conventional_revalidation(state):
     Intentionally expresses the same policy without NyAI explanation records.
     Equivalent outcomes would demonstrate no incremental decision benefit.
     """
+    if not _valid_state(state):
+        return False
     run, approval = state['observation'], state['approval']
-    if not run or not approval or not approval['active']:
+    if not approval['active']:
         return False
-    if run['exit_code'] != 0 or not run['artifact_stable']:
+    if run['exit_code'] != 0 or not run['artifact_stable'] or not run['harness_stable'] or run['error'] is not None:
         return False
-    current = (state['artifact_sha256'], state['task'])
+    if run['harness_sha256'] != state['harness_sha256']:
+        return False
+    current = (state.get('artifact_sha256'), state.get('task'))
     return (run['artifact_sha256'], run['task']) == current and (
-        approval['artifact_sha256'], approval['task']) == current and approval['run_id'] == run['run_id']
+        approval['artifact_sha256'], approval['task']) == current and type(approval['run_id']) is type(run['run_id']) and approval['run_id'] == run['run_id']

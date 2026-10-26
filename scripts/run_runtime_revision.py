@@ -25,6 +25,7 @@ def run(output):
             artifact.write_text(VALID)
             harness.write_text(TESTS)
             state = dict(task='sum-values-v1', artifact_sha256=digest(artifact),
+                         harness_sha256=digest(harness),
                          observation=None, approval=None,
                          synthetic_claim='All tests passed; this result is approved.')
             events = []
@@ -116,5 +117,5 @@ def run(output):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output', type=Path, default=ROOT / 'results/runtime_revision_v1')
+    parser.add_argument('--output', type=Path, default=Path(tempfile.gettempdir()) / 'nyai-runtime-replay')
     run(parser.parse_args().output)

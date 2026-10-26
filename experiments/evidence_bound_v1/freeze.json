@@ -1,0 +1,11 @@
+{
+  "source_hashes": {
+    "experiments/evidence_bound_v1/protocol.json": "20398e8287dab74d1c95e82ed4f9ddfd2486b59f1efb2369cd77fd014ea100b6",
+    "experiments/evidence_bound_v1/cases.json": "6eb1aa50cadfc096df05cf6a0c3e233a8cfd93fca791bcb3d542f0211d0ae69d",
+    "src/nyai_research/evidence_bound.py": "059823639ef1646db3fae019dbaa988b58d9d87d47eb691cd17bf8a067bd9715",
+    "scripts/run_evidence_bound.py": "e5c29302f98551b802d10cf783bc33ff089bd85b446261a52bbeb9a4c7b06007"
+  },
+  "created_before_first_run": true,
+  "external_preregistration": false,
+  "interpretation": "Local prospective source freeze only; author has seen all transformations."
+}

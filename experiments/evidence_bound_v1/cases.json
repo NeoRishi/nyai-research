@@ -1,0 +1,148 @@
+[
+  {
+    "case_id": "valid_current",
+    "operations": []
+  },
+  {
+    "case_id": "valid_threshold_boundary",
+    "operations": [
+      "boundary"
+    ]
+  },
+  {
+    "case_id": "observed_rate_fails",
+    "operations": [
+      "high_rate"
+    ]
+  },
+  {
+    "case_id": "no_execution",
+    "operations": [
+      "no_run"
+    ]
+  },
+  {
+    "case_id": "empty_evaluation",
+    "operations": [
+      "empty"
+    ]
+  },
+  {
+    "case_id": "unregistered_success_record",
+    "operations": [
+      "forged"
+    ]
+  },
+  {
+    "case_id": "outputs_changed",
+    "operations": [
+      "outputs_changed"
+    ]
+  },
+  {
+    "case_id": "dataset_changed",
+    "operations": [
+      "dataset_changed"
+    ]
+  },
+  {
+    "case_id": "harness_changed",
+    "operations": [
+      "harness_changed"
+    ]
+  },
+  {
+    "case_id": "configuration_changed",
+    "operations": [
+      "config_changed"
+    ]
+  },
+  {
+    "case_id": "model_version_changed",
+    "operations": [
+      "model_changed"
+    ]
+  },
+  {
+    "case_id": "population_safety_overclaim",
+    "operations": [
+      "overclaim"
+    ]
+  },
+  {
+    "case_id": "subgroup_failure_hidden_by_aggregate",
+    "operations": [
+      "red_scope"
+    ]
+  },
+  {
+    "case_id": "stricter_claim_unsupported",
+    "operations": [
+      "strict_claim"
+    ]
+  },
+  {
+    "case_id": "incomplete_output_coverage",
+    "operations": [
+      "missing_output"
+    ]
+  },
+  {
+    "case_id": "active_contrary_rerun",
+    "operations": [
+      "contrary"
+    ]
+  },
+  {
+    "case_id": "contrary_run_retired_by_authority",
+    "operations": [
+      "contrary",
+      "retire_contrary"
+    ]
+  },
+  {
+    "case_id": "supporting_run_retracted",
+    "operations": [
+      "retract"
+    ]
+  },
+  {
+    "case_id": "permission_revoked",
+    "operations": [
+      "revoke"
+    ]
+  },
+  {
+    "case_id": "approval_for_another_run",
+    "operations": [
+      "wrong_approval"
+    ]
+  },
+  {
+    "case_id": "benign_unrelated_note",
+    "operations": [
+      "note"
+    ]
+  },
+  {
+    "case_id": "failure_corrected_and_reapproved",
+    "operations": [
+      "high_rate",
+      "repair"
+    ]
+  },
+  {
+    "case_id": "missing_dataset_dependency_edge",
+    "operations": [
+      "omit_dataset_edge",
+      "dataset_changed"
+    ]
+  },
+  {
+    "case_id": "missing_counterevidence_dependency_edge",
+    "operations": [
+      "omit_active_edge",
+      "contrary"
+    ]
+  }
+]

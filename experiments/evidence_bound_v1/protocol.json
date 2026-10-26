@@ -1,0 +1,42 @@
+{
+  "study_id": "evidence_bound_v1",
+  "date": "2026-10-27",
+  "status": "Prospective local engineering evaluation; not external preregistration or confirmatory human/model study",
+  "question": "When is a reproducible evaluation run insufficient to warrant a current scoped conclusion, and does an explicit warrant/revision record add decision benefit beyond complete conventional revalidation?",
+  "selection": "B: stale/invalidated research conclusions; C reviewer usefulness is future work. A evidence binding is established engineering.",
+  "policy": "Accept a narrow observed-rate claim only with a registered successful nonempty run, complete matched model/output/dataset/config/harness identities, current scope and approval, arithmetic support, active evidence, and no unresolved current-context contrary run. Acceptance is for this fixture metric only, never model safety.",
+  "behavior_data": "Fictional harmless refusal/compliance strings, not model-generated completions. Real subprocess evaluation, artifact reads, hashing and grading occur.",
+  "conditions": [
+    "report_only_control",
+    "execution_integrity_only",
+    "lineage_selective",
+    "complete_revalidation",
+    "complete_revalidation_with_records"
+  ],
+  "fairness": "Identical packet access. Conditions differ by checks performed, not hidden evidence. Integrity-only is a strong provenance component, not the strongest conventional end-to-end workflow. Complete revalidation is the matched strong baseline. Recorded NyAI condition adds explanation records only; outcomes should tie if correctly implemented.",
+  "unit": "24 hand-constructed scenarios from one shared artifact generator. Correlated cases, no independent holdout or population inference.",
+  "reference": "A separate same-author executable oracle reads raw snapshots, registered observations and authority state. Specification-derived judgments, not independent human ground truth. Expected labels are not case inputs or arm inputs.",
+  "metrics": [
+    "unwarranted acceptance among reference withholds",
+    "correct acceptance among reference accepts",
+    "appropriate withholding",
+    "false withholding",
+    "paired disagreements",
+    "execution runs and elapsed process time",
+    "checks performed",
+    "dependency-omission failures"
+  ],
+  "failure_handling": "Timeout, malformed/missing/empty metric, execution error, unknown identity or missing observation withhold. Retain raw failures; do not silently retry.",
+  "statistics": "Descriptive counts only. No significance, confidence interval or general safety efficacy claim from constructed correlated scenarios.",
+  "threat_model": "Proposer may issue misleading claims and mutate working artifacts, omit recorded dependency edges, or cite an unregistered result. Observer registry, current authority, fixed grader allowlist and oracle remain trusted. Host compromise, malicious arbitrary code, covert channels and inference of scientific validity are outside scope.",
+  "downstream": "A separate consume operation rechecks against current state and copies verified bytes into a host-owned output. This narrows a simulated mutation window; it is not distributed atomic deployment or prevention of OS-level races.",
+  "stopping_rule": "Run all frozen scenarios once; preserve all results, including ties and unexpected discrepancies. Amend rather than silently edit frozen inputs or code. No paid APIs or human participants.",
+  "related_work": [
+    "https://arxiv.org/abs/2609.28574",
+    "https://arxiv.org/abs/2610.07274",
+    "https://arxiv.org/abs/2605.06527",
+    "https://arxiv.org/abs/2312.06942",
+    "https://slsa.dev/spec/v1.2/verifying-artifacts"
+  ],
+  "decision_semantics": "Permission to endorse/use a current conclusion under a conservative authority policy, not whether a historical run statement is true. A contrary run does not falsify the earlier observed rate; it defeats present endorsement under this policy. Retiring contrary evidence is an explicit simulated authority decision, not proof a conflict is scientifically resolved."
+}
