@@ -1,5 +1,7 @@
 # NyAI: evidence-grounded decisions in AI-assisted research
 
+Historical consolidated draft. The current primary report is `docs/evidence-bound-work-sample.md`, including the 27 October artifact study, close related work, amendments and applicant-supplied contribution disclosure. This file remains as design history.
+
 Preliminary work sample - 26 October 2026. Prepared with AI assistance; applicant review and contribution statement remain pending.
 
 ## Research problem

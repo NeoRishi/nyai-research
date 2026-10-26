@@ -1,5 +1,7 @@
 # MATS Bridge application readiness
 
+Current update27October2026: see `application/bridge-alignment-2026-10-27.md` for requirements rechecked against official Residency pages today. The applicant has supplied `application/authorship-record-2026-10-27.md` and requested an external-review packet. The primary report is now `docs/evidence-bound-work-sample.md`; private review ZIPs are prepared in `dist/`. No external judgments, publication, report approval or submission has occurred. The dated checklist below remains preparation history; outstanding personal/logistics/referee facts are not inferred.
+
 Updated 25 October 2026. Target: ready on 27 October. Official deadline: 31 October 2026 AoE.
 
 Sources: [published requirements](https://www.matsprogram.org/residency/apply), [live application](https://forms.matsprogram.org/residency-w27). Only the live form's introduction was inspected; later fields, formats and word limits remain to be checked without entering invented information or accepting acknowledgments for the applicant.

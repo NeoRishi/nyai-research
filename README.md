@@ -1,10 +1,27 @@
-# NyAI: evidence validation for AI oversight
+# NyAI: Evidence-Bound Oversight for Autonomous AI Research Agents
 
 An AI-generated explanation can sound convincing even when its evidence does not justify the conclusion. A citation may be irrelevant, a source may have been superseded, or an agent may claim it performed a check that never ran. A reviewer needs a way to inspect those grounds before accepting the answer or allowing the next action.
 
 **NyAI studies how to keep AI-assisted research and agent decisions checkable when explanations alone are not reliable evidence.** It investigates whether explicit warrants, defeaters and revision conditions help reviewers identify unsupported conclusions and inappropriate actions.
 
 This repository contains a runnable research prototype and reproducible pilot experiments. Improved human oversight has not yet been demonstrated.
+
+## Current research result
+
+**A successful evaluation run is insufficient to justify a current research conclusion.** We separate observed execution, exact artifact identity, claim scope, and later evidence or authority changes. This is a bounded research-evaluation diagnostic, not a novel attestation or alignment method.
+
+The new study runs a real grader over fictional evaluation records in 24 constructed scenarios. Under its explicit endorsement policy, five cases qualify for acceptance and 19 require withholding. A provenance-only component makes nine unwarranted acceptances; selective dependency rechecking misses two deliberately omitted edges. Complete conventional revalidation handles all 24. Adding NyAI records produces identical decisions **by construction**; reviewer benefit remains untested. The final archive retains all 33 local executions, including two deliberate errors. There are no new model calls or real-model safety claims.
+
+- [Primary technical report](docs/evidence-bound-work-sample.md) and [PDF](output/pdf/NyAI_Evidence_Bound_Oversight_2026-10-27.pdf)
+- [Research audit and corrected defects](docs/research-audit-2026-10-27.md)
+- [Related work and novelty limits](docs/related-work-2026-10-27.md)
+
+```bash
+python3 scripts/run_evidence_bound.py --phase verify --output results/evidence_bound_v1_final
+python3 scripts/run_evidence_bound.py --phase run --output /tmp/nyai-independent-replay
+```
+
+Use a new output path for each run. Python 3.10+ and its standard library suffice. No API, private knowledge base, database or agent framework is needed. The protocol was locally frozen before execution; two later hardening/accounting amendments and all earlier outputs are retained. Cases and reference rules share an AI author and lack external human validation. The next research question is whether explicit records help overseers beyond ordinary guarded workflows and logs.
 
 ## The AI safety problem
 
@@ -20,7 +37,7 @@ The proposed path to safety impact is to make unsupported conclusions easier to 
 
 Feature attribution can help explain model behaviour. NyAI examines a complementary question: **does the available evidence justify accepting this conclusion or taking this action?** Its records expose the external decision procedure; they do not reveal neural model internals or solve the black-box problem in general.
 
-## How it works
+## Earlier executable prototype
 
 The executable prototype checks a proposed action against a supplied policy and structured runtime facts:
 

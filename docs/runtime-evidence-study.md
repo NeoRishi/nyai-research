@@ -2,6 +2,8 @@
 
 Date: 26 October 2026. Engineering diagnostic, not a human oversight study.
 
+27 October audit update: harness identity, malformed-field and observation-failure defects were found and fixed. The original recorded results and manifest remain evidence of commit742ae57. The current hardened runner defaults to `/tmp/nyai-runtime-replay`; its hashes differ from the historical manifest. The new artifact-based study is reported separately in `docs/evidence-bound-work-sample.md`.
+
 ## Problem and safety connection
 
 An AI research assistant may report that an evaluation passed even when it failed, or continue relying on a result after the tested artifact changes. Fluent explanations and structurally consistent records cannot establish that a test ran. Checkable AI-assisted research needs a connection between observed execution, the artifact it concerns and the authority for the next action.

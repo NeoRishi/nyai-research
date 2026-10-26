@@ -13,6 +13,9 @@ The word **verified** must name the specific check. It must not collapse these d
 | Isolated Aura benchmark | Approved 86-node namespace and real retrieval | Added and evaluated separately from private wellness graph |
 | Controlled GraphRAG comparison | 576 request records, 573 returned API responses; replayed scoring | Real model/retrieval experiment on constructed tasks; unreviewed policy labels |
 | Observed execution/revision diagnostic | Actual local subprocess tests, hashes and approval bindings | 12 constructed trajectories / 24 correlated decision points; conventional baseline ties NyAI; no human review |
+| New evidence-bound artifact study | Frozen24scenarios, original plus two amended archives, raw grader observations and separate same-author reference recomputation | Final33executions, five policy-eligible accepts/19withholds; complete conventional and records share predicate/tie; no model or human reviewer outcomes |
+| External review preparation | Separate packet with24coded cases and blank worksheet | Prepared at applicant request; no completed external judgments |
+| Applicant contributions | Explicit applicant statement supplied27October | Conceptual/design/direction contributions distinguished from substantial AI assistance; final report approval pending |
 | 120 initial cases | Design-derived expected labels | Unreviewed; never promoted to human ground truth |
 | Paired model audit | Raw API outputs, prompts and protocol hashes | Actual model judgments, not human judgments |
 | 24 action-policy cases | Separate finite-set oracle vs engine implementation | Automated independent recomputation by the same assistant |

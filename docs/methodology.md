@@ -1,5 +1,7 @@
 # Pilot evaluation protocol — pre-registration candidate
 
+Current27October update: this file retains the initial pilot protocol as history. GraphRAG StageB has since been executed (`docs/graphrag-evaluation-results.md`). The new artifact study has its own prospective local freeze, two transparent amendments and complete records in `experiments/evidence_bound_v1/` and `results/evidence_bound_v1_final/`. See `docs/evidence-bound-work-sample.md` for current methods and limitations. No human oversight study has been completed.
+
 ## Recorded execution on 25 October 2026
 
 The candidate protocol below is retained as design history. Actual execution is defined by `experiments/protocol_freeze.json`, `protocol_amendment_01.json` and `agentic_freeze.json`; the completed findings are in `docs/work-sample.md`. This is a locally timestamped exploratory pilot, not an external preregistration. It does not implement Stage B retrieval comparisons or a human study.

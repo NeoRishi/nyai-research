@@ -24,7 +24,11 @@ jobs:
           python scripts/report_graphrag144.py
           python scripts/verify_graphrag144.py
           python scripts/run_runtime_revision.py --output /tmp/nyai-runtime-replay
+          python scripts/run_evidence_bound.py --phase verify --output results/evidence_bound_v1_final
+          python scripts/run_evidence_bound.py --phase run --output /tmp/nyai-evidence-bound-replay
       - name: Verify the separate sanitized package in isolation
         run: |
           python scripts/build_review_bundle.py
           python scripts/check_review_bundle.py dist/NyAI_Reproducibility_Review_2026-10-25.zip
+          python scripts/build_evidence_bound_supplement.py
+          python scripts/check_evidence_bound_supplement.py

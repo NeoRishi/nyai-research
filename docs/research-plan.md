@@ -1,5 +1,7 @@
 # NyAI research agenda for checkable AI oversight
 
+Update 27 October: the immediate research target is detecting stale or invalidated research endorsements under a declared scope/authority policy. See `docs/evidence-bound-work-sample.md` for executed results and `application/bridge-alignment-2026-10-27.md` for the proposed continuation/pivot criteria. The initial agenda below is retained as history; no reviewer efficacy hypothesis has been established.
+
 ## Question
 Can **explicit, claim-specific warrants and defeater checks** help evaluators identify unsupported or policy-violating recommendations made by AI agents, compared with a conventional answer-and-explanation interface?
 
