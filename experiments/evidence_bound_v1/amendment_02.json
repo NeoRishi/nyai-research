@@ -1,0 +1,16 @@
+{
+  "amendment": "02",
+  "phase": "After AI raw-record audit of original and amendment01 runs; before final replay",
+  "reason": "Missing-evidence case hid its initial registered observation from the reviewer and also inadvertently omitted it from resource accounting/raw archive. Retain a separate full host execution_log, while keeping reviewer evidence absent. Earlier summaries counted32 retained packet observations, although33 runs occurred. No scenario, acceptance rule or arm decision changed. Preserve both prior archives.",
+  "prior_results": [
+    "results/evidence_bound_v1",
+    "results/evidence_bound_v1_amended"
+  ],
+  "final_results": "results/evidence_bound_v1_final",
+  "source_hashes": {
+    "experiments/evidence_bound_v1/protocol.json": "20398e8287dab74d1c95e82ed4f9ddfd2486b59f1efb2369cd77fd014ea100b6",
+    "experiments/evidence_bound_v1/cases.json": "6eb1aa50cadfc096df05cf6a0c3e233a8cfd93fca791bcb3d542f0211d0ae69d",
+    "src/nyai_research/evidence_bound.py": "b46c4e6ea6ebbc6639e207e07d9c462c76bdac44ebf76de45ebc381f0cfe68d5",
+    "scripts/run_evidence_bound.py": "bf03c7d2c72446fc1b6cc320106b3d8aad02f98455f9dbb460d25468b47cfcba"
+  }
+}

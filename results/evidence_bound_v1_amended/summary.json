@@ -1,0 +1,63 @@
+{
+  "scenarios": 24,
+  "arms": {
+    "report_only_control": {
+      "reference_accepts": 5,
+      "reference_withholds": 19,
+      "correct_accepts": 5,
+      "unwarranted_accepts": 19,
+      "appropriate_withholds": 0,
+      "false_withholds": 0,
+      "matches": 5
+    },
+    "execution_integrity_only": {
+      "reference_accepts": 5,
+      "reference_withholds": 19,
+      "correct_accepts": 5,
+      "unwarranted_accepts": 9,
+      "appropriate_withholds": 10,
+      "false_withholds": 0,
+      "matches": 15
+    },
+    "lineage_selective": {
+      "reference_accepts": 5,
+      "reference_withholds": 19,
+      "correct_accepts": 5,
+      "unwarranted_accepts": 2,
+      "appropriate_withholds": 17,
+      "false_withholds": 0,
+      "matches": 22
+    },
+    "complete_revalidation": {
+      "reference_accepts": 5,
+      "reference_withholds": 19,
+      "correct_accepts": 5,
+      "unwarranted_accepts": 0,
+      "appropriate_withholds": 19,
+      "false_withholds": 0,
+      "matches": 24
+    },
+    "complete_revalidation_with_records": {
+      "reference_accepts": 5,
+      "reference_withholds": 19,
+      "correct_accepts": 5,
+      "unwarranted_accepts": 0,
+      "appropriate_withholds": 19,
+      "false_withholds": 0,
+      "matches": 24
+    }
+  },
+  "execution_runs": 32,
+  "execution_errors": 2,
+  "model_calls": 0,
+  "model_tokens": 0,
+  "api_cost": 0,
+  "lineage_rechecks": 19,
+  "full_contract_checks_per_case": 18,
+  "recorded_vs_complete_disagreements": [],
+  "selective_vs_complete_disagreements": [
+    "missing_dataset_dependency_edge",
+    "missing_counterevidence_dependency_edge"
+  ],
+  "interpretation": "Specification-derived engineering results. No independent human labels, LLM reviewer outcomes or NyAI decision superiority. Timings are process observations, not end-to-end comparative overhead."
+}

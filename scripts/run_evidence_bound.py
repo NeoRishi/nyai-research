@@ -58,7 +58,9 @@ def prepare():
 
 
 def check_freeze():
-    frozen = json.loads((STUDY/'freeze.json').read_text())['source_hashes']
+    amendments = sorted(STUDY.glob('amendment_*.json'))
+    amendment = amendments[-1] if amendments else STUDY/'freeze.json'
+    frozen = json.loads((amendment if amendment.exists() else STUDY/'freeze.json').read_text())['source_hashes']
     if frozen != freeze_sources():
         raise RuntimeError('Frozen source changed. Preserve results and create a documented amendment.')
 
@@ -142,7 +144,7 @@ def make_case(spec):
     # evidence is a distinct dependency that a declaration can wrongly omit.
     rechecked = bool(set(changed) & set(dependencies))
     result = evaluate(packet)
-    return dict(case_id=spec['case_id'], packet=packet, events=events,
+    return dict(case_id=spec['case_id'], packet=packet, execution_log=observer.snapshot(), events=events,
         declared_dependencies=dependencies, changed_dependencies=changed,
         initial_accept=initial_accept, lineage_rechecked=rechecked,
         reference_accept=reference_decision(packet), record=result,
@@ -164,7 +166,9 @@ def summarize(records):
             appropriate_withholds=sum(not r['decisions'][arm] for r in no),
             false_withholds=sum(not r['decisions'][arm] for r in yes),
             matches=sum(r['decisions'][arm] == r['reference_accept'] for r in records))
-    observations = [v for r in records for v in r['packet']['registry'].values()]
+    # Keep all host executions even when the evidence-access fixture removes a
+    # run from the reviewer's registry. Older archives lacked this separate log.
+    observations = [v for r in records for v in r.get('execution_log', r['packet']['registry']).values()]
     return dict(scenarios=len(records), arms=arms, execution_runs=len(observations),
         execution_errors=sum(v['exit_code'] != 0 for v in observations),
         model_calls=0, model_tokens=0, api_cost=0,
@@ -195,7 +199,7 @@ def execute(output):
     (output/'manifest.json').write_text(json.dumps(dict(source_hashes=freeze_sources(),
         records_sha256=file_hash(output/'records.jsonl'), summary_sha256=file_hash(output/'summary.json'),
         python=sys.version, platform=platform.platform(),
-        total_observed_execution_seconds=sum(v['elapsed_seconds'] for r in records for v in r['packet']['registry'].values()),
+        total_observed_execution_seconds=sum(v['elapsed_seconds'] for r in records for v in r['execution_log'].values()),
         agent_responses='None: behavioral strings and success claims are fictional fixtures.'), indent=2)+'\n')
     print(json.dumps(summary, indent=2))
 
@@ -204,7 +208,10 @@ def verify(output):
     check_freeze()
     records = [json.loads(line) for line in (output/'records.jsonl').read_text().splitlines()]
     manifest = json.loads((output/'manifest.json').read_text())
-    assert manifest['source_hashes'] == freeze_sources()
+    approved = [json.loads((STUDY/'freeze.json').read_text())['source_hashes']]
+    for amendment in sorted(STUDY.glob('amendment_*.json')):
+        approved.append(json.loads(amendment.read_text())['source_hashes'])
+    assert manifest['source_hashes'] in approved
     assert manifest['records_sha256'] == file_hash(output/'records.jsonl')
     assert manifest['summary_sha256'] == file_hash(output/'summary.json')
     assert len({r['case_id'] for r in records}) == len(records)

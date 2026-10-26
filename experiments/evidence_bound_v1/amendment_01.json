@@ -1,0 +1,14 @@
+{
+  "amendment": "01",
+  "phase": "After original24scenario run, before validation rerun",
+  "reason": "AI code review identified registry-key/run_id alias inconsistency. Add strict identity consistency; original frozen24 scenarios have no aliases. Preserve original results and verify both archives. No case, claim policy, metric or arm changes.",
+  "original_source_commit": "9727b26",
+  "original_results": "results/evidence_bound_v1",
+  "validation_results": "results/evidence_bound_v1_amended",
+  "source_hashes": {
+    "experiments/evidence_bound_v1/protocol.json": "20398e8287dab74d1c95e82ed4f9ddfd2486b59f1efb2369cd77fd014ea100b6",
+    "experiments/evidence_bound_v1/cases.json": "6eb1aa50cadfc096df05cf6a0c3e233a8cfd93fca791bcb3d542f0211d0ae69d",
+    "src/nyai_research/evidence_bound.py": "b46c4e6ea6ebbc6639e207e07d9c462c76bdac44ebf76de45ebc381f0cfe68d5",
+    "scripts/run_evidence_bound.py": "d02981da90cd7254042b904210e91325a6d81877ebf6b63900bda21f66f30528"
+  }
+}

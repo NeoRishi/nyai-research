@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-27",
+  "tests_passed": 44,
+  "historical_artifact_check": "PASS",
+  "historical_graphrag_check": "PASS",
+  "new_original_archive_check": "PASS",
+  "new_amendment01_archive_check": "PASS",
+  "new_final_archive_check": "PASS",
+  "isolated_export_tests": 11,
+  "isolated_export_full_replay": "PASS; summary identical",
+  "reviewer_packet": "24coded cases; no arm/reference answer fields; no completed judgments",
+  "privacy": "allowlisted export scan passed; full repository remains private",
+  "final_report_pages": 6,
+  "limitations": "Automated integrity only; no independent human or model reviewer efficacy outcomes"
+}

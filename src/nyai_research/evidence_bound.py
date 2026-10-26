@@ -171,6 +171,8 @@ def evaluate(packet):
             if not condition: raise ValueError('Invalid schema')
         require(type(packet) is dict)
         require(type(packet['registry']) is dict and type(packet['files']) is dict)
+        require(all(type(key) is str and bool(key) and type(value) is dict and value.get('run_id') == key
+                    for key, value in packet['registry'].items()))
         require(type(packet['observation_id']) is str and bool(packet['observation_id']))
         require(type(packet['active_run_ids']) is list)
         require(all(type(v) is str and bool(v) for v in packet['active_run_ids']))

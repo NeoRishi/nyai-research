@@ -92,6 +92,11 @@ class EvidenceBoundTests(unittest.TestCase):
         self.assertFalse(evaluate(packet)['accept'])
         self.assertFalse(reference_decision(packet))
 
+    def test_registry_alias_cannot_change_execution_identity(self):
+        packet = self.packet()
+        packet['registry'][packet['observation_id']]['run_id'] = 'another-run'
+        self.assertFalse(evaluate(packet)['accept'])
+
     def test_consumption_rechecks_and_uses_verified_snapshot(self):
         packet = self.packet()
         self.assertTrue(evaluate(packet)['accept'])

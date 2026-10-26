@@ -1,2 +1,4 @@
 *.pdf binary
 *.csv text eol=lf
+# Preserve the original archived CRLF bytes; do not renormalize past evidence.
+results/agentic_predictions.csv -text

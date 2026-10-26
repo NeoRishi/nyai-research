@@ -1,0 +1,14 @@
+{
+  "source_hashes": {
+    "experiments/evidence_bound_v1/protocol.json": "20398e8287dab74d1c95e82ed4f9ddfd2486b59f1efb2369cd77fd014ea100b6",
+    "experiments/evidence_bound_v1/cases.json": "6eb1aa50cadfc096df05cf6a0c3e233a8cfd93fca791bcb3d542f0211d0ae69d",
+    "src/nyai_research/evidence_bound.py": "b46c4e6ea6ebbc6639e207e07d9c462c76bdac44ebf76de45ebc381f0cfe68d5",
+    "scripts/run_evidence_bound.py": "bf03c7d2c72446fc1b6cc320106b3d8aad02f98455f9dbb460d25468b47cfcba"
+  },
+  "records_sha256": "25d89b0b3be0f365dbe855b446bc44f2ad4338b7ef0f4e4713f25cd4c7ca55e5",
+  "summary_sha256": "0344eb490616fe3d50ba4235a1b88297fd8e58d5cdd178046ed2458413501a3b",
+  "python": "3.13.5 (v3.13.5:6cb20a219a8, Jun 11 2025, 12:23:45) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "total_observed_execution_seconds": 0.7578601664863527,
+  "agent_responses": "None: behavioral strings and success claims are fictional fixtures."
+}
