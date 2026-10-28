@@ -1,29 +1,42 @@
-# EU AI Act relevance and limits
+# EU AI Act & Technical AI Governance Relevance Note
 
-Reviewed against official sources on 25 October 2026. This is a research mapping, not a legal compliance assessment.
+This note maps the host-anchored multi-hop `AssuranceDAG` prototype to research questions motivated by Regulation (EU) 2024/1689 and the EU General-Purpose AI (GPAI) Code of Practice. It does not establish applicability, legal sufficiency, certification, or improved human oversight.
 
-## What the earlier project actually cited
+## Scope and official sources
 
-The NyAI v1 repository's `Nyaya_XAI_Research_Position_Paper.pdf` cites Regulation (EU) 2024/1689, the Artificial Intelligence Act, specifically Article 86. Section 2.2 discusses regulatory explanation; section 3.4 proposes a connection to five-part reasoning records; section 8.2 treats that connection as work requiring formal analysis. In the PDF these appear on file pages 3, 6 and 13. The source repository's current README does not itself name the Act.
+The Act distinguishes high-risk AI systems from general-purpose AI models and from GPAI models with systemic risk. These obligations do not automatically apply to every research or coding agent. Applicability and transition dates depend on the system, provider and use; see the Commission's current [Article 113 text](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-113), rather than assuming all high-risk obligations began on one date.
 
-[Original position paper at the inspected commit](https://github.com/NeoRishi/nyai-dashboard/blob/5534d4c4985bf74e0ef5e7da64fae8143b9e046b/Nyaya_XAI_Research_Position_Paper.pdf).
+The [GPAI Code of Practice](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai) is a voluntary compliance tool. Its Transparency and Copyright chapters address Article 53; Safety and Security addresses Article 55. **Appendix 3.5 concerns independent external model evaluations**, not a statutory requirement to implement an assurance DAG. The Commission identifies this role in [COM(2026) 577, footnote 18](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A52026DC0577). **Measure 3.5** is a separate provision concerning post-market monitoring, discussed in the [AI Office's fourth Signatory Taskforce meeting report](https://digital-strategy.ec.europa.eu/en/news/fourth-gpai-signatory-taskforce-meeting). Sharing fewer code dependencies does not establish evaluator independence.
 
-Some earlier passages make broad claims about the limits of all post-hoc XAI and regulatory sufficiency. Those passages are not adopted as established findings here. An attractive architectural analogy does not prove faithfulness, explainability by construction, or legal conformity.
+## Technical mapping and limits
 
-## Scope of the connection
+| Official provision | Research connection in `AssuranceDAG` | What remains outside scope |
+|---|---|---|
+| [Article 12: record-keeping](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-12) | `observe_step_execution()` captures subprocess outcomes, stdout/stderr, direct local AST imports and selected before/after file digests in memory. Decision records expose resulting checks and causal metadata. | Full observation persistence, lifetime logging, retention, access controls and tamper-evident storage. The saved `records.jsonl` does not contain the full execution observations. |
+| [Article 13: deployer transparency](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-13) | Records list ancestor claims, bound artifact names, unmet gates and repair suggestions. Structural and hybrid evaluations are saved separately. | Complete instructions for use and evidence that deployers correctly interpret the outputs. |
+| [Article 14: human oversight](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-14) | Backward traversal selects active support claims and associated recorded steps. The fixture mean reductions are 79.49% of log steps and 85.53% of whitespace-separated log words. | Human accuracy, fatigue, review time, automation bias, deployed override/stop controls and effective intervention. Compression is a log-size measure, not a demonstrated reduction in human burden. |
+| [Article 15: accuracy, robustness and cybersecurity](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-15) | Current hashes, execution outcomes and selected shared warrants identify ten constructed structural/dependency invalidations. Optional Stage-2 AST inspection catches two selected assertion hacks. | General semantic correctness, adversarial coverage, implicit dependency tracing, secure execution and production robustness. |
+| [Article 53](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-53), [Article 55](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-55), and GPAI Code of Practice | Structured records may support documentation and evaluation review. Transitive invalidation illustrates how changed upstream evidence can defeat a downstream claim. Appendix 3.5 motivates external review as a separate governance question. | Provider obligations, systemic-risk evaluation and mitigation, incident reporting, independent external evaluation and a complete safety case. |
+| [Article 72: post-market monitoring](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-72) | The runner evaluates initial and final states after controlled revisions, illustrating evidence-drift detection. | A deployed monitoring system, continuous collection of operational performance data, a monitoring plan or tracking actual repository commits. |
+| [Article 86: explanations of certain individual decisions](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-86) | `principal_grounds_ancestors`, `unmet_gates`, `shared_warrants_detected` and `minimal_repair_set` support research into inspectable decision grounds and reconsideration. | An affected-person explanation process or proof of legal sufficiency. Article 86 has a specific scope involving consequential deployer decisions based on certain Annex III high-risk systems, excludes point 2 systems, and is subject to legal restrictions and overlapping Union-law rights. It does not prescribe this record schema or a counterfactual repair field. |
 
-| Official provision | What it addresses | Candidate NyAI contribution | What remains unestablished |
-|---|---|---|---|
-| [Article 13](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-13) | Transparency and information enabling deployers to interpret and use high-risk-system outputs | Document assumptions, check outcomes and limitations | Complete provider instructions, appropriate output interpretation and system-specific conformity |
-| [Article 14](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-14) | Effective human oversight, awareness of automation bias, interpretation and intervention capabilities | Test whether external records help a reviewer challenge a conclusion and decide to withhold | Actual reviewer benefit, deployed override/stop controls, suitable human-machine interfaces and operational safeguards |
-| [Article 86](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-86) | Explanations for affected people about certain consequential decisions involving Annex III high-risk systems | Explore records explaining system involvement and the principal decision grounds | An affected-person explanation process or evidence that these records meet the applicable legal duty |
+## Recorded Study 4 example
 
-Article 86 excludes the Annex III point 2 systems and includes legal or similarly significant effects perceived as adversely affecting health, safety or fundamental rights. Other restrictions and overlapping Union-law rights also matter. It is not a general requirement to disclose model weights, training data or internal chain-of-thought. Whether any duty applies depends on the actual system, use and legal context; this pilot makes no such determination. The Commission's service-desk pages identify their consolidated-text basis; this note does not attempt to resolve applicability dates or every amendment.
+The final record for `T08_shared_grader_warrant_collapse` shows `run_eval_a.py` and `run_eval_b.py` importing `shared_grader.py`. Both subprocess checks pass and their hashes are current. The configured 1-hop and flat-manifest baselines permit; both AssuranceDAG variants suspend because the branches share a selected warrant.
 
-## Appropriate research claims
+The actual `statutory_contestability_record` contains:
 
-NyAI may provide a way to study inspectable grounds and contestability. Its explanation is generated from its own executed contract checks, but the input facts can still be wrong or forged. The current simulation does not operate a deployed high-risk AI system or make actual decisions about affected people. A record of a check is not evidence that a human understood it or could intervene effectively.
+```json
+{
+  "effective_independent_branches": 1,
+  "required_independent_branches": 2,
+  "shared_warrants_detected": ["module:shared_grader.py"],
+  "unmet_gates": ["warrant_independence_vertex_cut"],
+  "minimal_repair_set": ["decouple_shared_warrant:shared_grader.py"],
+  "oversight_compression": "4/23 steps in causal slice (82.6% pruned)"
+}
+```
 
-The strongest connection to AI safety is the hypothesis that reliable external evidence checks could improve oversight of delegated AI work. The regulatory connection supplies useful design questions and evaluation criteria. It does not replace threat modelling, independent evaluation or a theory of change for advanced-AI risks.
+This example detects shared reliance without requiring the shared grader itself to be corrupted. `minimal_repair_set` is a legacy name for collected repair suggestions; the implementation does not prove a mathematically minimal or sufficient counterfactual repair. It emits no `counterfactual_fix` field. The `eu_ai_act_research_mapping` strings are research annotations, not legal findings.
 
-No claim is made that NyAI is EU AI Act compliant, certifies another system, fulfils Article 86, or guarantees meaningful human oversight.
+See [Study 4 methods and limitations](assurance-dag-study.md). All 16 trajectories are constructed subprocess diagnostics with simulated approval and configured claim dependencies. There are no affected-person decisions, participant trials or independent human annotations.

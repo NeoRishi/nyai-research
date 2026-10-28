@@ -6,6 +6,17 @@ An AI-generated explanation can sound convincing even when its evidence does not
 
 This repository contains a runnable research prototype and reproducible pilot experiments. Improved human oversight has not yet been demonstrated.
 
+## Four-study progression
+
+| Study | Question | Recorded result |
+|---|---|---|
+| 1. Synthetic audits and action contracts | Do structured checks improve agreement? | Structured prompts do not beat ordinary audit; model and contract tie on 24 action cases. |
+| 2. Controlled GraphRAG | Does retrieval provide needed evidence? | Graph expansion improves designated fact coverage; structured prompting adds no observed advantage. |
+| 3. Runtime revision | Can current execution evidence invalidate permission? | Observed contract and conventional revalidation tie at 24/24. |
+| 4. Multi-hop AssuranceDAG | Can transitive and shared-warrant checks distinguish harder failures? | Stage 1: 30/32; hybrid AST inspection: 32/32; configured 1-hop baseline: 23/32. |
+
+These are exploratory, constructed diagnostics with correlated cases. See the [work sample guide](docs/work-sample.md) for runnable entry points and limits.
+
 ## The AI safety problem
 
 An AI research assistant might declare an evaluation successful without running it, cite a result outside its tested scope, or continue using a conclusion after its evidence changes. As work is delegated to increasingly capable agents, fluent summaries can hide those failures from reviewers.
@@ -105,6 +116,26 @@ python3 scripts/run_runtime_revision.py --output /tmp/nyai-runtime-replay
 
 It needs no credentials, private knowledge base or LLM framework. Twelve constructed trajectories contain 24 correlated decision points. Both a conventional rechecking workflow and the NyAI observed-evidence contract agree with all 24 design decisions; each withholds all eight designated invalid permissions. Trusting a synthetic success claim or caching the initial permission permits those eight. **This shows the importance of current execution evidence; it does not show an advantage over conventional checks.** The programs are trivial, approval changes are simulated, and no model responses or human review are involved. [Protocol, results and remaining validation](docs/runtime-evidence-study.md).
 
+### Multi-hop assurance graphs, shared-warrant cuts and causal-slice compression (Study 4)
+
+Because Study 3 (`runtime_evidence.py`) tests a single-step dependency ($d=1$), conventional revalidation and the NyAI contract tie (`24/24`). Study 4 (`src/nyai_research/assurance_dag.py`, `scripts/run_assurance_dag.py`) extends host-observed execution binding to **multi-hop evaluation chains ($d \in \{1, 2, 3\}$), shared-warrant checks across safety-case branches, and causal-slice pruning ($\text{Ancestors}(D)$)**:
+
+```bash
+python3 scripts/run_assurance_dag.py
+```
+
+Across 16 multi-step trajectories (32 correlated decision points; mean step compression **79.5%**, token compression **85.5%**):
+
+| Arm | Valid permits (/20) | False alarms (/20) | Invalid withheld (/12) | Agreement (/32) |
+|---|---:|---:|---:|---:|
+| Conventional 1-hop revalidation | 20 | 0 | 3 | 23/32 (71.9%) |
+| Flat hash manifest (configured heuristic) | 20 | 0 | 4 | 24/32 (75.0%) |
+| Unpruned transcript monitor | 19 | 1 | 2 | 21/32 (65.6%) |
+| **NyAI AssuranceDAG (Stage-1 structural only)** | **20** | **0** | **10** | **30/32 (93.8%)** |
+| **NyAI AssuranceDAG (Stage-1 + Stage-2 causal slice)** | **20** | **0** | **12** | **32/32 (100.0%)** |
+
+Stage-1 catches all 4 multi-hop zombie claims ($d \ge 2$) and all 3 shared-warrant collapses with 0 false alarms, while missing the 2 pure semantic reward hacks (`T11–T12`) by design because file hashes are fresh and exit codes are zero. Stage-2 causal-slice AST inspection over $\text{Ancestors}(D)$ catches both semantic hacks while avoiding the dead-branch false alarm suffered by the windowed transcript heuristic (`T14`). Compression counts recorded log steps and whitespace-separated log words; human effort and model tokenizer counts were not measured. These are constructed cases with configured claim dependencies, not a general minimum-cut solver or an open-ended agent evaluation. See [Study 4 details and limitations](docs/assurance-dag-study.md).
+
 ### Earlier experiment replay
 
 ```bash
@@ -118,7 +149,7 @@ python3 scripts/verify_graphrag144.py
 
 These commands use stored outputs and need no credentials. Full replay and live-run instructions are in [Running experiments](docs/running-experiments.md).
 
-The demo and recorded action-policy results do not depend on the private knowledge base. A separate, allowlisted reproducibility package is prepared for review; see [Sharing and independent validation](docs/sharing-and-validation.md). It excludes private corpus content, proprietary policy excerpts, credentials and repository history. The full private repository should not be made public as a shortcut.
+The demo and recorded action-policy results do not depend on the private knowledge base. A separate, allowlisted reproducibility package is prepared for review; see [Sharing and independent validation](docs/sharing-and-validation.md). It excludes private corpus content, proprietary policy excerpts, credentials and repository history. Private knowledge-base vault notes and raw proprietary workbooks remain excluded from this repository.
 
 - [Research work sample](docs/work-sample.md) and [standalone PDF](output/pdf/NyAI_Research_Work_Sample_2026-10-25.pdf)
 - [Current consolidated research summary](docs/current-research-summary.md), including the runtime revision diagnostic and its limits
@@ -135,7 +166,8 @@ The earlier NyAI position paper discusses **Regulation (EU) 2024/1689, Article 8
 |---|---|
 | [Article 13](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-13) - transparency for deployers | Make outputs, evidence limits and check results interpretable |
 | [Article 14](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-14) - human oversight | Investigate appropriate reliance, contestability and conditions for withholding an action |
-| [Article 86](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-86) - explanation of certain individual decisions | Study records that expose the role of the system and the main grounds for a decision |
+| [Articles 55 & 72](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-55) - systemic-risk evaluation & post-market monitoring | Propagate upstream evaluation retractions and detect correlated-warrant collapse across safety-case branches |
+| [Article 86](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-86) - explanation of certain individual decisions | Emit machine-checkable principal grounds (`Ancestors(D)`), unmet gates, and repair suggestions (`minimal_repair_set`) |
 
 These are research connections, not a compliance determination. Article 86 has a specific scope involving certain Annex III high-risk systems and consequential decisions affecting people; it is not a universal right to every model's internal reasoning. No statutory duty is established as fulfilled by this prototype. See [the regulatory mapping and its limits](docs/eu-ai-act-relevance.md).
 

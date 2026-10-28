@@ -1,6 +1,6 @@
 # NyAI: evidence-grounded decisions in AI-assisted research
 
-Preliminary work sample - 26 October 2026. Prepared with AI assistance; applicant review and contribution statement remain pending.
+Preliminary work sample - updated 28 October 2026. Prepared with AI assistance; applicant review and contribution statement remain pending.
 
 ## Research problem
 
@@ -32,6 +32,14 @@ Both a conventional rechecking workflow and the NyAI observed-evidence contract 
 
 The observer executes real tests, but the programs are trivial and the tests are fixed. Approval events are simulated. The host and observation store are trusted; this is not tamper-proof attestation. No real action is authorized or executed. The test suite does not establish scientific correctness, and final permission is not atomically bound to a subsequent external action.
 
+## Study 4: when do multi-hop assurance graphs outperform 1-hop revalidation?
+
+Study 3 tied conventional revalidation (`24/24`) because every check was depth-1 ($d=1$). On 28 October 2026, we implemented `src/nyai_research/assurance_dag.py` and `scripts/run_assurance_dag.py` to test multi-hop evaluation chains ($d \in \{1, 2, 3\}$) across 16 trajectories (32 decision points) using real Python subprocess executions and AST import analysis.
+
+At depth $d=1$ (`T01–T03`), conventional 1-hop revalidation and `AssuranceDAG` again tie (`3/3`). However, on multi-hop transitive invalidations ("zombie claims", `T04–T07`, where an upstream calibration split, root dataset status, execution order, or scope drifts after an intermediate claim was cached) and correlated-warrant collapses (`T08–T10`, where branches share an imported `shared_grader.py` module or a `shared_calib.json` input file), 1-hop revalidation catches `0/7` while Stage-1 `AssuranceDAG` catches `7/7` with `0/20` false alarms across valid decision points, including the four terminal valid controls (`T13–T16`).
+
+Crucially, on pure semantic reward hacks (`T11–T12`, where an evaluation script is modified to weaken assertions to `>= -999` or `assert True` and re-executed cleanly with valid hashes), Stage-1 structural checking gets `0/2` by design. Pruning dead exploratory branches ($\mathcal{V} \setminus \text{Ancestors}(D)$) compresses trajectory steps by **79.5%** (tokens by **85.5%**), allowing Stage-2 causal-slice AST inspection to catch `2/2` semantic hacks while avoiding the dead-branch false alarm suffered by unpruned transcript monitoring (`T14`). See `docs/assurance-dag-study.md` and `results/assurance_dag_v1/summary.json`.
+
 ## Interpretation and next contribution to test
 
 The current contribution is a reproducible investigation that separates evidence coverage, outcome agreement and warranted permission, with explicit negative results and executable examples. It is not a demonstrated improvement in human oversight or a novel general reasoning calculus. Novelty relative to existing provenance, workflow validation and oversight methods requires a systematic prior-art comparison.
@@ -40,6 +48,6 @@ The next falsifiable hypothesis is that explicit warrant and revision records he
 
 ## Reproducibility, privacy and attribution
 
-The private repository preserves protocols, raw model responses, retrieval contexts, code hashes, scoring and limitations. `scripts/run_runtime_revision.py` reruns the local observation diagnostic without credentials or private data. `scripts/verify_artifacts.py` and `scripts/verify_graphrag144.py` check stored experiment integrity and scoring. These checks are automated, not independent scientific validation.
+This public repository preserves protocols, recorded model responses, retrieval contexts, code hashes, scoring and limitations. `scripts/run_runtime_revision.py` and `scripts/run_assurance_dag.py` rerun the local observation diagnostics without credentials or private data. `scripts/verify_artifacts.py` and `scripts/verify_graphrag144.py` check stored experiment integrity and scoring. These checks are automated, not independent scientific validation.
 
-AI assisted code, synthetic cases, analysis and documentation. Applicant intellectual contributions must be stated from actual work before submission. No external human annotation or participant study has been performed. A separate sanitized public review package exists for the earlier 24-case experiment only; it does not yet reproduce every study in this report. The full repository should remain private. Independent reviewers can inspect the new fictional runtime study without the private knowledge base, but its distribution package still needs preparation and applicant review.
+AI assisted code, synthetic cases, analysis and documentation. Applicant intellectual contributions must be stated from actual work before submission. No external human annotation or participant study has been performed. Private vault notes, proprietary workbooks and credentials remain excluded. Independent reviewers can run both fictional runtime studies and replay the recorded experiments from this repository without the private knowledge base. The earlier standalone review package covers only the 24-case experiment.
