@@ -1,0 +1,207 @@
+{
+  "model": "gpt-5.4",
+  "temperature": 0,
+  "reasoning_effort": "none",
+  "requests": 32,
+  "decision_phase": "final_only",
+  "order_seed": 20261028,
+  "runner_sha256": "9873bb6a03f1d4d79a7e65f94d72c4dad18996c4715b17b0acc4131e27f272a0",
+  "deterministic_summary_sha256": "878613650d23bec9d32c3a031aecc6248945a611291ed3117b6f7ca0dfd6b4b1",
+  "engine_sha256": "cc5d49ab530b6416a19e6053f395637f631ab532b1a0568d2d1577d1a0d0c28c",
+  "study_runner_sha256": "fd65ac397e94a9309a069ea795d4236aae01e426ac1a4539161311d03a8de4cf",
+  "protocol_sha256": "a950cfa7008e6652349ab64f201515a8ab7b40ac572c1482e238fd95b60819d2",
+  "request_plan": [
+    {
+      "case_id": "T07_d3_scope_drift_across_chain",
+      "condition": "full_unpruned_transcript",
+      "transcript_steps": 23,
+      "body_sha256": "eb3368ed925506605869c6707f27f45fdcd3c9bacd549d741d434ab70d2c2c70"
+    },
+    {
+      "case_id": "T12_semantic_reward_hack_hardcoded_return",
+      "condition": "causal_slice_only",
+      "transcript_steps": 4,
+      "body_sha256": "bb212dde543a737a5c9d1a38d9a1b87031c9747037ebb792adbae4a6b8477a28"
+    },
+    {
+      "case_id": "T16_valid_post_defeat_minimal_repair_restored",
+      "condition": "causal_slice_only",
+      "transcript_steps": 4,
+      "body_sha256": "8977f85f7dc16e87bf37cd3a336c3fa916a8b4e14938e23a1597d322ee3c566c"
+    },
+    {
+      "case_id": "T07_d3_scope_drift_across_chain",
+      "condition": "causal_slice_only",
+      "transcript_steps": 4,
+      "body_sha256": "c3e73cd5735c25d8f4dddecbd1b976ee7fb84bd2d1987124a9bc676e791df936"
+    },
+    {
+      "case_id": "T13_valid_benign_upstream_revision_repropagated",
+      "condition": "causal_slice_only",
+      "transcript_steps": 4,
+      "body_sha256": "bf36e7405d86ab9145523c2ee4ee5ec713c463fc180653f44c924b8f4afad283"
+    },
+    {
+      "case_id": "T13_valid_benign_upstream_revision_repropagated",
+      "condition": "full_unpruned_transcript",
+      "transcript_steps": 26,
+      "body_sha256": "ed0cd09d5f3fa5f345e7a825de264d16c831bd6d143f1690ee8eaea10fa2d570"
+    },
+    {
+      "case_id": "T09_shared_calibration_artifact_collapse",
+      "condition": "full_unpruned_transcript",
+      "transcript_steps": 23,
+      "body_sha256": "a310b2fa908afbc6581fc437404aeb05e686ca054dfdd1a996e2255c37d04381"
+    },
+    {
+      "case_id": "T15_valid_clean_independent_two_branch_safety_case",
+      "condition": "causal_slice_only",
+      "transcript_steps": 4,
+      "body_sha256": "4ed6f252d9b6cb5aa824ff2e1d9f4f1713326aa81944ac9b150a0247ae4b2204"
+    },
+    {
+      "case_id": "T05_d3_deep_dataset_retraction_zombie_claim",
+      "condition": "causal_slice_only",
+      "transcript_steps": 4,
+      "body_sha256": "30b9ebadc0ca0019d4125cef755ae3fb56535d3e14c9393b296bbda9483a39e6"
+    },
+    {
+      "case_id": "T02_d1_direct_test_failure_with_spoofed_claim",
+      "condition": "causal_slice_only",
+      "transcript_steps": 4,
+      "body_sha256": "ab7316b06cf0ba73e8c07a90143c8e2c5c97a388820183b69558b426b46bfe37"
+    },
+    {
+      "case_id": "T06_d2_upstream_harness_mutated_zombie_claim",
+      "condition": "causal_slice_only",
+      "transcript_steps": 4,
+      "body_sha256": "506ed0b5cbfbe7ce6ac8709250b88d554d0ffb12fdfdb1ec2bb702f607001af4"
+    },
+    {
+      "case_id": "T06_d2_upstream_harness_mutated_zombie_claim",
+      "condition": "full_unpruned_transcript",
+      "transcript_steps": 23,
+      "body_sha256": "522cb138468649095befb9ff5b42bc72b8fa193b2234caddd8024d40e5abb3dc"
+    },
+    {
+      "case_id": "T03_d1_approval_revoked",
+      "condition": "causal_slice_only",
+      "transcript_steps": 4,
+      "body_sha256": "6f567bdc0e5430132a27d2c2d28a57f128f1443c13d717c6cced6692a1e1048b"
+    },
+    {
+      "case_id": "T14_valid_dead_branch_failure_and_hack_pruned",
+      "condition": "full_unpruned_transcript",
+      "transcript_steps": 24,
+      "body_sha256": "29a5329d378d01638d58dc9a621faa4e6556d313fb812f861499db19a52956e7"
+    },
+    {
+      "case_id": "T11_semantic_reward_hack_relaxed_threshold",
+      "condition": "full_unpruned_transcript",
+      "transcript_steps": 31,
+      "body_sha256": "d9e6bfe2ee2877d9c95c9d62f512fb511e73f81ead289e4d118c7cfb1a5f20c9"
+    },
+    {
+      "case_id": "T16_valid_post_defeat_minimal_repair_restored",
+      "condition": "full_unpruned_transcript",
+      "transcript_steps": 29,
+      "body_sha256": "cd1bff65d695129014f204ab5222e1db8ce80a6969c4fcc543e54f69bf768317"
+    },
+    {
+      "case_id": "T12_semantic_reward_hack_hardcoded_return",
+      "condition": "full_unpruned_transcript",
+      "transcript_steps": 31,
+      "body_sha256": "dd30d3097af0ec246caae48454e3f12d8124bb9ed996b6ddf86e84c9df2a34d0"
+    },
+    {
+      "case_id": "T14_valid_dead_branch_failure_and_hack_pruned",
+      "condition": "causal_slice_only",
+      "transcript_steps": 4,
+      "body_sha256": "4ed6f252d9b6cb5aa824ff2e1d9f4f1713326aa81944ac9b150a0247ae4b2204"
+    },
+    {
+      "case_id": "T15_valid_clean_independent_two_branch_safety_case",
+      "condition": "full_unpruned_transcript",
+      "transcript_steps": 21,
+      "body_sha256": "fcbdcf13f9a057c4a506820a6675efa5223fe1efeb0a89e815ff8c93eb2b78a6"
+    },
+    {
+      "case_id": "T10_shared_warrant_simultaneous_defeat",
+      "condition": "causal_slice_only",
+      "transcript_steps": 4,
+      "body_sha256": "ed3e0c0ef24124df27d303c75e35a38de0649274f26009470bbc7a7fc8ea2d5f"
+    },
+    {
+      "case_id": "T04_d2_upstream_calibration_drift_zombie_claim",
+      "condition": "causal_slice_only",
+      "transcript_steps": 4,
+      "body_sha256": "c0c7a24091df310ec03213f0870547b3a78e7e917da8484d719ad8df3b1c5819"
+    },
+    {
+      "case_id": "T08_shared_grader_warrant_collapse",
+      "condition": "full_unpruned_transcript",
+      "transcript_steps": 23,
+      "body_sha256": "9c8596ea612c0e656c33c70d64220b721fdeb77e9ed13186cce4a47c6d71eba7"
+    },
+    {
+      "case_id": "T01_d1_direct_edit_without_retest",
+      "condition": "full_unpruned_transcript",
+      "transcript_steps": 10,
+      "body_sha256": "5a9abb2a28e7e6a37f37f6168d6084176abd24c4b37eb42f050097199f7084ea"
+    },
+    {
+      "case_id": "T05_d3_deep_dataset_retraction_zombie_claim",
+      "condition": "full_unpruned_transcript",
+      "transcript_steps": 24,
+      "body_sha256": "f89eca25a3328feda719972ca7b9c42eda966ba01f6d8bd7819fdc71cf162696"
+    },
+    {
+      "case_id": "T03_d1_approval_revoked",
+      "condition": "full_unpruned_transcript",
+      "transcript_steps": 10,
+      "body_sha256": "ad7a56325d665a6920ec66555ff124d3227407b4e0cb441432cccd674d45ac8d"
+    },
+    {
+      "case_id": "T09_shared_calibration_artifact_collapse",
+      "condition": "causal_slice_only",
+      "transcript_steps": 4,
+      "body_sha256": "d70ea93998768ff598597e0a02280699fb084fbac54fd89c22b5b949370b6bb0"
+    },
+    {
+      "case_id": "T08_shared_grader_warrant_collapse",
+      "condition": "causal_slice_only",
+      "transcript_steps": 4,
+      "body_sha256": "4bb47220756e3d3d533c8a53df97abd8b4bb509fda5fc16b1b86fcda4b698503"
+    },
+    {
+      "case_id": "T01_d1_direct_edit_without_retest",
+      "condition": "causal_slice_only",
+      "transcript_steps": 4,
+      "body_sha256": "8bce7f76526f2c9aa74cc01d7b8e20c2ab3da9cd67faf9ee840e3d1a090d609f"
+    },
+    {
+      "case_id": "T04_d2_upstream_calibration_drift_zombie_claim",
+      "condition": "full_unpruned_transcript",
+      "transcript_steps": 22,
+      "body_sha256": "99a1740c4dbe85043360a44b045a04e356a2611d264dd8014568ebd3508ad1c7"
+    },
+    {
+      "case_id": "T11_semantic_reward_hack_relaxed_threshold",
+      "condition": "causal_slice_only",
+      "transcript_steps": 4,
+      "body_sha256": "97b0357d3c5ec4e31426bc10438009a46687e9275939a2b0bc027709215a54ab"
+    },
+    {
+      "case_id": "T10_shared_warrant_simultaneous_defeat",
+      "condition": "full_unpruned_transcript",
+      "transcript_steps": 24,
+      "body_sha256": "0382f088f673ecbb3c7d15014b0dbfedcb36519a0d231c5c79b97a184a1e8536"
+    },
+    {
+      "case_id": "T02_d1_direct_test_failure_with_spoofed_claim",
+      "condition": "full_unpruned_transcript",
+      "transcript_steps": 11,
+      "body_sha256": "16fd21c61a7c4fb84ea8a7a4a2ed15cbb5ecc0abd5ca3c84864b55b6caa0e827"
+    }
+  ]
+}

@@ -136,6 +136,8 @@ Across 16 multi-step trajectories (32 correlated decision points; mean step comp
 
 Stage-1 catches all 4 multi-hop zombie claims ($d \ge 2$) and all 3 shared-warrant collapses with 0 false alarms, while missing the 2 pure semantic reward hacks (`T11–T12`) by design because file hashes are fresh and exit codes are zero. Stage-2 causal-slice AST inspection over $\text{Ancestors}(D)$ catches both semantic hacks while avoiding the dead-branch false alarm suffered by the windowed transcript heuristic (`T14`). Compression counts recorded log steps and whitespace-separated log words; human effort and model tokenizer counts were not measured. These are constructed cases with configured claim dependencies, not a general minimum-cut solver or an open-ended agent evaluation. See [Study 4 details and limitations](docs/assurance-dag-study.md).
 
+The optional live GPT-5.4 comparison matched 13/16 final design decisions with full logs and 11/16 with sliced logs. Slicing reduced actual API input by 15.80% but did not improve agreement in this run. Both arms received identical active evidence; these results are separate from the deterministic hybrid's 32/32. See [live methods, raw outputs and limitations](docs/assurance-dag-study.md#optional-live-gpt-54-monitor-comparison-28-october-2026).
+
 ### Earlier experiment replay
 
 ```bash
