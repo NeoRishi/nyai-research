@@ -1,6 +1,23 @@
 {
-  "plan_sha256": "316584a8ea72881587ac78f1e95180797e8af419f316d56fb3e3b07e7a5ae747",
-  "requests_sha256": "3d82ef17f51e5ec628f253277062f38064d5013056c63e6bfbe0206be20ceefd",
-  "summary_sha256": "4c96b048ded869308552d16b087234d528465109d169c1c01f6a637db651dd16",
-  "runner_sha256": "9873bb6a03f1d4d79a7e65f94d72c4dad18996c4715b17b0acc4131e27f272a0"
+  "runner_sha256": "09dc755d3c1db92ff9a90068c990a79fa11e7f189a5f21e730d3c49f854f783d",
+  "files_sha256": {
+    "model_monitor_plan.json": "316584a8ea72881587ac78f1e95180797e8af419f316d56fb3e3b07e7a5ae747",
+    "model_monitor_requests.jsonl": "3d82ef17f51e5ec628f253277062f38064d5013056c63e6bfbe0206be20ceefd",
+    "model_monitor_summary.json": "5522a82722bb1c2cc3e751a296c98ee030551bf66550e3eebb2b92142d9ba9da",
+    "model_monitor_hybrid_plan.json": "30ba6b9f1caef1f3697a6c48a2e2b390826b905158c32953a6ea21989520a7b1",
+    "model_monitor_hybrid_requests.jsonl": "be17cd13155b322d83089c7ac4c4fcb762770cf301efb89c2485aa8395395cf9",
+    "model_monitor_hybrid_decisions.jsonl": "0bb1390e54018d310187c32320f0e775745a07a745fff281f3bae5aca56649ef",
+    "model_monitor_workspace_packets.jsonl": "f6d08026b40aea9e48dcc81810454b6d6b14ddb1b7373b5966f98d52b79f7971",
+    "model_monitor_v1/runner.py.txt": "9873bb6a03f1d4d79a7e65f94d72c4dad18996c4715b17b0acc4131e27f272a0",
+    "model_monitor_v1/summary.json": "4c96b048ded869308552d16b087234d528465109d169c1c01f6a637db651dd16",
+    "model_monitor_v1/manifest.json": "5c681d46b9ac21111e7836ce8e41c4b4ab2ef1455aad9a3610ed23700c873685"
+  },
+  "protected_artifacts": {
+    "results/assurance_dag_v1/summary.json": "878613650d23bec9d32c3a031aecc6248945a611291ed3117b6f7ca0dfd6b4b1",
+    "results/assurance_dag_v1/records.jsonl": "33da876bbc909bb2558f16414ab0640152007771486d5f4980368bf92c1a5ed8",
+    "results/assurance_dag_v1/review_queue.csv": "5ef4bf8543da19c6529eb8a24aeed5c111329891a10a96ff82230b5549ee81c4",
+    "results/assurance_dag_v1/manifest.json": "0966f67c8795a1a8619b073264b104c65a694f16a1c403706df4879afc884fb3",
+    "results/assurance_dag_v1/model_monitor_requests.jsonl": "3d82ef17f51e5ec628f253277062f38064d5013056c63e6bfbe0206be20ceefd",
+    "results/assurance_dag_v1/model_monitor_plan.json": "316584a8ea72881587ac78f1e95180797e8af419f316d56fb3e3b07e7a5ae747"
+  }
 }

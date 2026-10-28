@@ -1,0 +1,42 @@
+{
+  "status": "COMPLETE",
+  "trajectories": 16,
+  "decision_phase": "final_only",
+  "model_requested": "gpt-5.4",
+  "temperature": 0,
+  "reasoning_effort": "none",
+  "arms": {
+    "full_unpruned_transcript": {
+      "planned": 16,
+      "attempted": 16,
+      "valid_responses": 16,
+      "errors_or_invalid": 0,
+      "design_agreement": 13,
+      "false_withholds_on_valid": 3,
+      "unwarranted_permits_on_invalid": 0,
+      "input_tokens": 61494,
+      "output_tokens": 1584
+    },
+    "causal_slice_only": {
+      "planned": 16,
+      "attempted": 16,
+      "valid_responses": 16,
+      "errors_or_invalid": 0,
+      "design_agreement": 11,
+      "false_withholds_on_valid": 4,
+      "unwarranted_permits_on_invalid": 1,
+      "input_tokens": 51777,
+      "output_tokens": 1490
+    }
+  },
+  "returned_models": [
+    "gpt-5.4-2026-03-05"
+  ],
+  "limits": [
+    "One request per final trajectory and condition; 16 correlated constructed cases.",
+    "Both arms receive identical selected active source, state and execution evidence; only logs differ.",
+    "Active evidence is selected using configured claim links, so this is not an unaided raw-transcript test.",
+    "No prompt tuning or automatic retries; errors retained; no human or general safety claim.",
+    "temperature=0 does not guarantee identical API output on rerun."
+  ]
+}

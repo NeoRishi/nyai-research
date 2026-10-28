@@ -136,7 +136,15 @@ Across 16 multi-step trajectories (32 correlated decision points; mean step comp
 
 Stage-1 catches all 4 multi-hop zombie claims ($d \ge 2$) and all 3 shared-warrant collapses with 0 false alarms, while missing the 2 pure semantic reward hacks (`T11–T12`) by design because file hashes are fresh and exit codes are zero. Stage-2 causal-slice AST inspection over $\text{Ancestors}(D)$ catches both semantic hacks while avoiding the dead-branch false alarm suffered by the windowed transcript heuristic (`T14`). Compression counts recorded log steps and whitespace-separated log words; human effort and model tokenizer counts were not measured. These are constructed cases with configured claim dependencies, not a general minimum-cut solver or an open-ended agent evaluation. See [Study 4 details and limitations](docs/assurance-dag-study.md).
 
-The optional live GPT-5.4 comparison matched 13/16 final design decisions with full logs and 11/16 with sliced logs. Slicing reduced actual API input by 15.80% but did not improve agreement in this run. Both arms received identical active evidence; these results are separate from the deterministic hybrid's 32/32. See [live methods, raw outputs and limitations](docs/assurance-dag-study.md#optional-live-gpt-54-monitor-comparison-28-october-2026).
+The live GPT-5.4 follow-up separates deterministic Stage 1 from semantic Stage 2:
+
+| Live arm (16 final decisions each) | Design agreement | False withholds (/4 valid) | Unwarranted permits (/12 invalid) | API calls | API input tokens |
+|---|---:|---:|---:|---:|---:|
+| Standalone full logs (preserved v1) | 13/16 | 3 | 0 | 16 | 61,494 |
+| Standalone sliced logs (preserved v1) | 11/16 | 4 | 1 | 16 | 51,777 |
+| Stage 1 + GPT-5.4 semantic causal slice (v2) | **16/16** | **0** | **0** | **6** | **6,743** |
+
+Stage 1 withholds T01–T10 without API calls. The six scoped LLM inspections catch T11–T12 and permit T13–T16. Actual API input falls **89.03%** relative to the historical full-log workload. All original requests are preserved; the new payload prunes files, state, observations and logs. Savings combine gating, pruning and a narrower prompt, so this exploratory follow-up does not isolate pruning's causal effect. The historical arms remain log-only comparisons with shared active evidence, not full-workspace API baselines. See [methods, raw outputs and limitations](docs/assurance-dag-study.md#stage-1-gated-semantic-causal-slice-follow-up-v2).
 
 ### Earlier experiment replay
 

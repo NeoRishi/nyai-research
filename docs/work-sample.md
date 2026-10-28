@@ -6,7 +6,7 @@
 
 ## Why this work sample is structured as four progressive studies
 
-This repository documents a progression across four studies, with 23 unit tests and offline replay of stored results. Runtime depends on the host:
+This repository documents a progression across four studies, with 27 unit tests (23 original plus four live-monitor regressions) and offline replay of stored results. Runtime depends on the host:
 
 1. **Study 1 (`scripts/run_pilot.py`) — Synthetic audit prompts and action contracts:** On 120 policy cases, ordinary, checklist and structured prompts match 96, 92 and 84 unreviewed template labels. A separate 24-case action-contract comparison gives both the API model and executable contract 24/24 oracle matches. No incremental benefit is demonstrated; protocols and raw outputs are retained.
 2. **Study 2 (`scripts/evaluate_graphrag144.py`) — Controlled GraphRAG evaluation (144 cases):** Full reference, vector RAG, GraphRAG and structured GraphRAG match 96/120, 63/120, 71/120 and 61/120 policy templates, and 24/24, 18/24, 24/24 and 24/24 contract decisions. Retrieval uses an isolated reference graph. These results do not establish independent warrant paths or general safety gains; see [the recorded results](graphrag-evaluation-results.md).

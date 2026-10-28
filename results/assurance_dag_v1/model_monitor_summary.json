@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "status": "COMPLETE",
   "trajectories": 16,
   "decision_phase": "final_only",
@@ -6,37 +7,62 @@
   "temperature": 0,
   "reasoning_effort": "none",
   "arms": {
-    "full_unpruned_transcript": {
-      "planned": 16,
-      "attempted": 16,
-      "valid_responses": 16,
+    "standalone_full_unpruned_transcript": {
+      "decision_points": 16,
+      "designated_permit_points": 4,
+      "designated_withhold_points": 12,
+      "valid_decisions": 16,
       "errors_or_invalid": 0,
       "design_agreement": 13,
       "false_withholds_on_valid": 3,
       "unwarranted_permits_on_invalid": 0,
+      "llm_calls": 16,
       "input_tokens": 61494,
-      "output_tokens": 1584
+      "output_tokens": 1584,
+      "source": "Preserved v1 calls: active evidence selected in both conditions; only logs differ"
     },
-    "causal_slice_only": {
-      "planned": 16,
-      "attempted": 16,
-      "valid_responses": 16,
+    "standalone_causal_slice_logs": {
+      "decision_points": 16,
+      "designated_permit_points": 4,
+      "designated_withhold_points": 12,
+      "valid_decisions": 16,
       "errors_or_invalid": 0,
       "design_agreement": 11,
       "false_withholds_on_valid": 4,
       "unwarranted_permits_on_invalid": 1,
+      "llm_calls": 16,
       "input_tokens": 51777,
-      "output_tokens": 1490
+      "output_tokens": 1490,
+      "source": "Preserved v1 calls: active evidence selected in both conditions; only logs differ"
+    },
+    "nyai_stage1_plus_gpt54_causal_slice": {
+      "decision_points": 16,
+      "designated_permit_points": 4,
+      "designated_withhold_points": 12,
+      "valid_decisions": 16,
+      "errors_or_invalid": 0,
+      "design_agreement": 16,
+      "false_withholds_on_valid": 0,
+      "unwarranted_permits_on_invalid": 0,
+      "llm_calls": 6,
+      "input_tokens": 6743,
+      "output_tokens": 389,
+      "stage1_withholds": 10,
+      "stage2_eligible": 6,
+      "stage1_llm_tokens": 0
     }
   },
+  "hybrid_input_token_reduction_vs_historical_full": 0.890347,
   "returned_models": [
     "gpt-5.4-2026-03-05"
   ],
   "limits": [
-    "One request per final trajectory and condition; 16 correlated constructed cases.",
-    "Both arms receive identical selected active source, state and execution evidence; only logs differ.",
-    "Active evidence is selected using configured claim links, so this is not an unaided raw-transcript test.",
-    "No prompt tuning or automatic retries; errors retained; no human or general safety claim.",
-    "temperature=0 does not guarantee identical API output on rerun."
+    "The two standalone arms reuse original calls byte-for-byte; they are not full-workspace LLM baselines.",
+    "Hybrid uses deterministic gating, source/state/observation/log pruning and a narrower semantic prompt.",
+    "Full-workspace versus slice reference packets are saved offline; full-workspace reference packets were not sent to the API.",
+    "Token reduction measures end-to-end workload versus 16 historical calls; it does not isolate pruning from gating or prompt changes.",
+    "This follow-up was designed after inspecting standalone errors; constructed, correlated cases and a single draw do not prove general necessity or efficacy.",
+    "Static approval and unused dataset arguments remain fixture limitations; scoped Stage 2 does not validate broader science or policy.",
+    "No prompt tuning after this follow-up run, automatic retries, discarded outputs, or independent human review."
   ]
 }
