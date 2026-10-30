@@ -1,6 +1,6 @@
 # NyAI: evidence-grounded decisions in AI-assisted research
 
-Preliminary work sample - updated 28 October 2026. Prepared with AI assistance; applicant review and contribution statement remain pending.
+Preliminary work sample - updated 28 October 2026. Prepared with AI assistance; applicant contributions and AI assistance are documented in [CONTRIBUTIONS.md](../CONTRIBUTIONS.md). Final technical report approval remains pending.
 
 ## Research problem
 
@@ -50,4 +50,4 @@ The next falsifiable hypothesis is that explicit warrant and revision records he
 
 This public repository preserves protocols, recorded model responses, retrieval contexts, code hashes, scoring and limitations. `scripts/run_runtime_revision.py` and `scripts/run_assurance_dag.py` rerun the local observation diagnostics without credentials or private data. `scripts/verify_artifacts.py` and `scripts/verify_graphrag144.py` check stored experiment integrity and scoring. These checks are automated, not independent scientific validation.
 
-AI assisted code, synthetic cases, analysis and documentation. Applicant intellectual contributions must be stated from actual work before submission. No external human annotation or participant study has been performed. Private vault notes, proprietary workbooks and credentials remain excluded. Independent reviewers can run both fictional runtime studies and replay the recorded experiments from this repository without the private knowledge base. The earlier standalone review package covers only the 24-case experiment.
+AI assisted code, synthetic cases, analysis and documentation. Applicant intellectual contributions and verification limits are described in [CONTRIBUTIONS.md](../CONTRIBUTIONS.md). No external human annotation or participant study has been performed. Private vault notes, proprietary workbooks and credentials remain excluded. Independent reviewers can run both fictional runtime studies and replay the recorded experiments from this repository without the private knowledge base. The earlier standalone review package covers only the 24-case experiment.
