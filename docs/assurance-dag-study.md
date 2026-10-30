@@ -6,7 +6,7 @@ Date: 28 October 2026. Reproducible multi-hop execution and assurance diagnostic
 
 In Study 3 (`src/nyai_research/runtime_evidence.py`), each permission decision depended on **depth-1 local state** (a single candidate file `candidate.py` tested by a single harness `checks.py`). At hop depth $d=1$, a structured NyAI contract is mathematically equivalent to conventional execution/version/approval revalidation (`24/24` tie).
 
-In multi-step AI safety evaluations and automated alignment workflows ([Bowkis et al., UK AISI 2026](https://arxiv.org/abs/2605.06390); [Li et al., HackBench 2026](https://facebookresearch.github.io/RAM/blogs/hackbench/); Barrett et al., 2026), safety cases depend **transitively across multi-hop chains ($d \ge 2$)** of upstream calibration splits, intermediate evaluation claims, and shared grading harnesses, surrounded by exploratory dead-branch commands.
+In multi-step AI safety evaluations and automated alignment workflows ([Bowkis et al., UK AISI 2026](https://arxiv.org/abs/2605.06390); [Li et al., HackBench 2026](https://facebookresearch.github.io/RAM/blogs/hackbench/)), safety cases depend **transitively across multi-hop chains ($d \ge 2$)** of upstream calibration splits, intermediate evaluation claims, and shared grading harnesses, surrounded by exploratory dead-branch commands.
 
 `src/nyai_research/assurance_dag.py` and `scripts/run_assurance_dag.py` test three falsifiable mechanisms over 16 multi-step trajectories (32 correlated decision points) using real Python subprocess executions, SHA-256 file digests, and standard-library AST inspection:
 
