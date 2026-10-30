@@ -2,7 +2,7 @@
 
 ## Core research question
 
-**Can a host-anchored multi-hop assurance graph (`AssuranceDAG`) with correlated-warrant cuts and causal-slice pruning catch multi-step stale claims ("zombie claims"), shared-dependency failures, and semantic reward hacks that conventional 1-hop runtime checks miss — while compressing the trace a human overseer or statutory auditor must inspect by ~80%?**
+**Can tracking multi-step dependencies and shared evaluation components catch stale or invalidated research claims that a one-hop check misses, and what does that cost compared with rerunning everything?**
 
 ## Why this work sample is structured as four progressive studies
 
